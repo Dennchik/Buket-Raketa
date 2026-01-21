@@ -1,0 +1,8 @@
+/* stylelint-disable annotation-no-unknown */
+@use 'sass:string'; // Импортируем модуль string
+$icomoon-font-family: 'icon-set' !default;
+$icomoon-font-path: '/fonts' !default;
+
+$icon-check: string.unquote('"\\e90f"');
+$icon-check-box: string.unquote('"\\e900"');
+$icon-pencil-alt: string.unquote('"\\e901"');

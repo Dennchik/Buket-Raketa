@@ -1,0 +1,46 @@
+form(action="#" id="form-cost").form-cost.order-form
+	.form-cost__body
+		.form-cost__line
+			.form-cost__item 
+				label.form-cost__label(for="service")
+				.form-cost__select-type(data-select)
+					.select
+						.select__input
+							input(type="button" value="Тип объекта" id="service").t-text.select__button 
+						ul.select__list._collapse
+							li.select__item.t-text._selected(value='') Офис 
+							li.select__item.t-text(value='Производство') Производство
+							li.select__item.t-text(value='Склад') Склад
+							li.select__item.t-text(value='Торговый зал') Торговый зал
+		.form-cost__line
+			.form-cost__item 
+				.form-cost__select-type
+					.select
+						.select__input.square
+							input(type="text" value="Площадь, м2" id="service").t-text
+		.form-cost__line
+			.form-cost__item 
+				.form-cost__select-type(data-select)
+					.select
+						.select__input
+							input(type="button" value="Частота уборки" id="service").t-text.select__button
+						ul.select__list._collapse
+							li.select__item.t-text._selected(value='') Ежедневно 
+							li.select__item.t-text(value='Производство') 2–3 раза в неделю
+							li.select__item.t-text(value='Склад') Раз в неделю
+							li.select__item.t-text(value='Торговый зал') Генеральная
+		.form-cost__line
+			.form-cost__item 
+				.form-cost__select-type(data-select)
+					.select
+						.select__input
+							input(type="button" value="Дополнительно" id="service").t-text.select__button
+						ul.select__list._collapse
+							li.select__item.t-text._selected(value='') Вывоз КГМ  
+							li.select__item.t-text(value='Производство') Уборка территории
+							li.select__item.t-text(value='Склад') Дезинфекция 
+		.form-cost__line
+			.form-cost__item 
+				label(for="phone").form-cost__label 
+				.form-cost__input
+					input.input.phone(id="phone" autocomplete="off" type="tel" name="phone" error="Обязательное поле" placeholder="+7 (___) ___-__-__") 

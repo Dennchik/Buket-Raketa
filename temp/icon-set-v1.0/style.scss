@@ -1,0 +1,60 @@
+@import 'variables';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7');
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7#iefix')
+      format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vq70q7')
+      format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vq70q7')
+      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vq70q7##{$icomoon-font-family}')
+      format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  speak: never;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-transform: none;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+}
+
+.icon-check {
+  &::before {
+    content: $icon-check;
+  }
+}
+.icon-check-box {
+  &::before {
+    content: $icon-check-box;
+  }
+}
+.icon-pencil-alt {
+  &::before {
+    content: $icon-pencil-alt;
+  }
+}
