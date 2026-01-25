@@ -5,10 +5,10 @@
   position: relative;
   z-index: 3;
 
-  overflow: hidden;
-
   width: 100%;
   margin: 0 auto;
+
+  visibility: visible;
 
   // .section-perform__body
   &__body {
@@ -103,8 +103,7 @@
 
   // .section-perform__image
   &__image {
-    overflow: hidden;
-    max-width: 540px;
+    // max-width: 540px;
     img {
       object-fit: cover;
     }

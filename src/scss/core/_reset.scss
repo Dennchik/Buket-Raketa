@@ -26,9 +26,13 @@ html {
 
 body {
   scroll-behavior: smooth;
+
   overscroll-behavior: none;
+
   font: 1.6rem/1.6 $font-family-default;
   line-height: 1;
+
+  background: rgb(247 243 240 / 100%);
 
   // background: $background;
 

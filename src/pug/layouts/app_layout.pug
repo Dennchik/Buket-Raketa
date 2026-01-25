@@ -26,14 +26,14 @@ html(lang="ru")
     .wrapper
       .page 
         block header 
-          header.page__header
+          //- header.page__header
             include @/pug/layouts/header
         block page-content
           main.page__main-content
             .main-content._container#wrapper 
               .main-content__content#content
                 block main-content 
-                footer.main-content__footer
+                //- footer.main-content__footer
                   block footer 
                     include footer 
             nav.page__aside-menu

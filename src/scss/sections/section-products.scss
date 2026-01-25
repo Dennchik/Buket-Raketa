@@ -18,7 +18,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 
-    @include screen-1024 {
+    @include screen-1140 {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -48,13 +48,38 @@
 
   // .section-products__column
   &__column {
+    position: relative;
     padding: 0.5rem;
+    border: 1px solid red;
   }
 }
 
 .products-cart {
+  cursor: pointer;
+
+  overflow: hidden;
+
+  padding: 1rem;
+  border-radius: 30px;
+
+  transition: filter 0.9s ease 0s;
+  &:hover {
+    background: rgb(255 255 255 / 100%);
+    filter: drop-shadow(0 1px 10px rgb(104 104 104 / 30%));
+
+    .products-cart__image {
+      height: 50%;
+      height: 235px;
+    }
+
+    .products-cart__button-by {
+      margin-top: 0;
+    }
+  }
+
   // .products-cart__content
   &__content {
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -64,6 +89,7 @@
   &__image {
     overflow: hidden;
     border-radius: 30px;
+    transition: all 0.3s ease 0s;
   }
 
   // .products-cart__text
@@ -92,16 +118,22 @@
 
   // .products-cart__button-container
   &__button-container {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     width: 100%;
+
+    .button {
+      pointer-events: all;
+    }
   }
 
   // .products-cart__button-cart
   &__button-cart {
-    position: relative;
-    transform: scale(1);
+    z-index: 2;
 
     display: flex;
     gap: 1rem;
@@ -109,6 +141,8 @@
     justify-content: space-between;
 
     width: 100%;
+
+    transition: transform 0.3s ease 0s;
 
     .icon {
       color: $color;
@@ -119,27 +153,30 @@
     }
   }
 
-  // .products-cart__icon-cart
-  &__icon-cart {
-    border-radius: 50%;
-    background-color: #fff;
-    transition: transform 0.3s ease 0s;
-  }
-
   // .products-cart__button-by
   &__button-by {
     position: relative;
-    transform: scale(1);
 
     display: flex;
-    gap: 1rem;
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
+    border: 1px solid green;
     border-radius: 55px;
 
     background: rgb(254 249 245 / 100%);
+
+    transition: all 0.3s ease 0s;
+    transition: grid-template-rows 0.3s ease 0s;
+
+    @include min-1140 {
+      margin-top: -57px;
+    }
+
+    @include screen-1140 {
+      margin-top: -45px;
+    }
 
     .icon {
       color: #fff;
@@ -147,6 +184,13 @@
     span {
       color: rgb(89 86 83 / 100%);
     }
+  }
+
+  // .products-cart__icon-cart
+  &__icon-cart {
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease 0s;
   }
 
   // .products-cart__icon-by

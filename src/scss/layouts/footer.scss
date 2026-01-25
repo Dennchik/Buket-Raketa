@@ -211,7 +211,10 @@
 
   &__item {
     display: flex;
+    flex: 1 1 auto;
     gap: 0.6rem;
+    align-items: center;
+
     padding: 1.5rem;
 
     &:not(:last-child) {
@@ -397,17 +400,22 @@
 
 .form-search {
   // .form-search__search-box
-  &__search-box {
+  &__search-catalog {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  // .form-search__search-button
-  &__search-button {
+  // .form-search__button
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 33px;
     height: 33px;
     border-radius: 50%;
+
     background: rgb(236 104 29 / 100%);
 
     .icon {

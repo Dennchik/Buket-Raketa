@@ -1,0 +1,56 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.form-search {
+  position: relative;
+  // margin: 0 -2rem;
+  // .form-search__search-box
+  &__search-box {
+    display: flex;
+    gap: 1.6rem;
+
+    padding: 1rem 2.3rem;
+    border-radius: 5rem;
+
+    background-color: #fff;
+    backdrop-filter: blur(4px);
+
+    label {
+      display: none;
+    }
+  }
+
+  // .form-search__input
+  &__input {
+    width: 100%;
+    padding: 0 1.6rem;
+    font-size: 1.8rem;
+    // color: $font-color-default;
+
+    &::placeholder {
+      font-size: 1.6rem;
+      // color: $font-color-secondary;
+      opacity: 0.8;
+    }
+  }
+
+  // .form-search__search-button
+  &__search-button {
+    width: 4.3rem;
+    height: 4.3rem;
+    padding: 0 1rem;
+    border-radius: 50%;
+
+    background: rgb(89 86 83 / 100%);
+    filter: contrast(150%);
+
+    .icon {
+      font-size: 20px;
+      color: #fff;
+
+      &::before {
+        font-weight: 100;
+      }
+    }
+  }
+}
