@@ -33,6 +33,7 @@
     "eslint": "^9.34.0",
     "fast-glob": "^3.3.3",
     "globals": "^16.3.0",
+    "otf2ttf": "^1.1.2",
     "postcss": "^8.5.6",
     "postcss-media-minmax": "^5.0.0",
     "postcss-scss": "^4.0.9",

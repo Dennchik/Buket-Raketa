@@ -1,41 +1,84 @@
-.footer._container#contacts
+.footer#contacts
 	.footer__body 
-		.footer__header
-			h2.footer__title.t-h1.el-item Контакты 
-			.footer__network 
-				.network
-					.network__network-links 
-						a(href="https://t.me/" target="_blank" aria-label="Телеграм").network__icon-link
-							+iconfont('telegram-fly', '_icon')
-						a(href="https://wa.me/" target="_blank" aria-label="WhatsApp").network__icon-link
-							+iconfont('whatsapp', '_icon')
-						a(href="https://vk/" target="_blank" aria-label="Контакт").network__icon-link
-							+iconfont('vk-brand', '_icon')
 		.footer__content 
 			.footer__column
-				.contacts.footer__contacts
-					.contacts__column 
-						.contacts__line
-							.contacts__item._name 
-								.contacts__title.t-h3 ООО «ЦРИ»
-								.contacts__text.t-text-14 “Профессиональный клининг офисов, производств и складов"
-					.contacts__column 
-						.contacts__line
-							.contacts__item
-								.contacts__title.t-h2 Почтовый адрес
-								.contacts__text.t-text 249034,&nbsp;Россия,&nbsp;Калужская обл.,&nbsp;г. Обнинск, пр-кт Ленина, д. 121, оф. 311
-					.contacts__column 
-						.contacts__line
-							.contacts__item
-								.contacts__title.t-h2 Телефон / Факс
-									.contacts__text.t-text 8 (800) 234-55-44
-									.contacts__text.t-text +7 (980) 510-41-96
-									.contacts__text.t-text +7 (953) 335-55-33  
-								.contacts__title.t-h2 Email 
-								.contacts__text.t-text 
-									a(href="mailto:gen.dir@crnii.ru") gen.dir@crnii.ru
-	.footer__footer 
-		._icon
-			img(src="/img/icons/sd.png" alt="иконка")
-		span Сайт разработан 
-		a(href="https://sadovskiy.art/") Sadovskiy Design
+				a(href="#home" aria-label="home").footer__logo
+					+picture('/img/icons/logo.png', 'image') 
+				.footer__offers
+					a(href="#").footer__offers-link Политика конфиденциальности
+					a(href="#").footer__offers-link Возврат и замена
+					a(href="#").footer__offers-link Договор оферты
+			.footer__column
+				.footer__navigation 
+					.footer__block-title 
+						span Навигация
+					a(href="").footer__navigation-link Главная
+					a(href="").footer__navigation-link Доставка
+					a(href="").footer__navigation-link Пиротехника
+					a(href="").footer__navigation-link О нас
+					a(href="").footer__navigation-link Контакты
+					a(href="").footer__navigation-link Информация
+					a(href="").footer__navigation-link Помощь
+			.footer__column
+				.footer__navigation-catalog 
+					.footer__block-title
+						.ct-button
+							span.ct-button__item
+							span.ct-button__item
+							span.ct-button__item
+							span.ct-button__item 
+						span Каталог
+					a(href="").footer__navigation-link Букеты
+					a(href="").footer__navigation-link Композиции
+					a(href="").footer__navigation-link Одиночные цветы
+					a(href="").footer__navigation-link Букет невесты
+					a(href="").footer__navigation-link Шары
+					a(href="").footer__navigation-link Свечи
+					a(href="").footer__navigation-link Открытки 
+			.footer__column 
+				.contacts.footer__contacts 
+					.contacts__item
+						.contacts__icon
+							+iconfont('phone-call', 'icon')
+						.contacts__text
+							span.t-text-20 +7 906 849-97-43
+							span.t-text-13 Позвоните нам 
+					.contacts__item
+						.contacts__icon
+							+iconfont('location', 'icon')
+						.contacts__text
+							span.t-text-20 г. Оренбург 
+							span.t-text-13 Смотреть все адреса  
+					.contacts__item.contacts__item--networks
+						.contacts__networks
+							+iconfont('telegram-fly', 'icon')
+							+iconfont('whats-app', 'icon')
+							+iconfont('vk-brand', 'icon')
+						.contacts__text
+							span.t-text-20 Мы в соц. сетях
+							span.t-text-13 Пишите нам 
+			.footer__column 
+				.service.footer__service 
+					.service__line
+						.service__search
+							form.form-search#quick-search(action="#" method="post")
+								.form-search__search-box
+									label(for="site-search")
+										input.form-search__search.input#site-search(type="text" name="search" placeholder="Поиск по букетам..." autocomplete="off")
+									button.form-search__search-button(type="submit")
+										+iconfont('search', 'icon')
+					.service__line
+						.service__button
+							span Подобрать букет
+							.service__icon
+								+iconfont('arrow-right', 'icon')
+					.service__line
+						.service__button
+							span Получить бонусы
+							.service__icon
+								+iconfont('arrow-right', 'icon')
+					.service__line
+						.service__button
+							span Не нашли букет?
+							.service__icon
+								+iconfont('arrow-right', 'icon')

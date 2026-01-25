@@ -30,14 +30,14 @@ html(lang="ru")
             include @/pug/layouts/header
         block page-content
           main.page__main-content
-            .main-content#wrapper 
+            .main-content._container#wrapper 
               .main-content__content#content
                 block main-content 
                 footer.main-content__footer
                   block footer 
-                    //- include footer 
+                    include footer 
             nav.page__aside-menu
               block burger-menu
-                //- include @/pug/assets/sidebar-menu 
+                include @/pug/assets/sidebar-menu 
         block cookies
           //- include @/pug/modules/cookies-accept 

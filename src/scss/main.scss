@@ -14,10 +14,10 @@
 @use 'core/extend' as *;
 
 // todo --------------------------- Modules ------------------------------------
-// @use 'modules/preloader';
+// @use 'modules/burger-button.scss';
 // todo --------------------------- Assets -------------------------------------
-// @use 'assets/burger-button';
-// @use 'assets/sidebar-menu';
+@use 'assets/burger-button';
+@use 'assets/sidebar-menu';
 // @use 'assets/select';
 // todo --------------------------- Chunks -------------------------------------
 // @use 'chunks/menu-list';
@@ -26,7 +26,13 @@
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
 // todo -------------------------- Section -------------------------------------
+@use 'sections/section-perform.scss';
+@use 'sections/section-invitation.scss';
+@use 'sections/section-bonuses.scss';
 
+@use 'sections/section-products.scss';
+@use 'sections/section-info.scss';
+@use 'sections/section-map.scss';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

@@ -1,0 +1,52 @@
+.section-products
+	.section-products__body  
+		.section-products__content 
+			.section-products__column 
+				.section-products__info
+					h2.section-products__title.t-text-45 
+						span Не нашли
+						span нужный </br>букет?
+					.section-products__text.t-text-19 Соберем букет по&nbsp;фото или&nbsp;вашим пожеланиям, топ&nbsp;флорист предложит несколько вариантов 
+				.section-products__image 
+					+picture('img/pic/pref-04.png', 'image')
+
+			.card.section-products__column 
+				.card__row
+					.card__icon 
+						img(src="/img/icons/icon-04.png" alt="Иконка") 
+					.card__tips 
+						span.t-text-19 Загрузите фото </br> желаемого букета
+
+						// Область для drag-and-drop
+						.card__upload-area(id="upload-area")
+							.card__upload-text
+								span Кликните для загрузки
+								span.card__upload-drag или перетащите фото сюда
+
+							// Скрытый input для загрузки
+							input.card__file-input(
+								type="file"
+								id="bouquet-upload"
+								accept="image/*"
+								style="display: none;"
+							)
+
+						// Превью загруженного фото
+						.card__preview
+							img.card__preview-image(
+								src=""
+								alt="Превью загруженного фото"
+							)
+							.card__preview-actions
+								button.card__preview-change(type="button") Изменить фото
+								button.card__preview-remove(type="button") 
+									+iconfont('trash', 'icon')
+
+				.card__row
+					.card__text Или напишите </br>пожелания по букету
+
+				.card__row
+					.card__button.button(id="submit-bonus")
+						span.t-text-16 Получить бонусы
+						.card__icon
+							+iconfont('arrow-right', 'icon')

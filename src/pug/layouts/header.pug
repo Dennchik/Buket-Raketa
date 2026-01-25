@@ -1,37 +1,44 @@
-.header
-	.header__container
-		.header__content
-			.header__column.el-logo 
-				a(href="#home" aria-label="home" ).header__logo.anchor-link 
-					+picture('/img/icons/logo.png', 'image')  
-			.header__column 
-				.header__menu(data-da="bp-7" data-da-position="0" data-da-resolution="960") 
-					ul.header__menu-items
-						li.header__item
-							a(href="#about").header__link-key.anchor-link.link_underline-lr 
-								span Каталог 
-						li.header__item
-							.header__link-key.link_underline-lr
-								span Доставка
-						li.header__item
-							.header__link-key.link_underline-lr
-								span О нас
-						li.header__item
-							a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
-								span Контакты
-						li.header__item
-							a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
-								span Система лояльности
-			.header__column
-				.header__search
-					+iconfont('check', 'icon')
-				.header__phone 
-					a(href="tel:8 (906) 849-97-43") 
-						span +7 (906) 849-97-43 
-				.header__icons 
-					.header__login 
-						+iconfont('check', 'icon')
-					.header__cart
-						+iconfont('check', 'icon')
-	.header__burger-button
-		include ../assets/burger-button  
+.header._container  
+	.header__content
+		.header__column
+			a(href="#home" aria-label="home").header__logo
+				+picture('/img/icons/logo.png', 'image')  
+		.header__column 
+			.header__menu(data-da="bp-7" data-da-position="0" data-da-resolution="960") 
+				ul.header__menu-items 
+					li.header__item 
+						.header__ct-button
+							.ct-button.ct-button__items
+								span.ct-button__item
+								span.ct-button__item
+								span.ct-button__item
+								span.ct-button__item
+						a(href="#about").header__link-key.anchor-link.link_underline-lr 
+							span Каталог 
+					li.header__item
+						.header__link-key.link_underline-lr
+							span Доставка
+					li.header__item
+						.header__link-key.link_underline-lr
+							span О нас
+					li.header__item
+						a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
+							span Контакты
+					li.header__item
+						.header__icon-flower
+							img(src="/img/icons/group.svg" alt="") 
+						a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
+							span Система лояльности
+		.header__column
+			.header__search
+				+iconfont('search', 'icon')
+			.header__phone.anchor-link.link_underline-lr 
+				a(href="tel:8 (906) 849-97-43") 
+					+iconfont('phone-call', 'icon')
+					span +7 (906) 849-97-43 
+			.header__login 
+				+iconfont('user-profile', 'icon')
+			.header__cart
+				+iconfont('cart', 'icon')
+		.header__burger-button
+			include ../assets/burger-button  

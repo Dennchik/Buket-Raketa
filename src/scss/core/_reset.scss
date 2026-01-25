@@ -10,6 +10,7 @@ html {
 
   color: var(--font-color-default);
   letter-spacing: 1.1px;
+
   font: {
     size: 62.5%;
 
@@ -18,7 +19,7 @@ html {
     weight: $font-weight-default;
   }
 
-  @include screen-1024 {
+  @include screen-1140 {
     font-size: 50%;
   }
 }
@@ -26,7 +27,7 @@ html {
 body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
-  font: 3rem/3 $font-family-default;
+  font: 1.6rem/1.6 $font-family-default;
   line-height: 1;
 
   // background: $background;
@@ -40,7 +41,9 @@ body {
   }
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -53,17 +56,15 @@ body {
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 img,
 svg {
   pointer-events: none;
+  user-select: none;
+
+  width: 100%;
   max-width: 100%;
   height: auto;
+
   vertical-align: top;
 }
 
@@ -88,9 +89,11 @@ a:visited {
   vertical-align: middle;
 }
 
+h1,
 h2,
 h3 {
   font-family: $font-family-title;
+  font-weight: 600;
 }
 
 input,
@@ -122,16 +125,6 @@ input:active,
 button:focus,
 button:active {
   outline: none;
-}
-
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -169,12 +162,6 @@ h6 {
 }
 
 //  * Изменить стиль выделения текста
-::selection {
-  color: $text-color-selection;
-  text-shadow: 0 1px 0 #000;
-  background-color: $text-selection;
-}
-
 ::selection {
   color: $text-color-selection;
   text-shadow: 0 1px 0 #000;

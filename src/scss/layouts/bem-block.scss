@@ -12,8 +12,35 @@
     transition: opacity 0.9s ease-in-out;
   }
 }
+
 .select > ._collapse:not(._show) {
   display: none;
+}
+
+//* button
+.button {
+  cursor: pointer;
+
+  overflow: hidden;
+
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.4rem;
+  border-radius: 55px;
+
+  font-weight: 400;
+
+  background: rgb(236 104 29 / 100%);
+
+  span {
+    pointer-events: none;
+    display: block;
+    letter-spacing: -1%;
+    white-space: nowrap;
+  }
+
+  @include screen-490 {
+    height: 40px;
+  }
 }
 
 //* ----------------------------------------------------------------------------
@@ -201,31 +228,12 @@
 //* ------------------------- [Class _ibg] -------------------------------------
 
 .t-h1 {
-  font-size: 64px;
-  line-height: 100%;
-  filter: contrast(120%);
+  font-size: 60px;
+  line-height: 110%;
 
   @include minmax-490-1920 {
     font-size: calc(
-      28px + (64 - 28) * ((100vw - 490px) / (1920 - 490))
-    ) !important;
-  }
-
-  @include screen-490 {
-    font-size: 28px !important;
-  }
-}
-.t-h2 {
-  font-size: 42px;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-
-  filter: contrast(120%);
-
-  @include minmax-490-1920 {
-    font-size: calc(
-      24px + (42 - 24) * ((100vw - 490px) / (1920 - 490))
+      24px + (60 - 24) * ((100vw - 490px) / (1920 - 490))
     ) !important;
   }
 
@@ -233,13 +241,22 @@
     font-size: 24px !important;
   }
 }
+
+.t-h2 {
+  font-size: 50px;
+  line-height: 110%;
+
+  @include minmax-490-1920 {
+    font-size: calc(22px + (50 - 22) * ((100vw - 490px) / (1920 - 490)));
+  }
+
+  @include screen-490 {
+    font-size: 22px;
+  }
+}
 .t-h3 {
   font-size: 32px;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-
-  filter: contrast(120%);
+  line-height: 110%;
 
   @include minmax-490-1920 {
     font-size: calc(
@@ -248,17 +265,43 @@
   }
 
   @include screen-490 {
-    font-size: 20px !important;
+    font-size: 22px !important;
   }
 }
-.t-text {
-  font-size: 24px;
-  line-height: 130%;
+
+.t-text-15 {
+  font-size: 15px;
   letter-spacing: 0;
-  filter: contrast(150%);
 
   @include minmax-490-1920 {
-    font-size: calc(14px + (24 - 14) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(10px + (16 - 10) * ((100vw - 490px) / (1920 - 490)));
+  }
+
+  @include screen-490 {
+    font-size: 10px;
+  }
+}
+
+.t-text-16 {
+  font-size: 16px;
+  line-height: 110%;
+
+  @include minmax-490-1920 {
+    font-size: calc(12px + (16 - 12) * ((100vw - 490px) / (1920 - 490)));
+  }
+
+  @include screen-490 {
+    font-size: 12px;
+  }
+}
+
+.t-text-19 {
+  font-size: 19px;
+  line-height: 110%;
+  letter-spacing: 0;
+
+  @include minmax-490-1920 {
+    font-size: calc(12px + (19 - 14) * ((100vw - 490px) / (1920 - 490)));
   }
 
   @include screen-490 {
@@ -266,27 +309,25 @@
   }
 }
 
-.t-text-14 {
-  font-size: 14px;
-  line-height: 130%;
-  letter-spacing: 0;
-  filter: contrast(150%);
+.t-text-20 {
+  font-size: 20px;
+  line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(12px + (14 - 12) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(15px + (19 - 15) * ((100vw - 490px) / (1920 - 490)));
   }
 
   @include screen-490 {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
-.t-text-30 {
-  font-size: 28px;
-  line-height: 130%;
-  letter-spacing: 0;
+
+.t-text-24 {
+  font-size: 24px;
+  line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(16px + (28 - 16) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 490px) / (1920 - 490)));
   }
 
   @include screen-490 {
@@ -294,48 +335,15 @@
   }
 }
 
-.t-text-26 {
-  font-size: 30px;
+.t-text-45 {
+  font-size: 45px;
 
   @include minmax-490-1920 {
-    font-size: calc(16px + (26 - 16) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(24px + (45 - 24) * ((100vw - 490px) / (1920 - 490)));
   }
 
   @include screen-490 {
-    font-size: 16px;
-  }
-}
-
-.button {
-  cursor: pointer;
-
-  position: relative;
-
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 5px;
-
-  font-family: $font-family-title;
-  font-weight: 400;
-  text-transform: uppercase;
-
-  transition: box-shadow 0.4s ease-in-out;
-
-  span {
-    pointer-events: none;
-
-    display: block;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
-
-  @include screen-490 {
-    height: 40px;
+    font-size: 24px;
   }
 }
 

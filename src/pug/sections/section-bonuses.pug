@@ -1,0 +1,75 @@
+.section-bonuses
+	.section-bonuses__body  
+		.section-bonuses__content 
+			.section-bonuses__column 
+				.section-bonuses__info
+					h2.section-bonuses__title.t-h2
+						span Не нашли
+						span нужный </br>букет?
+					.section-bonuses__text.t-text-19 Соберем букет по&nbsp;фото или&nbsp;вашим пожеланиям, топ&nbsp;флорист предложит несколько вариантов 
+				.section-bonuses__image 
+					+picture('img/pic/pref-04.png', 'image')
+
+			form.card.section-bonuses__column(id="bouquet-form")
+				.card__row
+					.card__icon 
+						img(src="/img/icons/icon-04.png" alt="Иконка") 
+					.card__tips 
+						span.t-text-19 Загрузите фото </br> желаемого букета
+
+						// Область для drag-and-drop
+						.card__upload-area(id="upload-area")
+							.card__upload-text
+								span Кликните для загрузки
+								span.card__upload-drag или перетащите фото сюда
+
+							// Скрытый input для загрузки
+							input.card__file-input(
+								type="file"
+								id="bouquet-upload"
+								name="bouquet_photo"
+								accept="image/*"
+								style="display: none;"
+							)
+
+						// Превью загруженного фото
+						.card__preview
+							img.card__preview-image(
+								src=""
+								alt="Превью загруженного фото"
+							)
+							.card__preview-actions
+								button.card__preview-change(type="button") Изменить фото
+								button.card__preview-remove(type="button") 
+									+iconfont('trash', 'icon')
+
+						// Скрытое поле для хранения данных файла
+						input(type="hidden" id="file-data" name="file_data")
+
+				.card__row
+					//- .card__text.t-text-19 Или напишите пожелания по букету
+					.card__textarea-wrapper
+						textarea.card__textarea(
+							id="bouquet-wishes"
+							name="bouquet_wishes"
+							placeholder="Например: Хочу нежный букет в розовых тонах с пионами и эвкалиптом. Бюджет до 5000 руб."
+							rows="4"
+						)
+						.card__textarea-counter
+							span#char-count 0
+							span /500 символов
+
+				.card__row
+					.card__button.button(type="submit")
+						span.t-text-16 Получить бонусы
+						.card__icon
+							+iconfont('arrow-right', 'icon')
+
+				// Сообщения об успехе/ошибке
+				.card__message.success-message(style="display: none;")
+					.message-icon ✓
+					.message-text Ваша заявка отправлена! Флорист свяжется с вами в течение 15 минут.
+
+				.card__message.error-message(style="display: none;")
+					.message-icon ⚠
+					.message-text Пожалуйста, загрузите фото или напишите пожелания

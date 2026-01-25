@@ -228,19 +228,16 @@
 
     position: absolute;
     bottom: 0;
+    left: 0;
 
     width: 0;
     height: 1px;
-    // opacity: 0.6;
-    background: linear-gradient(to right, #ffffffb0, #5e4da8);
+
+    background-color: $color;
 
     transition: width 0.3s ease-in-out;
   }
 
-  &::before {
-    bottom: 0;
-    left: 0;
-  }
   span {
     pointer-events: none;
   }

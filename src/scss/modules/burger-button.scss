@@ -1,0 +1,45 @@
+@use '../core/variables' as *;
+
+.ct-button {
+  &__items {
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+    display: block;
+
+    width: 9px;
+    height: 9px;
+  }
+
+  // .ct-button__item
+  &__item {
+    pointer-events: none;
+
+    position: absolute;
+
+    display: block;
+
+    width: 4px;
+    height: 4px;
+
+    background: rgb(89 86 83 / 100%);
+
+    &:nth-child(1) {
+      transform: translate(0, 0);
+    }
+
+    &:nth-child(2) {
+      transform: translate(5px, 0);
+    }
+
+    &:nth-child(3) {
+      transform: translate(0, 5px);
+    }
+
+    &:nth-child(4) {
+      transform: translate(5px, 5px);
+    }
+  }
+}

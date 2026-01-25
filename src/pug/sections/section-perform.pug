@@ -1,13 +1,37 @@
-.section-perform
-  .section-perform__image
-    +picture('/img/pic/prew-01.png', 'image') 
-    .section-perform__image-fon
-  .section-perform__body._container
+.section-perform._container 
+  .section-perform__body 
     .section-perform__content 
-      hgroup.section-perform__group   
-        h1.section-perform__title.t-h1.tl-1 Клининг коммерческих и&nbsp;производственных помещений
-        p.section-perform__text.t-text-30.tl-2 Работаем напрямую с &nbsp;юрлицами и &nbsp;ИП. Оперативный старт, договор, фиксированная стоимость. Механизированная и &nbsp;ручная уборка
-      .section-perform__button.button-request.tl-3 
-        button(type="button").button.t-h2
-          span Получить Коммерческое предложение
-          span.grad-blink
+      .section-perform__column.bp-1 
+        hgroup.section-perform__group   
+          h1.section-perform__title.t-h1 
+            span Доставим чувства 
+            span с космической
+            span скоростью 
+        .section-perform__row
+          .section-perform__image 
+            +picture('img/pic/perf-02.png', 'image')
+          .section-perform__info 
+            .section-perform__text.t-text-24 Новая&nbsp;вдохновляющая коллекция&nbsp;2025
+            .section-perform__button.button
+              span.t-text-16 Перейти в каталог 
+              .ct-button
+                span.ct-button__item
+                span.ct-button__item
+                span.ct-button__item
+                span.ct-button__item
+        .section-perform__footer 
+          .section-perform__footer-col
+            .section-perform__icon
+              img(src="/img/icons/icon-01.png" alt="Иконка")
+            .section-perform__footer-text.t-text-19 Авторский стиль
+          .section-perform__footer-col
+            .section-perform__icon
+              img(src="/img/icons/icon-02.png" alt="Иконка")
+            .section-perform__footer-text.t-text-19 Свежие цветы
+          .section-perform__footer-col
+            .section-perform__icon
+              img(src="/img/icons/icon-03.png" alt="Иконка")
+            .section-perform__footer-text.t-text-19 Для&nbsp;любого повода
+      .section-perform__column
+        .section-perform__image(data-da="bp-1" data-da-position="1" data-da-resolution="690")  
+          +picture('img/pic/perf-01.png', 'image')

@@ -1,6 +1,34 @@
 .section-map
-	.section-map__body._container 
+	.section-map__body
 		.section-map__content 
 			.section-map__column
-				.section-map__map 
-					iframe( src="https://yandex.ru/map-widget/v1/? um=constructor%3Axxxxxxxxxxxxxxxxxxxx&source=constructor" width="100%" height="400" frameborder="0")
+				.section-map__item
+					.section-map__icon
+						+iconfont('phone-call', 'icon')
+					.section-map__text
+						span.t-text-20 +7 906 849-97-43
+						span.t-text-13 Позвоните нам
+				.section-map__item
+					.section-map__icon
+						+iconfont('location', 'icon')
+					.section-map__text
+						span.t-text-20 г. Оренбург 
+						span.t-text-13 Смотреть все адреса 
+				.section-map__item.section-map__item--networks
+					.section-map__networks
+						+iconfont('telegram-fly', 'icon')
+						+iconfont('whats-app', 'icon')
+						+iconfont('vk-brand', 'icon')
+					.section-map__text
+						span.t-text-20 Мы в соц. сетях
+						span.t-text-13 Пишите нам
+				.section-map__item
+					.section-map__image
+						img(src="img/icons/icon-05.png" alt="Иконка")
+					.section-map__text
+						span.t-text-20 Не нашли букет?
+						span.t-text-13 Мы вам поможем
+			.section-map__column
+				.section-map__image-map
+					img.draggable-img(src="img/map.png" alt="Карта проезда")
+

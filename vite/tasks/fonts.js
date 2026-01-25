@@ -6,14 +6,17 @@ import ttf2woff2 from 'ttf2woff2';
 export function fonts(fontsDir) {
   if (!fs.existsSync(fontsDir)) return;
 
-  const items = fs.readdirSync(fontsDir).filter((f) => f.endsWith('.ttf'));
+  const items = fs
+    .readdirSync(fontsDir)
+    .filter((f) => f.endsWith('.ttf') || f.endsWith('.otf'));
 
   items.forEach((item) => {
-    const ttfPath = path.join(fontsDir, item);
-    const baseName = path.basename(item, '.ttf');
+    const fontPath = path.join(fontsDir, item);
+    const ext = path.extname(item); // Получаем расширение (.ttf или .otf)
+    const baseName = path.basename(item, ext); // Удаляем ВСЁ расширение
 
     // WOFF
-    const ttfData = fs.readFileSync(ttfPath);
+    const ttfData = fs.readFileSync(fontPath);
     const woffData = Buffer.from(ttf2woff(ttfData).buffer);
     fs.writeFileSync(path.join(fontsDir, `${baseName}.woff`), woffData);
 

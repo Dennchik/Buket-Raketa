@@ -30,18 +30,93 @@
   letter-spacing: 0;
 }
 
-.icon-check {
+.icon-rub {
   &::before {
-    content: $icon-check;
+    content: $icon-rub;
   }
 }
-.icon-check-box {
+.icon-trash {
   &::before {
-    content: $icon-check-box;
+    content: $icon-trash;
   }
 }
-.icon-pencil-alt {
+.icon-user-profile {
   &::before {
-    content: $icon-pencil-alt;
+    content: $icon-user-profile;
+  }
+}
+.icon-search {
+  &::before {
+    content: $icon-search;
+  }
+}
+.icon-local_grocery_store {
+  &::before {
+    content: $icon-local_grocery_store;
+  }
+}
+.icon-minus {
+  &::before {
+    content: $icon-minus;
+  }
+}
+.icon-plus {
+  &::before {
+    content: $icon-plus;
+  }
+}
+.icon-whats-app {
+  &::before {
+    content: $icon-whats-app;
+  }
+}
+.icon-vk-brand {
+  &::before {
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &::before {
+    content: $icon-telegram-fly;
+  }
+}
+.icon-cart {
+  &::before {
+    content: $icon-cart;
+  }
+}
+.icon-phone-call {
+  &::before {
+    content: $icon-phone-call;
+  }
+}
+.icon-angle-down {
+  &::before {
+    content: $icon-angle-down;
+  }
+}
+.icon-vk-draw {
+  &::before {
+    content: $icon-vk-draw;
+  }
+}
+.icon-telegram-draw {
+  &::before {
+    content: $icon-telegram-draw;
+  }
+}
+.icon-whatsapp-draw {
+  &::before {
+    content: $icon-whatsapp-draw;
+  }
+}
+.icon-location {
+  &::before {
+    content: $icon-location;
+  }
+}
+.icon-arrow-right {
+  &::before {
+    content: $icon-arrow-right;
   }
 }

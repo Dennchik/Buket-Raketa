@@ -1,28 +1,27 @@
 //* - [Variables] -
 $minWidth: 320px;
-$maxWidth: 1920px;
-$maxWidthContainer: 1920px;
+$maxWidth: 1440px;
+$maxWidthContainer: 1440px;
 $headerHeight: 4rem;
 $footerHeight: 4rem;
-$sidebarWidth: 4rem;
-$titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
 
 //* - [Font Variables] -
 $font-path: '../fonts';
-$font-family-default: 'Roboto', sans-serif;
-$font-family-title: 'PsyType', sans-serif;
+$font-family-default: 'VeranoSans', sans-serif;
+$font-family-title: 'SteticaMedium', sans-serif;
+$font-family-secondary: 'SteticaRegular';
 $font-weight-default: 400;
 $font-size: 1.6rem;
-//* - [Font color] -
 
+//* - [Font color] -
 $font-color-title: hsl(220deg 35% 35%);
 $font-color-secondary: rgb(250 250 255);
+
 //* - [Background Color] -
 $background: rgb(255 255 255);
-
-$color: #243444;
-$color-secondary: #fff;
+$color: rgb(236 104 29 / 100%);
+$color-secondary: rgb(31 30 29 / 100%);
 $border-color: rgb(94 77 168);
 
 //* - [Shadow] -
@@ -37,7 +36,6 @@ $text-color-selection: rgb(155 153 153);
 $border-button-color: rgb(131 169 224);
 
 :root {
-  // --astorRender: url('../img/pictures/i.png');
   --width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
   //* -
   --font-color-default: rgb(0 0 0);

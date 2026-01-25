@@ -7,31 +7,20 @@ block title
 	- var text='Home'
 
 block main-content
-	//- section.main-content__section#home
-	//- 	include @/pug/sections/section-perform
-	//- section.main-content__section#credence 
-	//- 	include @/pug/sections/section-credence 
-	//- section.main-content__section#about
-	//- 	include @/pug/sections/section-about
-	//- section.main-content__section#services
-	//- 	include @/pug/sections/section-services
-	//- section.main-content__section
-	//- 	include @/pug/sections/section-relations
-	//- section.main-content__section 
-	//- 	include @/pug/sections/section-cooperation
-	//- section.main-content__section 
-	//- 	include @/pug/sections/section-survey 
-	//- section.main-content__section.its-block
-	//- 	//- include @/pug/sections/section-ordercall 
-	//- section.main-content__section
-	//- 	include @/pug/sections/section-info
-	//- section.main-content__section.its-block._bg-color
-	//- 	include @/pug/sections/section-cost
-	//- section.main-content__section 
-	//- 	include @/pug/sections/section-brands
-	//- section.main-content__section.its-block._bg-color#order
-	//- 	include @/pug/sections/section-order
-	//- section.main-content__section 
-		include @/pug/sections/section-map
+	section.main-content__section#home 
+		.main-content__background-img
+			img(src="/img/pic/bg-img-01.png" alt="image") 
+			img(src="/img/pic/bg-img-02.png" alt="image") 
+		include @/pug/sections/section-perform
+		section.main-content__section#invitation
+			include @/pug/sections/section-invitation
+		section.main-content__section#products
+			include @/pug/sections/section-products
+		section.main-content__section#bonuses
+			include @/pug/sections/section-bonuses 
+		section.main-content__section#info
+			include @/pug/sections/section-info
+		section.main-content__section#map
+			include @/pug/sections/section-map 
 
 

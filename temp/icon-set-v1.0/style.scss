@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l1w5t');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vq70q7#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l1w5t#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vq70q7')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1l1w5t')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vq70q7')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1l1w5t')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vq70q7##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1l1w5t##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -43,18 +43,93 @@
   letter-spacing: 0;
 }
 
-.icon-check {
+.icon-rub {
   &::before {
-    content: $icon-check;
+    content: $icon-rub;
   }
 }
-.icon-check-box {
+.icon-whats-app {
   &::before {
-    content: $icon-check-box;
+    content: $icon-whats-app;
   }
 }
-.icon-pencil-alt {
+.icon-vk-brand {
   &::before {
-    content: $icon-pencil-alt;
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &::before {
+    content: $icon-telegram-fly;
+  }
+}
+.icon-cart {
+  &::before {
+    content: $icon-cart;
+  }
+}
+.icon-phone-call {
+  &::before {
+    content: $icon-phone-call;
+  }
+}
+.icon-angle-down {
+  &::before {
+    content: $icon-angle-down;
+  }
+}
+.icon-vk-draw {
+  &::before {
+    content: $icon-vk-draw;
+  }
+}
+.icon-telegram-draw {
+  &::before {
+    content: $icon-telegram-draw;
+  }
+}
+.icon-whatsapp-draw {
+  &::before {
+    content: $icon-whatsapp-draw;
+  }
+}
+.icon-trash {
+  &::before {
+    content: $icon-trash;
+  }
+}
+.icon-user-profile {
+  &::before {
+    content: $icon-user-profile;
+  }
+}
+.icon-search {
+  &::before {
+    content: $icon-search;
+  }
+}
+.icon-local_grocery_store {
+  &::before {
+    content: $icon-local_grocery_store;
+  }
+}
+.icon-minus {
+  &::before {
+    content: $icon-minus;
+  }
+}
+.icon-plus {
+  &::before {
+    content: $icon-plus;
+  }
+}
+.icon-location {
+  &::before {
+    content: $icon-location;
+  }
+}
+.icon-arrow-right {
+  &::before {
+    content: $icon-arrow-right;
   }
 }
