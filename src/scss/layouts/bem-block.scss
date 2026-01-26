@@ -247,7 +247,9 @@
   line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(22px + (50 - 22) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      22px + (50 - 22) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -274,7 +276,9 @@
   letter-spacing: 0;
 
   @include minmax-490-1920 {
-    font-size: calc(10px + (16 - 10) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      10px + (16 - 10) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -287,7 +291,9 @@
   line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(12px + (16 - 12) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      12px + (16 - 12) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -301,7 +307,9 @@
   letter-spacing: 0;
 
   @include minmax-490-1920 {
-    font-size: calc(12px + (19 - 14) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      12px + (19 - 14) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -314,7 +322,9 @@
   line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(15px + (19 - 15) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      15px + (19 - 15) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -327,7 +337,9 @@
   line-height: 110%;
 
   @include minmax-490-1920 {
-    font-size: calc(16px + (24 - 16) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      16px + (24 - 16) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {
@@ -339,7 +351,9 @@
   font-size: 45px;
 
   @include minmax-490-1920 {
-    font-size: calc(24px + (45 - 24) * ((100vw - 490px) / (1920 - 490)));
+    font-size: calc(
+      24px + (45 - 24) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
   }
 
   @include screen-490 {

@@ -366,3 +366,69 @@ export function dragAndDrop() {
     }, 3000);
   }
 }
+
+//* - [ управление side-bar элементами ] -
+export function sideBarLoyuts() {
+  const menuList = document.querySelector('.menu-list');
+  const burgerButtons = document.querySelectorAll('.burger-button');
+  const listContent = document.querySelector('.page__menu-list');
+  const buttons = document.querySelectorAll('.hamburger');
+  const anchorLinks = menuList.querySelectorAll('.anchor-link');
+
+  anchorLinks.forEach((anchorLink) => {
+    anchorLink.addEventListener('click', () => {
+      document.body.classList.toggle('no-scroll');
+      if (menuList.classList.contains('_open-list')) {
+        menuList.classList.remove('_open-list');
+        listContent.style.backgroundColor = 'transparent';
+      }
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.toggle('is-active');
+      }
+    });
+  });
+
+  burgerButtons.forEach((burgerButton) => {
+    burgerButton.addEventListener('click', () => {
+      const backgroundColorTransparent = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue('--background-transparent');
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.toggle('is-active');
+      }
+      // burgerButton.firstChild.classList.toggle('is-active');
+      menuList.classList.toggle('_open-list');
+      document.body.classList.toggle('no-scroll');
+      if (menuList.classList.contains('_open-list')) {
+        // listContent.style.pointerEvents = 'all';
+        listContent.style.backgroundColor = backgroundColorTransparent;
+        document.body.classList.add('no-scroll');
+      } else {
+        document.body.classList.remove('no-scroll');
+        listContent.style.backgroundColor = 'transparent';
+        // listContent.style.pointerEvents = 'none';
+      }
+    });
+  });
+}
+//* - [ Button Search  ] -
+export function buttonSearch() {
+  const headerContainer = document.querySelector('.header-container');
+  // const sectionTop = document.querySelector('.section-top');
+  const searchButton = document.querySelector('.search-button');
+
+  // if (!searchButton) return;
+  searchButton.addEventListener('click', () => {
+    headerContainer.classList.toggle('_active');
+    if (sectionTop) {
+      if (headerContainer.classList.contains('_active')) {
+        // sectionTop.style.paddingTop = '50px';
+        sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
+      } else {
+        // sectionTop.style.paddingTop = '0';
+        sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
+      }
+    }
+  });
+}

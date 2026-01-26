@@ -249,7 +249,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-h2 {
-    font-size: calc(22px + 28 * (100vw - 490px) / 1430);
+    font-size: calc(22px + 28 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -279,7 +279,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-15 {
-    font-size: calc(10px + 6 * (100vw - 490px) / 1430);
+    font-size: calc(10px + 6 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -294,7 +294,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-16 {
-    font-size: calc(12px + 4 * (100vw - 490px) / 1430);
+    font-size: calc(12px + 4 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -310,7 +310,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-19 {
-    font-size: calc(12px + 5 * (100vw - 490px) / 1430);
+    font-size: calc(12px + 5 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -325,7 +325,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-20 {
-    font-size: calc(15px + 4 * (100vw - 490px) / 1430);
+    font-size: calc(15px + 4 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -340,7 +340,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-24 {
-    font-size: calc(16px + 8 * (100vw - 490px) / 1430);
+    font-size: calc(16px + 8 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -354,7 +354,7 @@
 }
 @media (width >= 490.98px) and (width <= 1920px) {
   .t-text-45 {
-    font-size: calc(24px + 21 * (100vw - 490px) / 1430);
+    font-size: calc(24px + 21 * (100vw - 490px) / 1430) !important;
   }
 }
 @media screen and (width <= 490px) {
@@ -1923,7 +1923,6 @@ h6 {
 .section-perform__text {
   display: block;
   margin-bottom: 3.6rem;
-  font-size: 24px;
   font-weight: 500;
   font-style: normal;
   line-height: 130%;
@@ -2142,21 +2141,6 @@ h6 {
     padding-block: 3rem !important;
   }
 }
-.section-bonuses__content {
-  display: grid;
-  grid-template-columns: 1fr 25%;
-  gap: 10px;
-}
-@media screen and (width <= 1024px) {
-  .section-bonuses__content {
-    grid-template-columns: 1fr 45%;
-  }
-}
-@media screen and (width <= 690px) {
-  .section-bonuses__content {
-    grid-template-columns: 1fr;
-  }
-}
 .section-bonuses__column:nth-child(1) {
   display: flex;
   gap: 80px;
@@ -2175,13 +2159,6 @@ h6 {
   .section-bonuses__column:nth-child(1) {
     flex-direction: column !important;
   }
-}
-.section-bonuses__column:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 40px;
-  background: rgb(236, 104, 29);
 }
 .section-bonuses__info {
   display: flex;
@@ -2230,6 +2207,7 @@ h6 {
 }
 
 .card {
+  display: none !important;
   height: 100%;
   padding: 2rem;
   transition: background 0.3s ease 0s;

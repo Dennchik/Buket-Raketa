@@ -14,17 +14,19 @@
 
   // .section-bonuses __content
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 25%;
-    gap: 10px;
+    // display: grid;
+    // grid-template-columns: 1fr 25%;
+    // gap: 10px;
 
-    @include screen-1024 {
-      grid-template-columns: 1fr 45%;
-    }
+    // @include screen-1024 {
+    //   grid-template-columns: 1fr 45%;
+    // }
 
-    @include screen-690 {
-      grid-template-columns: 1fr;
-    }
+    // @include screen-690 {
+    //   grid-template-columns: 1fr;
+    // }
+
+    //todo Временные св-ва
   }
 
   // .section-bonuses __column
@@ -49,15 +51,16 @@
       }
     }
 
-    &:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    //todo Временно отключен
+    // &:nth-child(2) {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 10px;
 
-      border-radius: 40px;
+    //   border-radius: 40px;
 
-      background: rgb(236 104 29 / 100%);
-    }
+    //   background: rgb(236 104 29 / 100%);
+    // }
   }
 
   // .section-bonuses __info
@@ -118,6 +121,8 @@
 }
 
 .card {
+  //todo Временно отключен
+  display: none !important;
   height: 100%;
   padding: 2rem;
   transition: background 0.3s ease 0s;
