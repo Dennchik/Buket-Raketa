@@ -1896,10 +1896,10 @@ h6 {
   object-fit: cover;
 }
 .section-perform__title {
+  max-width: 52.5rem;
   margin-bottom: 12px;
   line-height: 110%;
-  letter-spacing: 1.4px;
-  letter-spacing: -3%;
+  letter-spacing: -2px;
 }
 .section-perform__title span {
   display: block;
@@ -1913,16 +1913,19 @@ h6 {
   .section-perform__title {
     text-align: center;
   }
-  .section-perform__title span {
-    display: inline-block;
-  }
   .section-perform__title span:not(:last-child) {
     margin-right: 1rem;
   }
 }
+.section-perform__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .section-perform__text {
   display: block;
-  margin-bottom: 3.6rem;
+  margin-bottom: 16px;
+  font-size: clamp(16px, 1.8vw, 24px);
   font-weight: 500;
   font-style: normal;
   line-height: 130%;
@@ -1974,13 +1977,13 @@ h6 {
   justify-content: space-between;
 }
 .section-perform__footer-text {
-  font-size: 18.76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: clamp(14px, 2.4vw, 18px);
   font-weight: 600;
-  font-style: semibold;
-  line-height: 110%;
   color: rgb(31, 30, 29);
   text-align: left;
-  letter-spacing: 0%;
 }
 
 .section-invitation__body {
