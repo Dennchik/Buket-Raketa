@@ -8,7 +8,7 @@
       a(href="#home" aria-label="home").header__logo
         +picture('/img/icons/logo.png', 'image')  
     .header__column 
-      .header__menu(data-da="bp-7" data-da-position="0" data-da-resolution="960") 
+      .header__menu 
         ul.header__menu-items 
           li.header__item 
             .header__ct-button
@@ -17,13 +17,13 @@
                 span.ct-button__item
                 span.ct-button__item
                 span.ct-button__item
-            a(href="#about").header__link-key.anchor-link.link_underline-lr 
+            a(href="").header__link-key.anchor-link.link_underline-lr 
               span Каталог 
           li.header__item
-            .header__link-key.link_underline-lr
+            a(href="").header__link-key.link_underline-lr
               span Доставка
           li.header__item
-            .header__link-key.link_underline-lr
+            a(href="").header__link-key.link_underline-lr
               span О нас
           li.header__item
             a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
@@ -31,7 +31,7 @@
           li.header__item
             .header__icon-flower
               img(src="/img/icons/group.svg" alt="") 
-            a(href="#contacts").header__link-key.anchor-link.link_underline-lr 
+            a(href="").header__link-key.anchor-link.link_underline-lr 
               span Система лояльности
     .header__column
       .header__search-button.search-button

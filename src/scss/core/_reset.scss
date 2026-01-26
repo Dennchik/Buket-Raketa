@@ -34,9 +34,8 @@ body {
 
   background: rgb(247 243 240 / 100%);
 
-  // background: $background;
-
   &.no-scroll {
+    pointer-events: none;
     overflow: hidden;
   }
 
@@ -81,7 +80,6 @@ a {
 a:hover {
   text-decoration: none;
   vertical-align: baseline;
-  background-color: transparent;
 }
 
 a:focus {

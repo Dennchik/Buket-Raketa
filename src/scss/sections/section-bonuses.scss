@@ -120,6 +120,10 @@
 .card {
   height: 100%;
   padding: 2rem;
+  transition: background 0.3s ease 0s;
+  &:hover {
+    background: rgb(242 113 39 / 34.2%);
+  }
 
   // .card__row
   &__row {
@@ -206,12 +210,14 @@
     transition: transform 0.3s ease 0s;
 
     .icon {
+      transform: rotate(-45deg);
       padding: 1rem;
       color: rgb(255 255 255);
       transition: transform 0.3s ease 0s;
     }
 
     &:hover {
+      transform: scale(0.95);
       .icon {
         transform: rotate(-45deg);
       }
@@ -336,10 +342,6 @@
     background: #f0f0f0;
 
     transition: background 0.3s;
-  }
-
-  &:hover {
-    background: rgb(242 113 39 / 34.2%);
   }
 
   // .card__preview-remove

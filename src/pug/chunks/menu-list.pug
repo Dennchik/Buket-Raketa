@@ -1,0 +1,32 @@
+.menu-list
+	.menu-list__body
+		.menu-list__header 
+			a(href="#home" aria-label="home").menu-list__logo
+				+picture('/img/icons/logo.png', 'image')  
+			include ../assets/burger-button 
+		.menu-list__content 
+			.menu-list__list.bp-7
+				.menu-list__list-item
+					a(href="").menu-list__link 
+						span Каталог
+				.menu-list__list-item
+					a(href="").menu-list__link 
+						span Доставка
+				.menu-list__list-item 
+					a(href="").menu-list__link 
+						span О нас
+				.menu-list__list-item
+					a(href="#contacts").menu-list__link.anchor-link
+						span Контакты
+				.menu-list__list-item
+					a(href="" target="_blank").menu-list__link 
+						span Система лояльности 
+				.menu-list__list-item 
+			.menu-list__footer 
+				.section-map__networks
+					+iconfont('telegram-fly', 'icon')
+					+iconfont('whats-app', 'icon')
+					+iconfont('vk-brand', 'icon')
+				.section-map__text
+					span.t-text-20 Мы в соц. сетях
+					span.t-text-13 Пишите нам

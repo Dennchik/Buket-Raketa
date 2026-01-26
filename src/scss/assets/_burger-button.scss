@@ -1,32 +1,29 @@
 @use '../core/variables' as *;
-@use '../core/mixins' as *;
 
-.burger-button {
+.hamburger {
   cursor: pointer;
-  transition: opacity 0.5s ease-in;
-
-  // .burger-button__line
+  // .hamburger__line
   &__line {
     display: block;
 
     width: 20px;
     height: 2px;
-    margin: 6px auto;
+    margin: 4px auto;
 
-    background-color: #000;
+    background-color: $color-secondary;
 
     transition: all 0.3s ease-in-out;
   }
 
   &.is-active {
-    .burger-button__line {
+    .hamburger__line {
       background-color: $color-secondary;
       &:nth-child(1) {
-        transform: translateY(8px);
+        transform: translateY(6px);
       }
 
       &:nth-child(3) {
-        transform: translateY(-8px);
+        transform: translateY(-6px);
       }
     }
   }

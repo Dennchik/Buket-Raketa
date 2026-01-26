@@ -12,15 +12,16 @@
 @use 'core/variables' as *;
 @use 'core/mixins' as *;
 @use 'core/extend' as *;
-
 // todo --------------------------- Modules ------------------------------------
 // @use 'modules/burger-button.scss';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/sidebar-menu';
+@use 'assets/pl-preloader.scss';
 // @use 'assets/select';
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/form-search.scss';
+@use 'chunks/menu-list.scss';
 // todo --------------------------- Plugins ------------------------------------
 // @use 'assets/swiper-11.2.5';
 // todo ---------------------------- Pages -------------------------------------

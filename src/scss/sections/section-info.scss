@@ -122,19 +122,27 @@
 
     max-width: 214px;
 
-    transition: transform 0.3s ease 0s;
+    transition:
+      filter 0.3s,
+      transform 0.3s ease 0s;
 
     .icon {
+      transform: rotate(-45deg);
       padding: 0.5rem;
-      transition: transform 0.3s ease 0s;
+      font-size: 14px;
+      color: $color;
     }
 
     &.accent {
       background: rgb(255 255 255);
+      filter: drop-shadow(0 0 10px #e6e6e6cb);
+
       span {
         color: rgb(89 86 83 / 100%);
       }
+
       .icon {
+        transform: rotate(-45deg);
         color: #fff;
       }
 
@@ -144,9 +152,8 @@
     }
 
     &:hover {
-      .icon {
-        transform: rotate(-45deg);
-      }
+      transform: scale(0.95);
+      filter: drop-shadow(0 0 10px #c9c9c993);
     }
 
     span {
