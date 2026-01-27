@@ -142,18 +142,15 @@
 
     height: 100%;
 
-    line-height: 120%;
-
-    span {
-      line-height: 120%;
-    }
+    letter-spacing: -0.01px;
   }
 
   // .footer__offers-link
   &__offers-link {
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: -1%;
+    line-height: 110%;
+    letter-spacing: -0.01px;
     white-space: nowrap;
 
     @include screen-620 {
@@ -192,7 +189,7 @@
   &__navigation-link {
     font-weight: 300;
     line-height: 110%;
-    letter-spacing: -0.5%;
+    letter-spacing: -0.01px;
     white-space: nowrap;
   }
 

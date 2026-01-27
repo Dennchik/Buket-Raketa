@@ -71,11 +71,7 @@
     flex-flow: column wrap;
     align-self: center;
 
-    padding-left: 100px;
-
-    @include minmax-768-1920 {
-      padding-left: calc(30px + (120 - 30) * ((100vw - 768px) / (1920 - 768)));
-    }
+    padding-left: clamp(2.4rem, 5vw, 12rem);
 
     @include screen-490 {
       max-width: 200px;
@@ -86,7 +82,8 @@
 
   // .section-bonuses __title
   &__title {
-    max-width: 270px;
+    // max-width: 270px;
+    max-width: clamp(200px, 20vw, 27rem);
     margin-bottom: 3rem;
 
     font-weight: 500;
@@ -110,7 +107,7 @@
 
   // .section-bonuses __text
   &__text {
-    max-width: 290px;
+    max-width: clamp(200px, 20vw, 27rem);
     max-height: 88px;
 
     font-weight: 400;

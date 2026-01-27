@@ -229,13 +229,15 @@
 }
 
 .t-h1 {
-  font-size: clamp(34px, 5vw, 60px);
+  font-size: clamp(30px, 5vw, 60px);
   line-height: 110%;
   letter-spacing: -0.5px;
 }
 
 .t-h2 {
-  font-size: clamp(30px, 5vw, 50px);
+  font-size: clamp(25px, 5vw, 5rem);
+  line-height: 110%;
+  letter-spacing: -0.5px;
 }
 
 .t-h3 {
@@ -727,15 +729,13 @@
   gap: 1rem;
   justify-content: space-between;
   height: 100%;
-  line-height: 120%;
-}
-.footer__links span {
-  line-height: 120%;
+  letter-spacing: -0.01px;
 }
 .footer__offers-link {
   font-size: 14px;
   font-weight: 300;
-  letter-spacing: -1%;
+  line-height: 110%;
+  letter-spacing: -0.01px;
   white-space: nowrap;
 }
 @media screen and (width <= 620px) {
@@ -766,7 +766,7 @@
 .footer__navigation-link {
   font-weight: 300;
   line-height: 110%;
-  letter-spacing: -0.5%;
+  letter-spacing: -0.01px;
   white-space: nowrap;
 }
 .footer__navigation-catalog {
@@ -1894,7 +1894,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: clamp(14px, 2.4vw, 18px);
+  font-size: clamp(10px, 2.4vw, 18px);
   font-weight: 600;
   color: rgb(31, 30, 29);
   text-align: left;
@@ -2083,12 +2083,7 @@ h6 {
   flex: 0 1 50%;
   flex-flow: column wrap;
   align-self: center;
-  padding-left: 100px;
-}
-@media (width >= 768.98px) and (width <= 1920px) {
-  .section-bonuses__info {
-    padding-left: calc(30px + 90 * (100vw - 768px) / 1152);
-  }
+  padding-left: clamp(2.4rem, 5vw, 12rem);
 }
 @media screen and (width <= 490px) {
   .section-bonuses__info {
@@ -2098,7 +2093,7 @@ h6 {
   }
 }
 .section-bonuses__title {
-  max-width: 270px;
+  max-width: clamp(200px, 20vw, 27rem);
   margin-bottom: 3rem;
   font-weight: 500;
   line-height: 110%;
@@ -2116,7 +2111,7 @@ h6 {
   text-align: right;
 }
 .section-bonuses__text {
-  max-width: 290px;
+  max-width: clamp(200px, 20vw, 27rem);
   max-height: 88px;
   font-weight: 400;
   line-height: 110%;
@@ -2695,8 +2690,6 @@ h6 {
 .info-content__title {
   margin-bottom: 2.4rem;
   font-weight: 500;
-  line-height: 110%;
-  letter-spacing: -3%;
 }
 .info-content__title span {
   display: block;
