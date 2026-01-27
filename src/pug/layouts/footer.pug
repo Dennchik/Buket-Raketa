@@ -70,9 +70,10 @@
 							span.t-text-13 Смотреть все адреса  
 					.contacts__item.contacts__item--networks
 						.contacts__networks
-							+iconfont('telegram-fly', 'icon')
-							+iconfont('whats-app', 'icon')
-							+iconfont('vk-brand', 'icon')
+							a(href="https://t.me/" target="_blank" data-letters="Телеграм")
+								+iconfont('telegram-fly', 'icon') 
+							a(href="https://vk.com/" target="_blank" data-letters="В контакте")
+								+iconfont('vk-brand', 'icon')
 						.contacts__text
 							span.t-text-20 Мы в соц. сетях
 							span.t-text-13 Пишите нам 

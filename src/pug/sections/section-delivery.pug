@@ -1,0 +1,44 @@
+.section-delivery
+  .section-delivery__body 
+    .section-delivery__bread-crumbs 
+      nav.bread-crumbs 
+        ul.bread-crumbs__list 
+          li 
+            a.bread-crumbs__link.link_underline-lr(href=getWebRoot(filename) + "index.html" aria-label="home") 
+              span Главная 
+          li -
+          li 
+            span.bread-crumbs__item Доставка 
+    .section-delivery__title.t-h1 Доставка
+    .section-delivery__content
+      .section-delivery__column 
+        .delivery-card
+          .delivery-card__body
+            .delivery-card__column 
+              .delivery-card__content
+                .delivery-card__title.t-text-20 Самовывоз 
+                .delivery-card__text.t-text-16 Можно забрать самостоятельно
+            .delivery-card__column 
+              .delivery-card__image 
+                +picture('../img/delivey/delv-01.png', 'image') 
+      .section-delivery__column 
+        .delivery-card
+          .delivery-card__body
+            .delivery-card__column 
+              .delivery-card__content
+                .delivery-card__title.t-text-20 По городу 
+                .delivery-card__text.t-text-16 350 рублей фиксированная стоимость
+            .delivery-card__column 
+              .delivery-card__image 
+                +picture('../img/delivey/delv-02.png', 'image') 
+      .section-delivery__column 
+        .delivery-card
+          .delivery-card__body
+            .delivery-card__column 
+              .delivery-card__content
+                .delivery-card__title.t-text-20 За пределы города 
+                .delivery-card__text.t-text-16 Рассчитывается индивидуально, либо по тарифам Яндекс.Доставки
+            .delivery-card__column 
+              .delivery-card__image 
+                +picture('../img/delivey/delv-03.png', 'image') 
+

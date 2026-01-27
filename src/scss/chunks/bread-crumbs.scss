@@ -1,0 +1,45 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.bread-crumbs {
+  position: relative;
+  z-index: 9;
+  left: 0;
+
+  // .bread-crumbs__list
+  &__list {
+    display: flex;
+    padding: 1rem 0;
+    font-weight: 600;
+
+    li,
+    a {
+      color: rgb(153 150 147 / 100%);
+    }
+
+    li {
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      span {
+        user-select: none;
+      }
+    }
+
+    li:nth-child(even) {
+      margin: 0 1.2rem;
+    }
+  }
+
+  // .bread-crumbs__link
+  &__link {
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  // .bread-crumbs__item
+  &__item {
+    position: relative;
+    line-height: 100%;
+  }
+}

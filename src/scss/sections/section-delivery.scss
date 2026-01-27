@@ -1,0 +1,113 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-delivery {
+  // .section-delivery__body
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 13rem 0 5rem;
+
+    @include screen-490 {
+      padding: 13rem 0 3rem;
+    }
+  }
+
+  // .section-delivery__bread-crumbs
+  &__bread-crumbs {
+    margin-bottom: 2rem;
+  }
+
+  // .section-delivery__title
+  &__title {
+    margin-bottom: 3rem;
+
+    font-family: $font-color-title;
+    font-weight: 500;
+    color: rgb(31 30 29 / 100%);
+    text-align: left;
+    letter-spacing: -1px;
+  }
+
+  // .section-delivery__content
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: space-between;
+
+    height: 100%;
+
+    @include screen-960 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-620 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .section-delivery__column
+  &__column {
+    border-radius: 30px;
+    background: rgb(255 255 255 / 100%);
+  }
+}
+
+.delivery-card {
+  height: 100%;
+  // .delivery-card__body
+  &__body {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  // .delivery-card__column
+  &__column {
+    flex: 1 1 auto;
+    height: 100%;
+  }
+
+  // .delivery-card__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+
+    height: 100%;
+    padding: 3rem 1rem 3rem 3rem;
+  }
+
+  // .delivery-card__title
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-color-title;
+    font-weight: 500;
+    color: rgb(31 30 29 / 100%);
+  }
+
+  // .delivery-card__text
+  &__text {
+    font-family: $font-family-secondary;
+    font-weight: 550;
+    color: rgb(94 94 94);
+  }
+
+  // .delivery-card__image
+  &__image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    min-width: 150px;
+    min-height: 164px;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}

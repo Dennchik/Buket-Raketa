@@ -20,20 +20,23 @@
 @use 'assets/pl-preloader.scss';
 // @use 'assets/select';
 // todo --------------------------- Chunks -------------------------------------
-@use 'chunks/form-search.scss';
-@use 'chunks/menu-list.scss';
+@use 'chunks/form-search';
+@use 'chunks/menu-list';
+@use 'chunks/bread-crumbs';
 // todo --------------------------- Plugins ------------------------------------
 // @use 'assets/swiper-11.2.5';
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
 // todo -------------------------- Section -------------------------------------
-@use 'sections/section-perform.scss';
-@use 'sections/section-invitation.scss';
-@use 'sections/section-bonuses.scss';
+@use 'sections/section-perform';
+@use 'sections/section-invitation';
+@use 'sections/section-bonuses';
 
-@use 'sections/section-products.scss';
-@use 'sections/section-info.scss';
-@use 'sections/section-map.scss';
+@use 'sections/section-products';
+@use 'sections/section-info';
+@use 'sections/section-map';
+
+@use 'sections/section-delivery';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

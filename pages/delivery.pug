@@ -1,0 +1,13 @@
+extends @/pug/layouts/app_layout.pug
+
+append link 
+prepend script
+	script(defer type="module" src="/src/js/index.js")
+block title
+	- var text='Home'
+
+block main-content
+	section.main-content__section#home 
+		include @/pug/sections/section-delivery
+	section.main-content__section#map
+		include @/pug/sections/section-map 

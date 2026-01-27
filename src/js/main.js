@@ -10,7 +10,7 @@ import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 // import { select } from './assets/itsSelect.js';
 
 import {
-  dragAndDrop,
+  //todo Временно отключен - dragAndDrop,
 
   //todo Временно отключен - showButton,
   sideBarLoyuts,
@@ -26,10 +26,18 @@ loaded('.preloader');
 buttonSearch();
 sideBarLoyuts();
 dynamicAdaptive();
-showButton();
+// document.addEventListener('DOMContentLoaded', () => {
+//   const element = document.querySelector('.className');
+//   if (condition) {
+//   }
+// });
+//todo Временно отключен - showButton();
 
 // toggleModal();
 
 document.addEventListener('DOMContentLoaded', () => {
-  dragAndDrop();
+  //todo Временно отключен -  dragAndDrop();
+
+  const element = document.querySelector('.map-widget-layout-view__maps-links');
+  console.log(element);
 });
