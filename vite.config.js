@@ -1,7 +1,6 @@
 //! ✅ vite.config.js
 import { defineConfig } from 'vite';
 //* ✅ Path
-// import pugPlugin from 'vite-plugin-pug';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { paths } from './vite/config/path.js';
@@ -25,14 +24,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 //* ✅ конвертируем шрифты перед dev/build
 fonts(paths.fonts.src);
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ command }) => {
   const isProd = command === 'build';
   const isDev = command === 'dev';
+
   return {
     base: './',
 
     plugins: [
-      // pugPlugin(),
       fonts(),
       fontStyle(),
       convertImagesToWebp(app.webp),
@@ -86,7 +85,7 @@ export default defineConfig(({ command, mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'src/js/main.js'),
-          index: resolve(__dirname, 'src/js/index.js'),
+          app: resolve(__dirname, 'src/js/app.js'),
           // about: resolve(__dirname, 'src/js/about.js'),
           // catalog: resolve(__dirname, 'src/js/catalog.js'),
           // news: resolve(__dirname, 'src/js/news.js'),

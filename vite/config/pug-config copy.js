@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { getWebRoot } from '../utils/getWebRoot.js';
 //* ✅ data - данные
 import data from '../../src/data/data.json' with { type: 'json' };
-//* ✅ const
+//* ✅
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export function getPugConfig(isProd) {
@@ -13,12 +13,8 @@ export function getPugConfig(isProd) {
 
     locals: {
       linkTo: (slug, currentFilename = '') => {
-        // ⚠️ Разделяем slug и hash (#)
         let [pathSlug, hash = ''] = slug.split('#');
-        const cleanSlug = pathSlug
-          .replace(/^\.?\//, '')
-          .replace(/\.html$/i, '');
-        const anchor = hash ? `#${hash}` : '';
+        const cleanSlug = slug.replace(/^\.?\//, '').replace(/\.html$/i, '');
 
         if (isProd) {
           // ⚠️ Если filename пустой или не содержит путь - считаем это главной страницей
@@ -38,20 +34,20 @@ export function getPugConfig(isProd) {
             relativePath === 'index' ||
             relativePath.endsWith('/index')
           ) {
-            return `./${cleanSlug}.html${anchor}`;
+            return `./${cleanSlug}.html`;
           }
 
           // ⚠️ Страница в подкаталоге
           if (relativePath.includes('/')) {
-            return `../${cleanSlug}.html${anchor}`;
+            return `../${cleanSlug}.html`;
           }
 
           // Страница в корне pages/
-          return `./${cleanSlug}.html${anchor}`;
+          return `./${cleanSlug}.html`;
         }
 
         // ⚠️ Development
-        return `/${cleanSlug}/${anchor}`;
+        return `/${cleanSlug}/`;
       },
 
       getWebRoot: (filename) => getWebRoot(filename, isProd),
