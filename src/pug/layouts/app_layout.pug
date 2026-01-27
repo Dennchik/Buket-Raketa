@@ -29,7 +29,7 @@ html(lang="ru")
 					header.page__header
 						include @/pug/layouts/header
 				block page-content
-					main.page__main-content
+					main.page__main-content 
 						.main-content._container#wrapper 
 							.main-content__content#content
 								block main-content 
@@ -38,6 +38,6 @@ html(lang="ru")
 										include footer  
 					block menu-list
 						nav.page__menu-list
-							include @/pug/chunks/menu-list
+							include @/pug/chunks/sidebar-menu
 				block cookies
 					//- include @/pug/modules/cookies-accept 

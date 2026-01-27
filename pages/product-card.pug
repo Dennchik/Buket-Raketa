@@ -4,13 +4,11 @@ append link
 prepend script
 	script(defer type="module" src="/src/js/index.js")
 block title
-	- var text='Доставка'
+	- var text='Продукция'
 
 block main-content
 	section.main-content__section#home 
 		.main-content__background-img
 			img(src="/img/pic/bg-img-01.png" alt="image") 
 			img(src="/img/pic/bg-img-02.png" alt="image") 
-		include @/pug/sections/section-delivery
-	section.main-content__section#map
-		include @/pug/sections/section-map 
+		include @/pug/sections/section-product-card

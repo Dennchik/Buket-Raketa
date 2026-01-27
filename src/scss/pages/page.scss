@@ -1,55 +1,7 @@
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
 
-.scroll-container {
-  pointer-events: none;
-
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  background: #00ffea34;
-}
-
 .page {
-  // .page__form-request
-  &__form-questions,
-  &__form-request,
-  &__order-call {
-    pointer-events: none;
-
-    position: fixed;
-    z-index: 17;
-    top: 0;
-
-    overflow-x: hidden;
-    display: flex;
-
-    width: 100%;
-    height: 100vh;
-
-    opacity: 0;
-    background-color: #24344496;
-    backdrop-filter: blur(40px);
-
-    transition: opacity 0.3s ease-in-out;
-
-    &.is-open {
-      opacity: 1;
-      .form-question,
-      .form-request,
-      .order-call {
-        pointer-events: auto;
-        top: 0;
-        opacity: 1;
-      }
-    }
-  }
-
   // .page__menu-list
   &__menu-list {
     pointer-events: none;
@@ -81,14 +33,15 @@
     z-index: 8;
     inset: 0;
 
+    overflow: hidden;
+
     width: 100%;
     height: 100%;
   }
 }
 
 .main-content {
-  overflow: hidden;
-  visibility: visible;
+  position: relative;
 
   // .main-content__background
   &__background-img {
@@ -101,6 +54,7 @@
 
     img {
       position: relative;
+      max-width: none;
       &:nth-child(1) {
         top: 0;
         left: 0;

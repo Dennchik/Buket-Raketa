@@ -1,0 +1,109 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.section-catalog {
+  position: relative;
+  z-index: 99;
+  // .section-catalog__body
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 13rem 0 5rem;
+
+    @include screen-490 {
+      padding: 13rem 0 3rem;
+    }
+  }
+  // .section-catalog__bread-crumbs
+  &__bread-crumbs {
+    margin-bottom: 2rem;
+  }
+
+  // .section-catalog__title
+  &__title {
+    margin-bottom: 3rem;
+
+    font-family: $font-color-title;
+    font-weight: 500;
+    color: rgb(31 30 29 / 100%);
+    text-align: left;
+    letter-spacing: -1px;
+  }
+
+  // .section-catalog__select-filter
+  &__select-filter {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  //.section-catalog__col
+  &__col {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 110%;
+      color: rgb(153 150 147 / 100%);
+    }
+  }
+
+  //.section-catalog__del-btn
+  &__del-btn {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      transform: translateY(-2px) rotate(45deg);
+      font-size: 20px;
+      color: rgb(153 150 147 / 100%);
+    }
+  }
+
+  // .section-catalog__content-wrapper
+  &__content-wrapper {
+    //todo Дописать стили
+    display: flex;
+  }
+
+  //.section-catalog__colo-left
+  &__colo-left {
+    //todo Дописать стили
+    display: none;
+  }
+
+  //.section-catalog__colo-right
+  &__colo-right {
+    //todo Дописать стили
+    flex: 0 1 100%;
+  }
+
+  // .section-catalog__content
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+    @include screen-1440 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include screen-960 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include screen-768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-490 {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .section-catalog__column
+  &__column {
+  }
+}

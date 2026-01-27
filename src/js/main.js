@@ -1,7 +1,7 @@
 import '../scss/main.scss';
 
 import loaded from './assets/preloader.js';
-import { smoother } from './animations/animations.jsx';
+// import { smoother } from './animations/animations.jsx';
 // import { initFormValidation } from './assets/validate-form.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
@@ -20,7 +20,7 @@ import {
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 if (!isMobile) {
-  smoother();
+  // smoother();
 }
 loaded('.preloader');
 buttonSearch();
