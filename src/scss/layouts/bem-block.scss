@@ -234,18 +234,7 @@
 }
 
 .t-h2 {
-  font-size: 50px;
-  line-height: 110%;
-
-  @include minmax-490-1920 {
-    font-size: calc(
-      22px + (50 - 22) * ((100vw - 490px) / (1920 - 490))
-    ) !important;
-  }
-
-  @include screen-490 {
-    font-size: 22px !important;
-  }
+  font-size: clamp(30px, 5vw, 50px);
 }
 .t-h3 {
   font-size: 32px;
@@ -281,7 +270,7 @@
 }
 
 .t-text-20 {
-  font-size: clamp(15px, 1.8vw, 20px);
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 110%;
   letter-spacing: -0.5px;
 }

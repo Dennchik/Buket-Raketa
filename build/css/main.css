@@ -235,18 +235,7 @@
 }
 
 .t-h2 {
-  font-size: 50px;
-  line-height: 110%;
-}
-@media (width >= 490.98px) and (width <= 1920px) {
-  .t-h2 {
-    font-size: calc(22px + 28 * (100vw - 490px) / 1430) !important;
-  }
-}
-@media screen and (width <= 490px) {
-  .t-h2 {
-    font-size: 22px !important;
-  }
+  font-size: clamp(30px, 5vw, 50px);
 }
 
 .t-h3 {
@@ -283,7 +272,7 @@
 }
 
 .t-text-20 {
-  font-size: clamp(15px, 1.8vw, 20px);
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 110%;
   letter-spacing: -0.5px;
 }
@@ -2085,14 +2074,15 @@ h6 {
   border-radius: 40px;
   background: rgb(255, 255, 255);
 }
-@media (width >= 690.98px) and (width <= 1920px) {
+@media (width >= 490.98px) and (width <= 1920px) {
   .section-bonuses__column:nth-child(1) {
-    gap: calc(20px + 60 * (100vw - 690px) / 1230);
+    gap: calc(30px + 50 * (100vw - 490px) / 1430);
   }
 }
-@media screen and (width <= 1024px) {
+@media screen and (width <= 490px) {
   .section-bonuses__column:nth-child(1) {
     flex-direction: column !important;
+    gap: 16px;
   }
 }
 .section-bonuses__info {
@@ -2104,21 +2094,22 @@ h6 {
 }
 @media (width >= 768.98px) and (width <= 1920px) {
   .section-bonuses__info {
-    padding-left: calc(10px + 90 * (100vw - 768px) / 1152);
+    padding-left: calc(30px + 90 * (100vw - 768px) / 1152);
   }
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 490px) {
   .section-bonuses__info {
-    max-width: 300px;
-    padding-left: 10px;
+    max-width: 200px;
+    padding-left: 0;
+    padding-block: 4rem;
   }
 }
 .section-bonuses__title {
-  max-width: 300px;
+  max-width: 270px;
   margin-bottom: 3rem;
   font-weight: 500;
   line-height: 110%;
-  letter-spacing: -3%;
+  letter-spacing: -3px;
 }
 .section-bonuses__title span {
   display: block;
@@ -2137,6 +2128,11 @@ h6 {
   font-weight: 400;
   line-height: 110%;
   color: rgb(31, 30, 29);
+}
+@media screen and (width <= 490px) {
+  .section-bonuses__text {
+    max-width: 240px;
+  }
 }
 .section-bonuses__image {
   flex: 0 1 50%;
