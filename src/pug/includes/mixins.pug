@@ -1,4 +1,4 @@
-//-! Mxin Head-Links
+//-! Mixin Head-Links
 mixin style(href)
   link(rel="stylesheet" type="text/css" href=href)
 mixin icons(href)
@@ -8,7 +8,7 @@ mixin script(src)
 
 //-! Mixin link & attributes --------------------------
 mixin link(id, href, name)
-  a(class=id, href=href)&attributes(attributes) 
+  a(class=id, href=href)&attributes(attributes)
     span=name
     block
 //-! Mixin link ---------------------------------------
@@ -17,13 +17,36 @@ mixin btn-link(type, text, mod)
   a(class=mod + '' type=type)=text
   block
 
-//-! Mixin iconFont	
-mixin picture(src, alt)
+//-! mixins SVG.pug
+mixin imgSvg(src, alt, className = '', loading = 'lazy', width = false, height = false)
+  - var cleanSrc = src.replace(/^\.?\//, '')
+  - var basePath = getWebRoot(filename)
+  - var imgSrc = basePath + cleanSrc
+
+  if width && height
+    img(src=imgSrc alt=alt class=className loading=loading width=width height=height)
+  else
+    img(src=imgSrc alt=alt class=className loading=loading)
+
+
+
+
+
+//-! mixins/picture.pug
+mixin picture(src, alt, className = '', loading = 'lazy', width = false, height = false)
+  - var cleanSrc = src.replace(/^\.?\//, '')
+  - var basePath = getWebRoot(filename)
+  - var webpSrc = basePath + cleanSrc.replace(/\.[^\.]+$/, '.webp')
+  - var imgSrc = basePath + cleanSrc
+
   picture
-    - var webpSrc = src.replace(/\.[^\.]+$/, '.webp')
     source(srcset=webpSrc type='image/webp')
-    img(src=src alt=alt)
-//-! mixin iconFont		
+    if width && height
+      img(src=imgSrc alt=alt class=className loading=loading width=width height=height)
+    else
+      img(src=imgSrc alt=alt class=className loading=loading)
+
+//-! Mixin iconFont
 mixin iconfont(mod, classes)
   i(class='icon-' + mod + ' ' + classes)
     block
@@ -35,8 +58,8 @@ mixin list-item(list, link, alink, name)
 //-! Sprite SVG --------------------------------------
 mixin svg(name, bem, mod)
   - m = mod || ''
-    svg(class= name + ' '+ bem + ' '+ mod + ' ')
-      use(href=`img/sprites/sprite.svg#${name}`)
+  svg(class= name + ' '+ bem + ' '+ mod + ' ')
+    use(href=`img/sprites/sprite.svg#${name}`)
 
 //- initialization
 - var blocks = {}
@@ -48,7 +71,7 @@ mixin set(key)
 mixin layout
   block
   .page__main-content
-    if blocks.mainContent 
+    if blocks.mainContent
       - blocks.mainContent ()
     else
       //- Do nothing
@@ -60,4 +83,3 @@ mixin layout
       //- Do nothing
   +set('main')
   +set('side')
-

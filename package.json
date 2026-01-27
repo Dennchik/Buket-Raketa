@@ -6,8 +6,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "Preview": "vite preview",
-    "scss:build": "stylelint '**/*.{css,scss}' --fix"
+    "Preview": "vite preview"
   },
   "dependencies": {
     "animateplus": "^2.1.1",

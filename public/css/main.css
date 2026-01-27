@@ -1709,6 +1709,7 @@ h6 {
 }
 .main-content__footer {
   position: relative;
+  z-index: 99;
   overflow: hidden;
   padding-block: 5rem 2rem;
 }
@@ -1718,14 +1719,6 @@ h6 {
   }
 }
 
-@keyframes rain {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
 .section-perform {
   position: relative;
   z-index: 3;

@@ -82,22 +82,12 @@
 
   &__footer {
     position: relative;
+    z-index: 99;
     overflow: hidden;
     padding-block: 5rem 2rem;
 
     @include screen-490 {
       padding-block: 3rem 2rem;
     }
-  }
-}
-
-//* - [ @keyframes Animations ] -
-
-@keyframes rain {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
   }
 }
