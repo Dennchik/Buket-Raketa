@@ -13,7 +13,7 @@
 @use 'core/mixins' as *;
 @use 'core/extend' as *;
 // todo --------------------------- Modules ------------------------------------
-// @use 'modules/burger-button.scss';
+@use 'modules/modal-overlay';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/sidebar-menu';

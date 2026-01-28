@@ -42,6 +42,92 @@
     height: 40px;
   }
 }
+//* ✅ - [ Checkbox ] -
+.check-box__input:checked + .check-box__icon .icon-angle-down {
+  scale: 1;
+  opacity: 1;
+}
+
+.check-box {
+  position: relative;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  &._error {
+    .checkbox__label::before {
+      box-shadow: 0 0 14px 3px #f16666;
+    }
+  }
+
+  // .checkbox__input
+  &__input {
+    display: none;
+
+    &:checked + .checkbox__icon .icon-angle-down {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  // .checkbox__label
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &::before {
+      cursor: pointer;
+      content: '';
+
+      position: relative;
+      z-index: 9;
+
+      flex: 0 0 18px;
+      align-self: center;
+
+      width: 18px;
+      height: 18px;
+    }
+
+    .icon {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      width: 18px;
+      height: 18px;
+
+      &::before {
+        font-size: 30px;
+        color: rgb(162 157 153 / 100%);
+      }
+    }
+  }
+
+  // .checkbox__icon
+  &__icon {
+    .icon-angle-down {
+      scale: 0;
+      transition: scale 0.3s ease-in-out;
+    }
+  }
+
+  // .check-box__text
+  &__text {
+    a {
+      color: #414141;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 //* ----------------------------------------------------------------------------
 .return-button {
@@ -107,90 +193,6 @@
 }
 
 //* ----------------------------------------------------------------------------
-.checkbox {
-  // .checkbox__input
-  &__input {
-    display: none;
-
-    &:checked + .checkbox__checked ._icon {
-      scale: 1;
-    }
-  }
-
-  &__checked {
-    cursor: pointer;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    width: 16px;
-    height: 16px;
-
-    line-height: 130%;
-  }
-
-  // .checkbox__label
-  &__label {
-    cursor: pointer;
-
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-
-    max-width: 66.1rem;
-
-    font-size: 1.6rem;
-    line-height: 110%;
-
-    &::before {
-      content: '';
-
-      position: absolute;
-
-      flex: 0 0 16px;
-
-      width: 16px;
-      height: 16px;
-
-      background: $background;
-
-      transition: box-shadow 0.3s ease-in-out;
-    }
-
-    ._icon {
-      position: absolute;
-      transform: translateX(-1px);
-      scale: 0;
-
-      display: block;
-
-      width: 16px;
-      height: 16px;
-
-      color: $font-color-title;
-
-      transition: scale 0.2s ease;
-
-      &::before {
-        font-size: 18px;
-      }
-    }
-
-    a {
-      font-weight: 600;
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    @include screen-490 {
-      font-size: 12px;
-    }
-  }
-}
 
 ._clip-circle {
   @include min-960 {

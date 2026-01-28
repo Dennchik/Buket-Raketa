@@ -1,90 +1,4 @@
-export function showButton() {
-  const productsCarts = document.querySelectorAll('.products-cart');
-  let activeElement = null;
-
-  // Функция закрытия элемента
-  function closeElement(element) {
-    if (!element) return;
-    const image = element.querySelector('.products-cart__image');
-    const button = element.querySelector('.products-cart__button-by');
-    image.style.maxHeight = '295px';
-    button.style.marginTop = '-57px';
-    element.classList.remove('active'); // Удаляем класс
-    activeElement = null;
-  }
-
-  // Функция открытия элемента
-  function openElement(element) {
-    if (!element) return;
-    const image = element.querySelector('.products-cart__image');
-    const button = element.querySelector('.products-cart__button-by');
-    image.style.maxHeight = '235px';
-    button.style.marginTop = '0';
-    element.classList.add('active'); // Добавляем класс
-    activeElement = element;
-  }
-
-  // Закрытие при клике вне элементов
-  document.addEventListener('click', (event) => {
-    // Проверяем, был ли клик на исключенных элементах
-    const isExcludedElement =
-      event.target.closest('.products-cart__button-cart') ||
-      event.target.closest('.products-cart__button-by') ||
-      event.target.closest('.products-cart__link'); // Добавили ссылку
-
-    if (isExcludedElement) {
-      // Если кликнули на исключенные элементы - не закрываем
-      return;
-    }
-
-    let clickedOnCart = false;
-
-    productsCarts.forEach((cart) => {
-      if (cart.contains(event.target)) {
-        clickedOnCart = true;
-      }
-    });
-
-    if (!clickedOnCart && activeElement) {
-      closeElement(activeElement);
-    }
-  });
-
-  // Обработчики кликов по элементам
-  productsCarts.forEach((productsCart) => {
-    productsCart.addEventListener('click', (event) => {
-      // Проверяем, не кликнули ли на исключенные элементы
-      const isExcludedElement =
-        event.target.closest('.products-cart__button-cart') ||
-        event.target.closest('.products-cart__button-by') ||
-        event.target.closest('.products-cart__link'); // Добавили ссылку
-
-      if (isExcludedElement) {
-        // Если кликнули на исключенные элементы - не обрабатываем открытие/закрытие
-        // Эти элементы будут работать по своей логике
-        return;
-      }
-
-      event.stopPropagation();
-
-      // Если кликнули на уже активный элемент - закрываем
-      if (activeElement === productsCart) {
-        closeElement(productsCart);
-        return;
-      }
-
-      // Закрываем предыдущий активный элемент
-      if (activeElement) {
-        closeElement(activeElement);
-      }
-
-      // Открываем новый элемент
-      openElement(productsCart);
-    });
-  });
-}
-
-//* - [ реализация с drag-and-drop функционала ] -
+//* ✅ - [ реализация с drag-and-drop функционала ] -
 export function dragAndDrop() {
   const form = document.getElementById('bouquet-form');
   const uploadArea = document.getElementById('upload-area');
@@ -367,7 +281,7 @@ export function dragAndDrop() {
   }
 }
 
-//* - [ управление side-bar элементами ] -
+//* ✅ - [ управление side-bar элементами ] -
 export function sideBarLoyuts() {
   const menuList = document.querySelector('.menu-list');
   const burgerButtons = document.querySelectorAll('.burger-button');
@@ -431,4 +345,177 @@ export function buttonSearch() {
       }
     }
   });
+}
+
+//* ✅ - [ Управление оповещением cookies ] -
+export function cookiesAccept(el, trigger) {
+  const cookiesAccept = document.querySelector(el);
+  const button = document.querySelector(trigger);
+
+  if (!cookiesAccept) return;
+
+  if (button) {
+    cookiesAccept.style.transform = 'translateY(110%)';
+    button.addEventListener('click', () => {
+      cookiesAccept.style.transform = 'translateY(110%)';
+      cookiesAccept.style.transition = 'transform 0.5s ease';
+    });
+  } else {
+    console.log('кнопка не найдена');
+  }
+
+  setTimeout(() => {
+    cookiesAccept.style.transform = 'translateY(0)';
+    cookiesAccept.style.transition = 'transform 0.5s ease';
+  }, 3000);
+}
+
+//* ✅ - [ Показать кнопку в карточке товара ] -
+export function showButton() {
+  const productsCarts = document.querySelectorAll('.products-cart');
+  let activeElement = null;
+
+  // Функция закрытия элемента
+  function closeElement(element) {
+    if (!element) return;
+    const image = element.querySelector('.products-cart__image');
+    const button = element.querySelector('.products-cart__button-by');
+    image.style.maxHeight = '295px';
+    button.style.marginTop = '-57px';
+    element.classList.remove('active'); // Удаляем класс
+    activeElement = null;
+  }
+
+  // Функция открытия элемента
+  function openElement(element) {
+    if (!element) return;
+    const image = element.querySelector('.products-cart__image');
+    const button = element.querySelector('.products-cart__button-by');
+    image.style.maxHeight = '235px';
+    button.style.marginTop = '0';
+    element.classList.add('active'); // Добавляем класс
+    activeElement = element;
+  }
+
+  // Закрытие при клике вне элементов
+  document.addEventListener('click', (event) => {
+    // Проверяем, был ли клик на исключенных элементах
+    const isExcludedElement =
+      event.target.closest('.products-cart__button-cart') ||
+      event.target.closest('.products-cart__button-by') ||
+      event.target.closest('.products-cart__link'); // Добавили ссылку
+
+    if (isExcludedElement) {
+      // Если кликнули на исключенные элементы - не закрываем
+      return;
+    }
+
+    let clickedOnCart = false;
+
+    productsCarts.forEach((cart) => {
+      if (cart.contains(event.target)) {
+        clickedOnCart = true;
+      }
+    });
+
+    if (!clickedOnCart && activeElement) {
+      closeElement(activeElement);
+    }
+  });
+
+  // Обработчики кликов по элементам
+  productsCarts.forEach((productsCart) => {
+    productsCart.addEventListener('click', (event) => {
+      // Проверяем, не кликнули ли на исключенные элементы
+      const isExcludedElement =
+        event.target.closest('.products-cart__button-cart') ||
+        event.target.closest('.products-cart__button-by') ||
+        event.target.closest('.products-cart__link'); // Добавили ссылку
+
+      if (isExcludedElement) {
+        // Если кликнули на исключенные элементы - не обрабатываем открытие/закрытие
+        // Эти элементы будут работать по своей логике
+        return;
+      }
+
+      event.stopPropagation();
+
+      // Если кликнули на уже активный элемент - закрываем
+      if (activeElement === productsCart) {
+        closeElement(productsCart);
+        return;
+      }
+
+      // Закрываем предыдущий активный элемент
+      if (activeElement) {
+        closeElement(activeElement);
+      }
+
+      // Открываем новый элемент
+      openElement(productsCart);
+    });
+  });
+}
+
+//* ✅ - [ Управление открытием модальных окон ]
+export function toggleModalOpen() {
+  const modals = [
+    {
+      triggerSelector: '.request-button',
+      modalSelector: '.page__form-request',
+    },
+    // {
+    //   triggerSelector: '.phone-call',
+    //   modalSelector: '.page__order-call',
+    // },
+  ];
+
+  modals.forEach(({ triggerSelector, modalSelector }) => {
+    const modal = document.querySelector(modalSelector);
+    const triggers = document.querySelectorAll(triggerSelector);
+    const closeBtn = modal.querySelector('.btn-close');
+
+    triggers.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        handleScrollbarOffset(modal);
+        document.body.classList.add('no-scroll');
+        modal.classList.add('is-open');
+
+        if (modalSelector === '.questions-form') {
+          const { showFieldset } = fieldSetsToggle(); // Получаем showFieldset
+          showFieldset(0); // Активируем первый fieldset
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+
+      if (modalSelector === '.questions-form') {
+        const active = modal.querySelector(
+          '.form-question__fieldset-table.active'
+        );
+        if (active) {
+          active.classList.remove('active');
+          console.log('Класс active удалён');
+        } else {
+          console.log('Нет активного fieldset');
+        }
+      }
+    });
+  });
+}
+//* ✅ - [Компенсируем отступы ]
+export function handleScrollbarOffset(enable) {
+  const scrollbarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
+
+  console.log('scrollbarWidth:', scrollbarWidth);
+
+  if (enable && scrollbarWidth > 0) {
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+  } else {
+    document.body.style.paddingRight = `0px`;
+  }
 }

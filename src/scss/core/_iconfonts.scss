@@ -50,36 +50,6 @@
     content: $icon-rub;
   }
 }
-.icon-trash {
-  &::before {
-    content: $icon-trash;
-  }
-}
-.icon-user-profile {
-  &::before {
-    content: $icon-user-profile;
-  }
-}
-.icon-search {
-  &::before {
-    content: $icon-search;
-  }
-}
-.icon-local_grocery_store {
-  &::before {
-    content: $icon-local_grocery_store;
-  }
-}
-.icon-minus {
-  &::before {
-    content: $icon-minus;
-  }
-}
-.icon-plus {
-  &::before {
-    content: $icon-plus;
-  }
-}
 .icon-whats-app {
   &::before {
     content: $icon-whats-app;
@@ -123,6 +93,41 @@
 .icon-whatsapp-draw {
   &::before {
     content: $icon-whatsapp-draw;
+  }
+}
+.icon-cross-middle {
+  &::before {
+    content: $icon-cross-middle;
+  }
+}
+.icon-trash {
+  &::before {
+    content: $icon-trash;
+  }
+}
+.icon-user-profile {
+  &::before {
+    content: $icon-user-profile;
+  }
+}
+.icon-search {
+  &::before {
+    content: $icon-search;
+  }
+}
+.icon-local_grocery_store {
+  &::before {
+    content: $icon-local_grocery_store;
+  }
+}
+.icon-minus {
+  &::before {
+    content: $icon-minus;
+  }
+}
+.icon-plus {
+  &::before {
+    content: $icon-plus;
   }
 }
 .icon-location {
