@@ -3,6 +3,9 @@
 $icomoon-font-family: 'icon-set' !default;
 $icomoon-font-path: '/fonts' !default;
 
+$icon-angle-left: string.unquote('"\\f104"');
+$icon-angle-right: string.unquote('"\\f105"');
+$icon-star: string.unquote('"\\e906"');
 $icon-rub: string.unquote('"\\f159"');
 $icon-trash: string.unquote('"\\e938"');
 $icon-user-profile: string.unquote('"\\e971"');

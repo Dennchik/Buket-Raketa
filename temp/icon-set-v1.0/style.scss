@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l1w5t');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a3uofb');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l1w5t#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a3uofb#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1l1w5t')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?a3uofb')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1l1w5t')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?a3uofb')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1l1w5t##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?a3uofb##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -43,6 +43,21 @@
   letter-spacing: 0;
 }
 
+.icon-angle-left {
+  &::before {
+    content: $icon-angle-left;
+  }
+}
+.icon-angle-right {
+  &::before {
+    content: $icon-angle-right;
+  }
+}
+.icon-star {
+  &::before {
+    content: $icon-star;
+  }
+}
 .icon-rub {
   &::before {
     content: $icon-rub;
@@ -91,6 +106,11 @@
 .icon-whatsapp-draw {
   &::before {
     content: $icon-whatsapp-draw;
+  }
+}
+.icon-cross-middle {
+  &::before {
+    content: $icon-cross-middle;
   }
 }
 .icon-trash {

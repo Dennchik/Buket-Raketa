@@ -25,6 +25,8 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'angle-left': '&#xf104;',
+            'angle-right': '&#xf105;',
             'rouble': '&#xf159;',
             'rub': '&#xf159;',
             'whatsapp': '&#xf232;',
@@ -35,6 +37,7 @@
             'vk-draw': '&#xe900;',
             'telegram-draw': '&#xe901;',
             'whatsapp-draw': '&#xe902;',
+            'cross-middle': '&#xe944;',
             'trash': '&#xe938;',
             'user-profile': '&#xe971;',
             'local_grocery_store': '&#xe904;',

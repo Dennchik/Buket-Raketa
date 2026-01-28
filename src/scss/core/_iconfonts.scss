@@ -30,6 +30,21 @@
   letter-spacing: 0;
 }
 
+.icon-angle-left {
+  &::before {
+    content: $icon-angle-left;
+  }
+}
+.icon-angle-right {
+  &::before {
+    content: $icon-angle-right;
+  }
+}
+.icon-star {
+  &::before {
+    content: $icon-star;
+  }
+}
 .icon-rub {
   &::before {
     content: $icon-rub;

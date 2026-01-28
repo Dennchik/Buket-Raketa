@@ -1,5 +1,9 @@
 import '../scss/main.scss';
+import { buildSwiper } from './utils/build-swiper.js';
+import { cardSlide } from './utils/slide.js';
 
+buildSwiper();
+cardSlide();
 import loaded from './assets/preloader.js';
 // import { smoother } from './animations/animations.jsx';
 // import { initFormValidation } from './assets/validate-form.js';

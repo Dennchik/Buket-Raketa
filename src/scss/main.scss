@@ -18,13 +18,12 @@
 @use 'assets/burger-button';
 @use 'assets/sidebar-menu';
 @use 'assets/pl-preloader.scss';
-// @use 'assets/select';
+@use 'assets/swiper-11.2.10';
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/form-search';
 @use 'chunks/menu-list';
 @use 'chunks/bread-crumbs';
-// todo --------------------------- Plugins ------------------------------------
-// @use 'assets/swiper-11.2.5';
+@use 'chunks/slide-thumb';
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
 // todo -------------------------- Section -------------------------------------
@@ -38,6 +37,8 @@
 
 @use 'sections/section-delivery';
 @use 'sections/section-catalog';
+@use 'sections/section-product-card';
+@use 'sections/related-products';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

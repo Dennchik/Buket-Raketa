@@ -16,7 +16,6 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
 
     @include screen-1440 {
       grid-template-columns: repeat(4, 1fr);
@@ -79,7 +78,7 @@
     pointer-events: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
   // .products-cart__image

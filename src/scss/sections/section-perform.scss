@@ -46,7 +46,6 @@
 
   // .section-perform__column
   &__column {
-    flex: 0 1 50%;
     width: 100%;
 
     @include screen-690 {
@@ -103,6 +102,8 @@
 
   // .section-perform__image
   &__image {
+    overflow: hidden;
+    border-radius: 50px;
     img {
       object-fit: cover;
     }

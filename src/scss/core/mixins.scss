@@ -67,6 +67,12 @@
   }
 }
 
+@mixin screen-880 {
+  @media screen and (width <= 880px) {
+    @content;
+  }
+}
+
 @mixin screen-768 {
   @media screen and (width <= 768px) {
     @content;

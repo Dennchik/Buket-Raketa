@@ -121,8 +121,10 @@
 
   // .section-bonuses __image
   &__image {
+    overflow: hidden;
     flex: 0 1 50%;
     width: 100%;
+    border-radius: 30px;
   }
 }
 

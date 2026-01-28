@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-set';
-  src:  url('fonts/icon-set.eot?1l1w5t');
-  src:  url('fonts/icon-set.eot?1l1w5t#iefix') format('embedded-opentype'),
-    url('fonts/icon-set.ttf?1l1w5t') format('truetype'),
-    url('fonts/icon-set.woff?1l1w5t') format('woff'),
-    url('fonts/icon-set.svg?1l1w5t#icon-set') format('svg');
+  src:  url('fonts/icon-set.eot?a3uofb');
+  src:  url('fonts/icon-set.eot?a3uofb#iefix') format('embedded-opentype'),
+    url('fonts/icon-set.ttf?a3uofb') format('truetype'),
+    url('fonts/icon-set.woff?a3uofb') format('woff'),
+    url('fonts/icon-set.svg?a3uofb#icon-set') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,6 +35,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-star:before {
+  content: "\e906";
+}
 .icon-rub:before {
   content: "\f159";
 }
@@ -64,6 +73,9 @@
 }
 .icon-whatsapp-draw:before {
   content: "\e902";
+}
+.icon-cross-middle:before {
+  content: "\e944";
 }
 .icon-trash:before {
   content: "\e938";
