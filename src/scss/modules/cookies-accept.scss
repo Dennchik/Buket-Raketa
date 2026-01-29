@@ -3,77 +3,53 @@
 
 //* - [ Cookies - accept] -
 .cookies-accept {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  transform: translateY(100%);
+	position: fixed;
+	width: 100%;
+	z-index: 15;
+	bottom: 0;
+	box-shadow: 2px 0 7px #000;
+	background-color: $color;
+	transform: translateY(100%);
 
-  width: 100%;
+	&__body {
+		max-width: 1440px;
+		margin: auto;
+		padding: 0 2rem;
+	}
 
-  background-color: hsl(0deg 0% 0% / 100%);
-  background-image:
-    radial-gradient(at 52% 40%, hsl(28deg 0% 0% / 100%) 0, transparent 50%),
-    radial-gradient(at 14% 1%, hsl(220deg 86% 63% / 39%) 0, transparent 50%),
-    radial-gradient(at 100% 100%, hsl(220deg 86% 63% / 29%) 0, transparent 50%);
-  box-shadow: 2px 0 7px #000;
+	// .cookies-accept__content
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		max-width: 100%;
+		padding: 2rem 0;
+		margin: 0 auto;
 
-  &__body {
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 2rem;
-  }
+		@include screen-425 {
+			flex-direction: column;
+		}
+	}
 
-  // .cookies-accept__content
-  &__content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
+	// .cookies-accept__text
+	&__text {
+		p {
+			font-size: 12px;
+			color: #fff;
+			line-height: 120%;
+		}
+	}
 
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0;
+	// .cookies-accept_button
+	&__button {
+		padding: 6px 7.8rem;
+		max-width: 180px;
+		background: $font-color-secondary;
 
-    @include screen-425 {
-      flex-direction: column;
-    }
-  }
-
-  // .cookies-accept__text
-  &__text {
-    p {
-      font-size: 12px;
-      line-height: 120%;
-      color: #a6c9ff;
-    }
-  }
-
-  // .cookies-accept__button
-  &__button {
-    max-width: 180px;
-    padding: 6px 7.8rem;
-    color: $font-color-title;
-
-    &.button {
-      transform: skew(-15deg) translateX(-1rem);
-
-      display: block;
-
-      height: auto;
-      padding: 0.8rem 2rem !important;
-      border: 1px solid #83a9e0;
-      border-radius: 10px;
-
-      // background: $font-color-secondary;
-    }
-
-    span {
-      transform: skew(15deg);
-
-      color: #83a9e0;
-      text-align: center;
-      text-transform: none;
-      text-transform: uppercase;
-    }
-  }
+		span {
+			text-transform: uppercase;
+			color: $color;
+		}
+	}
 }

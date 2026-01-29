@@ -24,7 +24,7 @@
   &__title {
     margin-bottom: 30px;
 
-    font-family: $font-color-title;
+    font-family: $font-family-title;
     font-size: 30px;
     font-weight: 500;
     line-height: 110%;
@@ -54,7 +54,7 @@
 
       &:not(:placeholder-shown) + label,
       &:focus + label {
-        transform: translateY(-120%);
+        transform: translateY(-200%);
         text-shadow: 0 0 1px #000;
       }
     }
@@ -69,9 +69,9 @@
 
       width: auto;
       height: auto;
-      margin: 10px 40px;
+      margin: 20px 40px;
 
-      font-size: $font-family-default;
+      font-family: $font-family-default;
       font-size: 13px;
       color: rgb(89 86 83 / 100%);
       letter-spacing: -0.2px;
@@ -96,17 +96,35 @@
     background: rgb(254 249 245 / 100%);
   }
 
-  // .form-request__footer
-  &__footer {
-  }
-
   // .form-request__button
   &__button {
+    position: relative;
+    transform: scale(1);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 100%;
     margin-bottom: 20px;
+    padding: 1rem 1rem 1rem 3rem;
+
+    transition: transform 0.3s ease 0s;
+    span {
+      color: #fff;
+    }
+    .icon {
+      transform: rotate(-45deg);
+      padding: 1rem;
+      color: #ec681d;
+    }
   }
 
-  // .form-request__agreement
-  &__agreement {
+  &__icon {
+    border-radius: 50%;
+    background-color: #fff;
   }
 
   // .form-request__close

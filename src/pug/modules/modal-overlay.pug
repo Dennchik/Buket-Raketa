@@ -1,37 +1,38 @@
-form.form-request._modal-form(action="#" method="post" id="requestForm")
-	.form-request__body 
-		.form-request__title Оставить заявку 
-		.form-request__content
+form.form-request.modal-form(action="#" method="post" id="requestForm")
+  .form-request__body 
+    .form-request__title Оставить заявку 
+    .form-request__content
 
-			.form-request__form-group
-				input.form-request__input.full-name#fullname(type="text" name="fullname" placeholder=" " autocomplete="off" required)
-				label(for="fullname") ФИО
+      .form-request__form-group
+        input.form-request__input.full-name#fullname(type="text" name="fullname" placeholder=" " autocomplete="off" required)
+        label(for="fullname") ФИО
 
-			.form-request__form-group
-				input.form-request__input.phone#phone(type="tel" name="phone" placeholder=" " autocomplete="off" data-mask="+7 (000) 000-00-00" required)
-				label(for="phone") Телефон
+      .form-request__form-group
+        input.form-request__input.phone#phone(type="tel" name="phone" placeholder=" " autocomplete="off" data-mask="+7 (000) 000-00-00" required)
+        label(for="phone") Телефон
 
-			.form-request__form-group
-				textarea.form-request__input#comment(name="comment" placeholder=" " rows="3")
-				label(for="comment") Комментарий
+      .form-request__form-group
+        textarea.form-request__input#comment(name="comment" placeholder=" " rows="3")
+        label(for="comment") Комментарий
 
-		.form-request__footer 
-			.form-request__button.button-container.is-disabled
-				button.button.send-button(type="submit" disabled)
-					span Отправить
+    .form-request__footer  
+      button.form-request__button.button.send-button(type="submit")
+        span Отправить
+        .form-request__icon 
+          +iconfont('arrow-right', 'icon')
 
-			.form-request__agreement
-				.check-box
-					label.check-box__label
-						input.check-box__input(type="checkbox" name="agreement" required id="agreement")
-						span.check-box__icon
-							+iconfont('angle-down', 'icon')
-					.check-box__text
-						| Я даю свое Согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с условиями 
-						a(href="#" target="_blank") Политики&nbsp;конфиденциальности
-						| , 
-						a(href="#" target="_blank") Публичной оферты для&nbsp;физических лиц
-						|  и 
-						a(href="#" target="_blank") Правилами программы лояльности
-		.form-request__close.btn-close
-			+iconfont('cross-middle', 'icon') 
+      .form-request__agreement
+        .check-box
+          label.check-box__label
+            input.check-box__input(type="checkbox" name="agreement" required id="agreement")
+            span.check-box__icon
+              +iconfont('angle-down', 'icon')
+          .check-box__text
+            | Я даю свое Согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с условиями 
+            a(href="#" target="_blank") Политики&nbsp;конфиденциальности
+            | , 
+            a(href="#" target="_blank") Публичной оферты для&nbsp;физических лиц
+            |  и 
+            a(href="#" target="_blank") Правилами программы лояльности
+    .form-request__close.btn-close
+      +iconfont('cross-middle', 'icon') 

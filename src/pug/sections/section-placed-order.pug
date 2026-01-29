@@ -1,0 +1,15 @@
+.placed-order
+	.placed-order__body 
+		.placed-order__content 
+			.placed-order__title.t-h1 Спасибо за ваш заказ 
+				span.num-order №5632!
+			.placed-order__text В ближайшее время наш менеджер свяжется с&nbsp;вами!
+			.placed-order__buttons
+				a(href=linkTo('catalog', filename)).link-btn__catalog
+					span Перейти в каталог
+					.link-btn__icon 
+						+iconfont('arrow-right', 'icon')
+				a(href=getWebRoot(filename) + "index.html" aria-label="home").link-btn__home
+					span На главную
+					.link-btn__icon 
+						+iconfont('arrow-right', 'icon')

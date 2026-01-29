@@ -3,17 +3,11 @@ import { buildSwiper } from './utils/build-swiper.js';
 import { cardSlide } from './utils/slide.js';
 import { maskPhone } from './assets/mask-phone.js';
 
-//? cookiesAccept('.cookies-accept', '.cookies-accept__button');
+cookiesAccept('.cookies-accept', '.cookies-accept__button');
 buildSwiper();
 cardSlide();
 import loaded from './assets/preloader.js';
-// import { smoother } from './animations/animations.jsx';
-// import { initFormValidation } from './assets/validate-form.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
-
-// import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
-// import { validateChecked } from './assets/validate-checked.js';
-// import { select } from './assets/itsSelect.js';
 
 import {
   //todo Временно отключен - dragAndDrop,
@@ -22,28 +16,27 @@ import {
   sideBarLoyuts,
   buttonSearch,
   toggleModalOpen,
-  //? cookiesAccept,
+  cookiesAccept,
+  fadeInHeader,
 } from './layouts/layouts.js';
 
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-if (!isMobile) {
-  // smoother();
+const requestForm = document.getElementById('requestForm');
+if (requestForm) {
 }
+
 loaded('.preloader');
 buttonSearch();
 sideBarLoyuts();
 dynamicAdaptive();
-// document.addEventListener('DOMContentLoaded', () => {
-//   const element = document.querySelector('.className');
-//   if (condition) {
-//   }
-// });
-//todo Временно отключен - showButton();
+fadeInHeader();
 
-// toggleModal();
+//todo Временно отключен - showButton();
 
 document.addEventListener('DOMContentLoaded', () => {
   //todo Временно отключен -  dragAndDrop();
   maskPhone('.phone');
-  toggleModalOpen();
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  if (!isMobile) {
+    toggleModalOpen();
+  }
 });

@@ -506,7 +506,7 @@ export function toggleModalOpen() {
     });
   });
 }
-//* ✅ - [Компенсируем отступы ]
+//* ✅ - [ Компенсируем отступы ]
 export function handleScrollbarOffset(enable) {
   const scrollbarWidth =
     window.innerWidth - document.documentElement.clientWidth;
@@ -518,4 +518,56 @@ export function handleScrollbarOffset(enable) {
   } else {
     document.body.style.paddingRight = `0px`;
   }
+}
+//* ✅ - [ Исчезновение Header ]
+export function fadeInHeader(params) {
+  // Получаем элемент заголовка
+  const header = document.querySelector('.page__header');
+  if (!header) {
+    console.error('Элемент .page__header не найден');
+  }
+
+  // Переменные для отслеживания состояния
+  let lastScrollTop = 0;
+  const hideThreshold = 50; // Порог скрытия (50px)
+  let isHidden = false;
+
+  // Функция обработки прокрутки
+  function handleScroll() {
+    // Текущая позиция прокрутки
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Если прокрутили вниз больше чем на 50px и блок еще не скрыт
+    if (scrollTop > hideThreshold && scrollTop > lastScrollTop && !isHidden) {
+      // Скрываем блок
+      header.style.transform = 'translateY(-100%)';
+      header.style.transition = 'transform 0.3s ease';
+      isHidden = true;
+    }
+    // Если прокручиваем вверх и блок скрыт
+    else if (scrollTop < lastScrollTop && isHidden) {
+      // Показываем блок
+      header.style.transform = 'translateY(0)';
+      header.style.transition = 'transform 0.3s ease';
+      isHidden = false;
+    }
+
+    // Сохраняем текущую позицию прокрутки
+    lastScrollTop = scrollTop;
+  }
+
+  // Добавляем обработчик события прокрутки
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Инициализация при загрузке страницы
+  document.addEventListener('DOMContentLoaded', function () {
+    // Устанавливаем начальные стили для плавной анимации
+    header.style.position = 'fixed';
+    header.style.top = '0';
+    header.style.left = '0';
+    header.style.width = '100%';
+    header.style.zIndex = '1000';
+    header.style.transform = 'translateY(0)';
+    header.style.transition = 'transform 0.3s ease';
+  });
 }

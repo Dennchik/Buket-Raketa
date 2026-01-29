@@ -14,6 +14,7 @@
 @use 'core/extend' as *;
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/modal-overlay';
+@use 'modules/cookies-accept';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/sidebar-menu';
@@ -39,6 +40,7 @@
 @use 'sections/section-catalog';
 @use 'sections/section-product-card';
 @use 'sections/related-products';
+@use 'sections/section-placed-order';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

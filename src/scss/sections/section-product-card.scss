@@ -55,6 +55,11 @@
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 110%;
+
+    .icon-star {
+      margin-right: 0.5rem;
+      color: rgb(251 180 21);
+    }
   }
 
   // .section-product-card__icon
@@ -73,7 +78,11 @@
   &__counter {
     display: flex;
     gap: 0.2rem;
+    line-height: 100%;
     color: rgb(60 109 202 / 100%);
+    span {
+      display: block;
+    }
   }
 
   //.section-product-card__product-code

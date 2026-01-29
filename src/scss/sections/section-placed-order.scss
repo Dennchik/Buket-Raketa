@@ -1,0 +1,131 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.placed-order {
+  // .placed-order__body
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 13rem 0 5rem;
+
+    @include screen-490 {
+      padding: 13rem 0 3rem;
+    }
+  }
+  // .placed-order__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 30px;
+  }
+
+  // .placed-order__title
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  // .placed-order__text
+  &__text {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  // .placed-order__buttons
+  &__buttons {
+    position: relative;
+    transform: scale(1);
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    transition: transform 0.3s ease 0s;
+
+    @include screen-490 {
+      flex-direction: column;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 110%;
+      letter-spacing: -0.2px;
+    }
+  }
+}
+
+.link-btn {
+  // .link-btn__catalog
+  &__catalog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 239px;
+    padding: 1.2rem 1rem 1.2rem 3rem;
+    border-radius: 55px;
+
+    background-color: $color;
+
+    .icon {
+      transform: rotate(-45deg);
+      color: $color;
+    }
+    span {
+      color: #fff;
+    }
+
+    .link-btn__icon {
+      background: rgb(255 255 255 / 100%);
+    }
+  }
+
+  // .link-btn__home
+  &__home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 239px;
+    padding: 1.2rem 1rem 1.2rem 3rem;
+    border-radius: 55px;
+
+    background: rgb(254 249 245 / 100%);
+    filter: drop-shadow(0 0 10px #d6d6d6);
+
+    .icon {
+      color: rgb(255 255 255 / 100%);
+    }
+
+    .link-btn__icon {
+      background: rgb(89 86 83 / 100%);
+    }
+
+    span {
+      color: rgb(89 86 83 / 100%);
+    }
+  }
+
+  // .link-btn__icon
+  &__icon {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    padding: 0.5em;
+    border-radius: 50%;
+    .icon {
+      font-size: 18px;
+    }
+  }
+}
