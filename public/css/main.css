@@ -2345,7 +2345,7 @@ h6 {
   letter-spacing: 2px;
 }
 .section-perform__group .section-perform__row {
-  min-width: 348px;
+  min-width: 370px;
 }
 @media screen and (width <= 690px) {
   .section-perform__group {
