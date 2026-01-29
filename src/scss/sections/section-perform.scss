@@ -67,6 +67,10 @@
     text-align: left;
     letter-spacing: 2px;
 
+    .section-perform__row {
+      min-width: 348px;
+    }
+
     @include screen-690 {
       margin-bottom: 4rem;
     }

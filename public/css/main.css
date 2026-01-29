@@ -2344,6 +2344,9 @@ h6 {
   text-align: left;
   letter-spacing: 2px;
 }
+.section-perform__group .section-perform__row {
+  min-width: 348px;
+}
 @media screen and (width <= 690px) {
   .section-perform__group {
     margin-bottom: 4rem;
