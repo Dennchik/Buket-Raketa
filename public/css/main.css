@@ -412,16 +412,13 @@
 }
 .header__icon-flower {
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 50%;
   background: rgb(236, 104, 29);
 }
 .header__icon-flower img {
-  width: 11px;
-  height: 11px;
+  width: 8px;
+  height: 8px;
 }
 .header__search-button, .header__login, .header__cart {
   overflow: hidden;
@@ -540,7 +537,6 @@
 }
 .header__link-key span {
   pointer-events: none;
-  line-height: 140%;
   color: rgb(89, 86, 83);
   white-space: nowrap;
   transition: color 0.3s ease;
@@ -2344,9 +2340,6 @@ h6 {
   text-align: left;
   letter-spacing: 2px;
 }
-.section-perform__group .section-perform__row {
-  min-width: 370px;
-}
 @media screen and (width <= 690px) {
   .section-perform__group {
     margin-bottom: 4rem;
@@ -2355,6 +2348,7 @@ h6 {
 .section-perform__row {
   display: flex;
   gap: 2.3rem;
+  min-width: 370px;
   margin-bottom: 8rem;
   padding: 10px;
   border: 1px solid rgb(228, 223, 223);
@@ -2378,9 +2372,19 @@ h6 {
     margin: 3rem 0;
   }
 }
+@media screen and (width <= 490px) {
+  .section-perform__row {
+    min-width: 100%;
+  }
+}
 .section-perform__image {
   overflow: hidden;
   border-radius: 50px;
+}
+@media screen and (width <= 490px) {
+  .section-perform__image {
+    border-radius: 30px;
+  }
 }
 .section-perform__image img {
   object-fit: cover;
@@ -2523,6 +2527,11 @@ h6 {
 .section-invitation__image {
   overflow: hidden;
   border-radius: 40px;
+}
+@media screen and (width <= 490px) {
+  .section-invitation__image {
+    border-radius: 30px;
+  }
 }
 .section-invitation__title {
   width: 100%;
@@ -3065,7 +3074,13 @@ h6 {
   font-weight: 500;
   line-height: 110%;
   color: rgb(31, 30, 29);
-  letter-spacing: -3%;
+  letter-spacing: -0.3px;
+}
+@media screen and (width <= 490px) {
+  .section-products__title {
+    padding: 0 2rem;
+    text-align: right;
+  }
 }
 .section-products__column {
   position: relative;

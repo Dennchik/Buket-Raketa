@@ -42,7 +42,12 @@
     font-weight: 500;
     line-height: 110%;
     color: rgb(31 30 29 / 100%);
-    letter-spacing: -3%;
+    letter-spacing: -0.3px;
+
+    @include screen-490 {
+      padding: 0 2rem;
+      text-align: right;
+    }
   }
 
   // .section-products__column

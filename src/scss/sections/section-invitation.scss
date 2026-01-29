@@ -52,6 +52,10 @@
   &__image {
     overflow: hidden;
     border-radius: 40px;
+
+    @include screen-490 {
+      border-radius: 30px;
+    }
   }
 
   // .section-credence__title

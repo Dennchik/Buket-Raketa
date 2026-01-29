@@ -99,12 +99,20 @@
     @include screen-690 {
       margin: 3rem 0;
     }
+
+    @include screen-490 {
+      min-width: 100%;
+    }
   }
 
   // .section-perform__image
   &__image {
     overflow: hidden;
     border-radius: 50px;
+
+    @include screen-490 {
+      border-radius: 30px;
+    }
 
     img {
       object-fit: cover;
