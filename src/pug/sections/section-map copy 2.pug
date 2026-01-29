@@ -1,0 +1,67 @@
+.section-map
+	.section-map__body
+		.section-map__content 
+			.section-map__column
+				.section-map__item
+					.section-map__icon
+						+iconfont('phone-call', 'icon')
+					.section-map__text
+						span.t-text-20 +7 906 849-97-43
+						span.t-text-13 Позвоните нам
+				.section-map__item
+					.section-map__icon
+						+iconfont('location', 'icon')
+					.section-map__text
+						span.t-text-20 г. Оренбург 
+						span.t-text-13 Смотреть все адреса 
+				.section-map__item.section-map__item--networks
+					.section-map__networks
+						a(href="https://t.me/" target="_blank" data-letters="Телеграм")
+							+iconfont('telegram-fly', 'icon') 
+						a(href="https://vk.com/" target="_blank" data-letters="В контакте")
+							+iconfont('vk-brand', 'icon')
+					.section-map__text
+						span.t-text-20 Мы в соц. сетях
+						span.t-text-13 Пишите нам
+				.section-map__item
+					.section-map__image
+						img(src="/img/icons/icon-05.png" alt="Иконка")
+					.section-map__text
+						span.t-text-20 Не нашли букет?
+						span.t-text-13 Мы вам поможем
+			.section-map__column
+				.section-map__image-map#map
+
+					script.
+						function loadMap() {
+							if (!document.getElementById('map')) return;
+
+							var mapDiv = document.getElementById('map');
+
+							// Проверяем загрузку API
+							if (typeof ymaps === 'undefined') {
+								// Загружаем API
+								var script = document.createElement('script');
+								script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e873cfbe-d140-4bc8-99c7-54007e3ff7a5';
+								script.onload = initMap;
+								document.head.appendChild(script);
+							} else {
+								initMap();
+							}
+
+							function initMap() {
+								ymaps.ready(function() {
+									new ymaps.Map('map', {
+										center: [55.115, 36.62],
+										zoom: 13
+									});
+								});
+							}
+						}
+
+						// Загружаем карту когда страница готова
+						if (document.readyState === 'loading') {
+							document.addEventListener('DOMContentLoaded', loadMap);
+						} else {
+							loadMap();
+						}

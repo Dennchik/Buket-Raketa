@@ -487,7 +487,6 @@
   }
 }
 .header__phone span {
-  line-height: 140%;
   white-space: nowrap;
 }
 @media (width >= 690.98px) and (width <= 1920px) {
@@ -1439,12 +1438,12 @@ h6 {
 
 .cookies-accept {
   position: fixed;
-  width: 100%;
   z-index: 15;
   bottom: 0;
-  box-shadow: 2px 0 7px #000;
-  background-color: #ec681d;
   transform: translateY(100%);
+  width: 100%;
+  background-color: #ec681d;
+  box-shadow: 2px 0 7px #000;
 }
 .cookies-accept__body {
   max-width: 1440px;
@@ -1453,12 +1452,12 @@ h6 {
 }
 .cookies-accept__content {
   display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
   max-width: 100%;
-  padding: 2rem 0;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 @media screen and (width <= 425px) {
   .cookies-accept__content {
@@ -1467,17 +1466,18 @@ h6 {
 }
 .cookies-accept__text p {
   font-size: 12px;
-  color: #fff;
   line-height: 120%;
+  color: #fff;
 }
 .cookies-accept__button {
-  padding: 6px 7.8rem;
   max-width: 180px;
+  padding: 6px 3rem;
+  text-align: center;
   background: rgb(250, 250, 255);
 }
 .cookies-accept__button span {
-  text-transform: uppercase;
   color: #ec681d;
+  text-transform: uppercase;
 }
 
 .hamburger {
@@ -2359,6 +2359,7 @@ h6 {
 }
 .section-perform__row .section-perform__image {
   flex: 0 0 16.3rem;
+  border-radius: 22px;
 }
 .section-perform__row .section-perform__image img {
   max-width: 16.3rem;
@@ -3071,6 +3072,7 @@ h6 {
 .products-cart {
   pointer-events: all;
   cursor: pointer;
+  height: 100%;
   padding: 1rem;
   border-radius: 30px;
   transition: background-color 0.4s, filter 0.4s ease 0s;
@@ -3088,18 +3090,26 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
+}
+.products-cart__wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 .products-cart__image {
   overflow: hidden;
+  min-height: auto;
   border-radius: 30px;
   transition: max-height 0.3s ease;
 }
 .products-cart__link {
   pointer-events: all;
+  flex: 1 1 100%;
   font-family: "SteticaRegular";
   font-weight: 400;
   color: rgb(31, 30, 29);
-  letter-spacing: -3%;
+  letter-spacing: -0.2px;
   transition: color 0.3s ease 0s;
 }
 .products-cart__link:hover {
@@ -3477,6 +3487,35 @@ h6 {
 }
 .section-map__iframe {
   height: 290px;
+}
+
+.marker-box {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+.marker-box__img {
+  width: 50px;
+  height: 50px;
+}
+.marker-box__img img {
+  filter: drop-shadow(-3px 2px 7px rgba(0, 0, 0, 0.5215686275));
+}
+.marker-box__text {
+  transform: translate(40px, -110%);
+  width: 200px;
+  height: 42px;
+  padding: 14px 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(26px);
+}
+.marker-box__text span {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 110%;
+  color: rgb(31, 30, 29);
 }
 
 .section-delivery__body {

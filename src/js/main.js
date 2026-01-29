@@ -22,6 +22,7 @@ import {
 
 const requestForm = document.getElementById('requestForm');
 if (requestForm) {
+  toggleModalOpen();
 }
 
 loaded('.preloader');
@@ -37,6 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
   maskPhone('.phone');
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
   if (!isMobile) {
-    toggleModalOpen();
   }
 });

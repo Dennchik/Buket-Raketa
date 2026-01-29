@@ -30,6 +30,110 @@
 						span.t-text-20 Не нашли букет?
 						span.t-text-13 Мы вам поможем
 			.section-map__column
-				.section-map__image-map 
-					iframe.section-map__iframe( src="https://yandex.ru/map-widget/v1/? um=constructor%3Axxxxxxxxxxxxxxxxxxxx&source=constructor" width="100%" height="400" frameborder="0") 
+				.section-map__image-map#map
+					.marker-box 
+						.marker-box__img 
+							img(src="img/icons/loc.png" alt="Иконка")
+						.marker-box__text 
+							span Некоторый текст
+					// ПОДКЛЮЧАЕМ API Яндекс.Карт
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+					script.
+						// Ждем загрузки API и DOM
+						document.addEventListener('DOMContentLoaded', function() {
 
+							// Проверяем загрузку API каждые 100мс
+							function waitForYMaps(callback) {
+								if (typeof ymaps !== 'undefined') {
+									callback();
+								} else {
+									setTimeout(function() {
+										waitForYMaps(callback);
+									}, 100);
+								}
+							}
+
+							waitForYMaps(function() {
+								ymaps.ready(initMap);
+							});
+
+							function initMap() {
+								console.log('Инициализация карты...');
+
+								// Создаем карту
+								var myMap = new ymaps.Map('map', {
+									center: [55.103868, 36.662214],
+									zoom: 13,
+									controls: ['zoomControl', 'typeSelector'],
+								});
+
+								// Точные координаты для Обнинска (уточненные)
+								var locations = [
+									{
+										coords: [55.125555, 36.595738], // 16 линия, 4а
+										title: 'Обнинск, ул. 16 линия, 4а',
+										address: 'г. Обнинск, ул. 16 линия, 4а',
+										hint: '16 линия, 4а',
+										markerText: 'Ул. 16 линия, 4а'
+									},
+									{
+										coords: [55.117455, 36.635794], // Салмышская, 46б
+										title: 'Обнинск, ул. Салмышская, 46б',
+										address: 'г. Обнинск, ул. Салмышская, 46б',
+										hint: 'Салмышская, 46б',
+										markerText: 'Ул. Салмышская, 46б'
+									},
+									{
+										coords: [55.131276, 36.625689], // Пролетарская 288/4 к1
+										title: 'Обнинск, ул. Пролетарская, 288/4 к1',
+										address: 'г. Обнинск, ул. Пролетарская, 288/4 к1',
+										hint: 'Пролетарская 288/4 к1',
+										markerText: 'Пролетарская 288/4 к1'
+									}
+								];
+
+								// Создаем коллекцию меток
+								var myCollection = new ymaps.GeoObjectCollection();
+
+								// Добавляем метки
+								locations.forEach(function(location, index) {
+									var placemark = new ymaps.Placemark(location.coords, {
+										balloonContentHeader: location.title,
+										balloonContentBody: '<p>' + location.address + '</p>',
+										hintContent: location.hint
+									}, {
+										// Твой блок marker-box
+										iconLayout: ymaps.templateLayoutFactory.createClass(
+											'<div class="marker-box">' +
+												'<div class="marker-box__img">' +
+													'<img src="img/icons/loc.png" alt="Иконка">' +
+													'<div class="marker-box__text">' + location.markerText + '</div>' +
+												'</div>' +
+											'</div>'
+										),
+
+										// Подбери размеры под твой блок
+										iconContentSize: [10, 150], // ширина, высота
+										iconContentOffset: [-50, -100] // центрирование
+									});
+
+									myCollection.add(placemark);
+								});
+
+								// Добавляем коллекцию на карту
+								myMap.geoObjects.add(myCollection);
+
+								// Подгоняем карту чтобы все точки были видны
+								if (myCollection.getLength() > 0) {
+									myMap.setBounds(myCollection.getBounds(), {
+										checkZoomRange: true,
+										zoomMargin: 50
+									});
+								}
+
+								// Опционально: отключаем скролл зум
+								// myMap.behaviors.disable('scrollZoom');
+
+								console.log('Карта создана с ' + locations.length + ' точками');
+							}
+						});

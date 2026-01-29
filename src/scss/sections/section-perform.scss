@@ -84,7 +84,7 @@
 
     .section-perform__image {
       flex: 0 0 16.3rem;
-
+      border-radius: 22px;
       img {
         max-width: 16.3rem;
         max-height: 15.9rem;
@@ -104,6 +104,7 @@
   &__image {
     overflow: hidden;
     border-radius: 50px;
+
     img {
       object-fit: cover;
     }
