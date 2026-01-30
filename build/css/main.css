@@ -2623,7 +2623,7 @@ h6 {
 }
 .section-invitation__button .icon {
   transform: rotate(-45deg);
-  padding: 1rem;
+  padding: 0.51rem;
   color: #ec681d;
 }
 .section-invitation__button:hover {
