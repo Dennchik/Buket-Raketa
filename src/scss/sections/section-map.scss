@@ -1,3 +1,6 @@
+/* stylelint-disable value-no-vendor-prefix */
+/* stylelint-disable order/properties-order */
+/* stylelint-disable property-no-vendor-prefix */
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
 
@@ -28,7 +31,8 @@
     overflow: hidden;
     min-width: 240px;
     height: 100%;
-    border-radius: 40px; // Префикс для Safari
+    border-radius: 40px;
+    -webkit-border-radius: 40px; // Для Safari
 
     &:nth-child(1) {
       display: flex;
@@ -37,7 +41,7 @@
 
       padding: 2rem;
 
-      background: rgb(255 255 255 / 100%); // Фоллбэк для старых браузеров
+      background: rgb(255 255 255 / 100%);
     }
 
     &:nth-child(2) {
@@ -47,7 +51,8 @@
     }
 
     @include screen-490 {
-      border-radius: 30px; // Префикс для Safari
+      border-radius: 30px;
+      -webkit-border-radius: 30px; // Для Safari
     }
   }
 
@@ -57,9 +62,10 @@
     gap: 1.6rem;
 
     padding: 10px 15px;
-    border-radius: 60px; // Префикс для Safari
+    border-radius: 60px;
+    -webkit-border-radius: 60px; // Для Safari
 
-    background: rgb(254 249 245 / 100%); // Фоллбэк
+    background: rgb(254 249 245 / 100%);
 
     // .section-map__item--networks
     &--networks {
@@ -78,7 +84,7 @@
         font-size: 13px;
         font-weight: 400;
         line-height: 110%;
-        color: rgb(167 162 157 / 100%); // Фоллбэк
+        color: rgb(167 162 157 / 100%);
       }
 
       &:first-child {
@@ -96,9 +102,10 @@
 
     width: 33px;
     height: 33px;
-    border-radius: 50%; // Префикс для Safari
+    border-radius: 50%;
+    -webkit-border-radius: 50%; // Для Safari
 
-    background: rgb(236 104 29 / 100%); // Фоллбэк
+    background: rgb(236 104 29 / 100%);
   }
 
   // .section-map__icon
@@ -109,9 +116,10 @@
 
     width: 33px;
     height: 33px;
-    border-radius: 50%; // Префикс для Safari
+    border-radius: 50%;
+    -webkit-border-radius: 50%; // Для Safari
 
-    background: rgb(236 104 29 / 100%); // Фоллбэк
+    background: rgb(236 104 29 / 100%);
 
     .icon {
       font-size: 14px;
@@ -132,7 +140,8 @@
 
       width: 33px;
       height: 33px;
-      border-radius: 50%; // Префикс для Safari
+      border-radius: 50%;
+      -webkit-border-radius: 50%; // Для Safari
 
       font-size: 18px;
       color: #fff;
@@ -142,24 +151,22 @@
 
     .icon-telegram-fly {
       background-color: rgb(4 155 229);
-      background-color: rgb(4 155 229 / 100%); // Фоллбэк
     }
 
     .icon-whats-app {
       background-color: rgb(40 167 27);
-      background-color: rgb(40 167 27 / 100%); // Фоллбэк
     }
 
     .icon-vk-brand {
       background-color: rgb(39 135 245);
-      background-color: rgb(39 135 245 / 100%); // Фоллбэк
     }
   }
 
   // .section-map__image-map
   &__image-map {
     pointer-events: auto;
-    user-select: auto; // Префикс для Safari
+    user-select: auto;
+    -webkit-user-select: auto; // Для Safari
 
     position: relative;
 
@@ -170,21 +177,23 @@
 
     width: 100%;
     height: 100%;
-    border-radius: 40px; // Префикс для Safari
+    border-radius: 40px;
+    -webkit-border-radius: 40px; // Для Safari
   }
 
   //  .section-map__iframe
   &__iframe {
-    width: 100%; // Добавлено для лучшей адаптивности
+    width: 100%;
     height: 290px;
-    border: none; // Убираем стандартную рамку iframe
+    border: none;
   }
 }
 
 .marker-box {
   position: absolute;
   display: inline-flex;
-  width: auto; // Улучшает рендеринг в Safari
+  width: auto;
+  -webkit-backface-visibility: hidden; // Улучшает рендеринг в Safari
   backface-visibility: hidden;
 
   &__img {
@@ -192,12 +201,14 @@
     height: 50px;
 
     img {
-      filter: drop-shadow(-3px 2px 7px #aaaaaa85); // Префикс для Safari
+      filter: drop-shadow(-3px 2px 7px #aaaaaa85);
+      -webkit-filter: drop-shadow(-3px 2px 7px #aaaaaa85); // Для Safari
     }
   }
 
   &__text {
-    transform: translate(40px, -120%); // Префикс для Safari
+    transform: translate(40px, -120%);
+    -webkit-transform: translate(40px, -120%); // Для Safari
 
     display: flex;
     align-items: center;
@@ -205,48 +216,31 @@
     width: 230px;
     height: 42px;
     padding: 14px 20px;
-    border-radius: 50px; // Префикс для Safari
+    border-radius: 50px;
+    -webkit-border-radius: 50px; // Для Safari
 
     white-space: nowrap;
 
-    // Упрощенный градиент для всех браузеров
-    background: rgb(255 255 255 / 32.2%); // Основной фоллбэк
-
-    // Градиент для браузеров, которые его поддерживают
+    // Градиент с префиксами для кроссбраузерности
+    background: rgb(255 255 255 / 32.2%);
+    background: -webkit-linear-gradient(
+      90deg,
+      rgb(255 255 255 / 70%),
+      rgb(255 255 255 / 39%)
+    ); // Для Safari
     background: linear-gradient(
       90deg,
-      rgb(255 255 255 / 28.1%),
+      rgb(255 255 255 / 70%),
       rgb(255 255 255 / 39%)
     );
-
-    // Добавляем тень для улучшения читаемости
-    box-shadow: 0 4px 15px rgb(0 0 0 / 8%);
-
-    // backdrop-filter с префиксами и фоллбэком
-    // Важно: backdrop-filter не поддерживается в некоторых версиях Safari
-    // Поэтому используем проверку поддержки
-    @supports (
-      (-webkit-backdrop-filter: blur(26px)) or (backdrop-filter: blur(26px))
-    ) {
-      background: rgb(
-        255 255 255 / 32.9%
-      ); // Более прозрачный фон при blur // Префикс для Safari
-      backdrop-filter: blur(26px);
-    }
-
-    // Альтернатива для Safari без полной поддержки backdrop-filter
-    @supports (-webkit-backdrop-filter: none) and
-      (not (backdrop-filter: blur(26px))) {
-      backdrop-filter: blur(26px);
-    }
 
     span {
       font-size: 13px;
       font-weight: 600;
+      line-height: 110%;
+      color: rgb(31 30 29 / 100%);
       -webkit-font-smoothing: antialiased; // Улучшает рендеринг текста в Safari
       -moz-osx-font-smoothing: grayscale;
-      line-height: 110%;
-      color: rgb(31 30 29 / 100%); // Фоллбэк
     }
   }
 }
@@ -257,28 +251,15 @@
     .section-map {
       &__image-map {
         // Исправление для корректного отображения iframe в Safari
+        -webkit-transform: translateZ(0);
         transform: translateZ(0);
       }
     }
 
     .marker-box {
       // Улучшение производительности в Safari
+      -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
-    }
-  }
-}
-
-// Класс для JS-детекшна, если нужно отключить backdrop-filter
-// Можно добавить через JavaScript при обнаружении неподдерживающего браузера
-.no-backdropfilter {
-  .marker-box {
-    &__text {
-      border: 1px solid rgb(255 255 255 / 20%);
-      background: rgb(255 255 255 / 95%) !important;
-
-      // Явно отключаем backdrop-filter
-      backdrop-filter: none !important;
-      box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
     }
   }
 }
