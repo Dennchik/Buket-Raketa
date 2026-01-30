@@ -25,9 +25,10 @@
 
   // .section-map__column
   &__column {
+    overflow: hidden;
     min-width: 240px;
     height: 100%;
-    border-radius: 40px;
+    border-radius: 40px; // Префикс для Safari
 
     &:nth-child(1) {
       display: flex;
@@ -36,7 +37,7 @@
 
       padding: 2rem;
 
-      background: rgb(255 255 255 / 100%);
+      background: rgb(255 255 255 / 100%); // Фоллбэк для старых браузеров
     }
 
     &:nth-child(2) {
@@ -46,7 +47,7 @@
     }
 
     @include screen-490 {
-      border-radius: 30px;
+      border-radius: 30px; // Префикс для Safari
     }
   }
 
@@ -56,9 +57,9 @@
     gap: 1.6rem;
 
     padding: 10px 15px;
-    border-radius: 60px;
+    border-radius: 60px; // Префикс для Safari
 
-    background: rgb(254 249 245 / 100%);
+    background: rgb(254 249 245 / 100%); // Фоллбэк
 
     // .section-map__item--networks
     &--networks {
@@ -77,7 +78,7 @@
         font-size: 13px;
         font-weight: 400;
         line-height: 110%;
-        color: rgb(167 162 157 / 100%);
+        color: rgb(167 162 157 / 100%); // Фоллбэк
       }
 
       &:first-child {
@@ -95,9 +96,9 @@
 
     width: 33px;
     height: 33px;
-    border-radius: 50%;
+    border-radius: 50%; // Префикс для Safari
 
-    background: rgb(236 104 29 / 100%);
+    background: rgb(236 104 29 / 100%); // Фоллбэк
   }
 
   // .section-map__icon
@@ -108,9 +109,9 @@
 
     width: 33px;
     height: 33px;
-    border-radius: 50%;
+    border-radius: 50%; // Префикс для Safari
 
-    background: rgb(236 104 29 / 100%);
+    background: rgb(236 104 29 / 100%); // Фоллбэк
 
     .icon {
       font-size: 14px;
@@ -131,7 +132,7 @@
 
       width: 33px;
       height: 33px;
-      border-radius: 50%;
+      border-radius: 50%; // Префикс для Safari
 
       font-size: 18px;
       color: #fff;
@@ -141,66 +142,143 @@
 
     .icon-telegram-fly {
       background-color: rgb(4 155 229);
+      background-color: rgb(4 155 229 / 100%); // Фоллбэк
     }
 
     .icon-whats-app {
       background-color: rgb(40 167 27);
+      background-color: rgb(40 167 27 / 100%); // Фоллбэк
     }
 
     .icon-vk-brand {
       background-color: rgb(39 135 245);
+      background-color: rgb(39 135 245 / 100%); // Фоллбэк
     }
   }
 
   // .section-map__image-map
   &__image-map {
     pointer-events: auto;
-    user-select: auto;
+    user-select: auto; // Префикс для Safari
 
     position: relative;
 
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 100%;
     height: 100%;
+    border-radius: 40px; // Префикс для Safari
   }
 
   //  .section-map__iframe
   &__iframe {
+    width: 100%; // Добавлено для лучшей адаптивности
     height: 290px;
+    border: none; // Убираем стандартную рамку iframe
   }
 }
+
 .marker-box {
   position: absolute;
-  display: flex;
-  width: 100%;
+  display: inline-flex;
+  width: auto; // Улучшает рендеринг в Safari
+  backface-visibility: hidden;
+
   &__img {
     width: 50px;
     height: 50px;
 
     img {
-      filter: drop-shadow(-3px 2px 7px #00000085);
+      filter: drop-shadow(-3px 2px 7px #aaaaaa85); // Префикс для Safari
     }
   }
 
   &__text {
-    transform: translate(40px, -110%);
+    transform: translate(40px, -120%); // Префикс для Safari
 
-    width: 200px;
+    display: flex;
+    align-items: center;
+
+    width: 230px;
     height: 42px;
     padding: 14px 20px;
-    border-radius: 50px;
+    border-radius: 50px; // Префикс для Safari
 
     white-space: nowrap;
 
-    background: rgb(255 255 255 / 6%);
-    backdrop-filter: blur(26px);
+    // Упрощенный градиент для всех браузеров
+    background: rgb(255 255 255 / 32.2%); // Основной фоллбэк
+
+    // Градиент для браузеров, которые его поддерживают
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 28.1%),
+      rgb(255 255 255 / 39%)
+    );
+
+    // Добавляем тень для улучшения читаемости
+    box-shadow: 0 4px 15px rgb(0 0 0 / 8%);
+
+    // backdrop-filter с префиксами и фоллбэком
+    // Важно: backdrop-filter не поддерживается в некоторых версиях Safari
+    // Поэтому используем проверку поддержки
+    @supports (
+      (-webkit-backdrop-filter: blur(26px)) or (backdrop-filter: blur(26px))
+    ) {
+      background: rgb(
+        255 255 255 / 32.9%
+      ); // Более прозрачный фон при blur // Префикс для Safari
+      backdrop-filter: blur(26px);
+    }
+
+    // Альтернатива для Safari без полной поддержки backdrop-filter
+    @supports (-webkit-backdrop-filter: none) and
+      (not (backdrop-filter: blur(26px))) {
+      backdrop-filter: blur(26px);
+    }
 
     span {
       font-size: 13px;
       font-weight: 600;
+      -webkit-font-smoothing: antialiased; // Улучшает рендеринг текста в Safari
+      -moz-osx-font-smoothing: grayscale;
       line-height: 110%;
-      color: rgb(31 30 29 / 100%);
+      color: rgb(31 30 29 / 100%); // Фоллбэк
+    }
+  }
+}
+
+// Дополнительные исправления для Safari на мобильных устройствах
+@media not all and (resolution >= 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .section-map {
+      &__image-map {
+        // Исправление для корректного отображения iframe в Safari
+        transform: translateZ(0);
+      }
+    }
+
+    .marker-box {
+      // Улучшение производительности в Safari
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+// Класс для JS-детекшна, если нужно отключить backdrop-filter
+// Можно добавить через JavaScript при обнаружении неподдерживающего браузера
+.no-backdropfilter {
+  .marker-box {
+    &__text {
+      border: 1px solid rgb(255 255 255 / 20%);
+      background: rgb(255 255 255 / 95%) !important;
+
+      // Явно отключаем backdrop-filter
+      backdrop-filter: none !important;
+      box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
     }
   }
 }
