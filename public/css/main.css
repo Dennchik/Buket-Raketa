@@ -3539,13 +3539,13 @@ h6 {
   padding: 14px 20px;
   border-radius: 50px;
   white-space: nowrap;
-  background: rgba(255, 255, 255, 0.9);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+  background: rgba(255, 255, 255, 0.322);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.281), rgba(255, 255, 255, 0.39));
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 @supports (-webkit-backdrop-filter: blur(26px)) or (backdrop-filter: blur(26px)) {
   .marker-box__text {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.329);
     backdrop-filter: blur(26px);
   }
 }
