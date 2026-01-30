@@ -3452,7 +3452,9 @@ h6 {
   color: rgb(167, 162, 157);
 }
 .section-map__text span:first-child {
+  color: rgb(90, 87, 84);
   font-weight: 600;
+  font-style: semibold;
   line-height: 110%;
 }
 .section-map__image {
