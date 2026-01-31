@@ -55,7 +55,7 @@
 							function initMap() {
 								console.log('Инициализация карты...');
 
-								// Создаем карту
+								// Создаем карту (центрируем относительно координат)
 								var myMap = new ymaps.Map('map', {
 									center: [55.103868, 36.662214],
 									zoom: 13,
@@ -101,7 +101,7 @@
 										iconLayout: ymaps.templateLayoutFactory.createClass(
 											'<div class="marker-box">' +
 												'<div class="marker-box__img">' +
-													'<img src="/img/icons/loc.png" alt="Иконка">' +
+													'<img src="img/icons/loc.png" alt="Иконка">' +
 													'<div class="marker-box__text">' + location.markerText + '</div>' +
 												'</div>' +
 											'</div>'
