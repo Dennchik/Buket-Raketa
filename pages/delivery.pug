@@ -2,7 +2,7 @@ extends @/pug/layouts/app_layout.pug
 
 append link 
 prepend script
-	script(defer type="module" src="/src/js/index.js")
+	//- script(defer type="module" src="/src/js/index.js")
 block title
 	- var text='Доставка'
 
@@ -12,5 +12,5 @@ block main-content
 			img(src="/img/pic/bg-img-01.png" alt="image") 
 			img(src="/img/pic/bg-img-02.png" alt="image") 
 		include @/pug/sections/section-delivery
-	section.main-content__section#map
+	section.main-content__section 
 		include @/pug/sections/section-map 

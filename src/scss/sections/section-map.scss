@@ -108,6 +108,11 @@
     -webkit-border-radius: 50%; // Для Safari
 
     background: rgb(236 104 29 / 100%);
+
+    img {
+      width: 13px;
+      height: 13px;
+    }
   }
 
   // .section-map__icon
@@ -181,6 +186,10 @@
     height: 100%;
     border-radius: 40px;
     -webkit-border-radius: 40px; // Для Safari
+
+    @include screen-960 {
+      height: 274px;
+    }
   }
 
   //  .section-map__iframe
@@ -253,8 +262,8 @@
     .section-map {
       &__image-map {
         // Исправление для корректного отображения iframe в Safari
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
+        // -webkit-transform: translateZ(0);
+        // transform: translateZ(0);
       }
     }
 

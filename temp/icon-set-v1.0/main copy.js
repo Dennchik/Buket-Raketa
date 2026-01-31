@@ -3,12 +3,12 @@ import '../scss/main.scss';
 const productsCart = document.querySelector('.products-cart');
 const productsCartIimage = document.querySelector('.products-cart__image');
 
-import loaded from './assets/preloader.js';
+import loaded from '../../src/js/assets/preloader.js';
 loaded('.preloader');
 
-import { smoother } from './animations/animations.jsx';
+import { smoother } from '../../src/js/animations/animations.jsx';
 // import { initFormValidation } from './assets/validate-form.js';
-import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+import { dynamicAdaptive } from '../../src/js/assets/dynamic-adaptive.js';
 
 // import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
 // import { validateChecked } from './assets/validate-checked.js';
@@ -33,7 +33,7 @@ import {
   //   sidebarMenuHandle,
   // toggleModal,
   //   lineMarquee,
-} from './layouts/layouts.js';
+} from '../../src/js/layouts/layouts.js';
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 if (!isMobile) {

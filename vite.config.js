@@ -85,7 +85,7 @@ export default defineConfig(({ command }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'src/js/main.js'),
-          app: resolve(__dirname, 'src/js/app.js'),
+          // app: resolve(__dirname, 'src/js/app.js'),
           // about: resolve(__dirname, 'src/js/about.js'),
           // catalog: resolve(__dirname, 'src/js/catalog.js'),
           // news: resolve(__dirname, 'src/js/news.js'),
@@ -95,19 +95,19 @@ export default defineConfig(({ command }) => {
         output: {
           entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash].[ext]',
-          chunkFileNames: 'assets/vendors/[name]-[hash].js',
+          // chunkFileNames: 'assets/vendors/[name]-[hash].js',
 
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('lodash') || id.includes('date-fns')) {
-                return 'utils';
-              }
-              if (id.includes('chart.js') || id.includes('d3')) {
-                return 'charts';
-              }
-              return 'vendor';
-            }
-          },
+          // manualChunks(id) {
+          //   if (id.includes('node_modules')) {
+          //     if (id.includes('lodash') || id.includes('date-fns')) {
+          //       return 'utils';
+          //     }
+          //     if (id.includes('chart.js') || id.includes('d3')) {
+          //       return 'charts';
+          //     }
+          //     return 'vendor';
+          //   }
+          // },
         },
       },
       optimizeDeps: {

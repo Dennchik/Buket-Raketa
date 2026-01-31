@@ -25,7 +25,6 @@
 
   // .section-map__column
   &__column {
-    overflow: hidden;
     min-width: 240px;
     height: 100%;
     border-radius: 40px;
@@ -99,6 +98,10 @@
     border-radius: 50%;
 
     background: rgb(236 104 29 / 100%);
+    img {
+      width: 13px;
+      height: 13px;
+    }
   }
 
   // .section-map__icon
