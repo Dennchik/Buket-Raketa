@@ -14,26 +14,24 @@
 
   // .section-bonuses __content
   &__content {
-    // display: grid;
-    // grid-template-columns: 1fr 25%;
-    // gap: 10px;
+    display: grid;
+    grid-template-columns: auto 390px;
+    gap: 10px;
 
-    // @include screen-1024 {
-    //   grid-template-columns: 1fr 45%;
-    // }
+    @include screen-1140 {
+      grid-template-columns: 1fr;
+    }
 
-    // @include screen-690 {
-    //   grid-template-columns: 1fr;
-    // }
-
-    //todo Временные св-ва
+    @include screen-690 {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .section-bonuses __column
   &__column {
     &:nth-child(1) {
       display: flex;
-      gap: 80px;
+      gap: 20px;
       align-items: center;
       justify-content: space-between;
 
@@ -42,26 +40,21 @@
 
       background: rgb(255 255 255);
 
-      @include minmax-490-1920 {
-        gap: calc(30px + (80 - 30) * ((100vw - 490px) / (1920 - 490)));
-      }
-
       @include screen-490 {
         flex-direction: column !important;
         gap: 16px;
       }
     }
 
-    //todo Временно отключен
-    // &:nth-child(2) {
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 10px;
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-    //   border-radius: 40px;
+      border-radius: 40px;
 
-    //   background: rgb(236 104 29 / 100%);
-    // }
+      background: rgb(236 104 29 / 100%);
+    }
   }
 
   // .section-bonuses __info
@@ -129,11 +122,10 @@
 }
 
 .card {
-  //todo Временно отключен
-  display: none !important;
   height: 100%;
   padding: 2rem;
   transition: background 0.3s ease 0s;
+
   &:hover {
     background: rgb(242 113 39 / 34.2%);
   }

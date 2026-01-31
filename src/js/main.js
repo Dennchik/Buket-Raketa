@@ -10,7 +10,8 @@ import loaded from './assets/preloader.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
 import {
-  //todo Временно отключен - dragAndDrop,
+  //todo Временно отключен -
+  dragAndDrop,
 
   //todo Временно отключен - showButton,
   sideBarLoyuts,
@@ -34,7 +35,8 @@ fadeInHeader();
 //todo Временно отключен - showButton();
 
 document.addEventListener('DOMContentLoaded', () => {
-  //todo Временно отключен -  dragAndDrop();
+  //todo Временно отключен -
+  dragAndDrop();
   maskPhone('.phone');
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
   if (!isMobile) {

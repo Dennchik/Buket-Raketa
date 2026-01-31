@@ -259,14 +259,6 @@
 // Дополнительные исправления для Safari на мобильных устройствах
 @media not all and (resolution >= 0.001dpcm) {
   @supports (-webkit-appearance: none) {
-    .section-map {
-      &__image-map {
-        // Исправление для корректного отображения iframe в Safari
-        // -webkit-transform: translateZ(0);
-        // transform: translateZ(0);
-      }
-    }
-
     .marker-box {
       // Улучшение производительности в Safari
       -webkit-transform-style: preserve-3d;
