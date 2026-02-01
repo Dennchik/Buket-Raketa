@@ -12,10 +12,6 @@ form.form-request.modal-form(action="#" method="post" id="requestForm")
         label(for="phone") Телефон
 
       .form-request__form-group
-        input.form-request__input.address#address(type="text" name="address" placeholder=" " autocomplete="off")
-        label(for="address") Адрес
-
-      .form-request__form-group
         textarea.form-request__input#comment(name="comment" placeholder=" " rows="3")
         label(for="comment") Комментарий
 
@@ -39,4 +35,4 @@ form.form-request.modal-form(action="#" method="post" id="requestForm")
             |  и 
             a(href="#" target="_blank") Правилами программы лояльности
     .form-request__close.btn-close
-      +iconfont('cross-middle', 'icon')
+      +iconfont('cross-middle', 'icon') 

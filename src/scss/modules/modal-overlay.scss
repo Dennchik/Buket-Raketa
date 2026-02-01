@@ -18,6 +18,10 @@
       -19.4px 23.4px 26.4px 0 rgb(0 0 0 / 2%),
       -7.9px 9.53px 13.2px 0 rgb(0 0 0 / 2%),
       -1.8px 2.17px 6.4px 0 rgb(0 0 0 / 1%);
+
+    @include screen-490 {
+      padding: 35px 16px;
+    }
   }
 
   // .form-request__title
@@ -56,6 +60,14 @@
       &:focus + label {
         transform: translateY(-200%);
         text-shadow: 0 0 1px #000;
+      }
+
+      @include screen-490 {
+        &:not(:placeholder-shown) + label,
+        &:focus + label {
+          transform: translateY(-148%);
+          text-shadow: 0 0 1px #000;
+        }
       }
     }
 
@@ -115,10 +127,19 @@
     span {
       color: #fff;
     }
+
+    &:hover {
+      transform: scale(0.95);
+      .icon {
+        transform: rotate(0deg);
+      }
+    }
+
     .icon {
       transform: rotate(-45deg);
-      padding: 1rem;
+      padding: 0.5rem;
       color: #ec681d;
+      transition: transform 0.3s ease 0s;
     }
   }
 
@@ -156,10 +177,16 @@
 
   // .checkbox__text
   &__text {
+    user-select: none;
+
     font-size: 13px;
     font-weight: 400;
     line-height: 110%;
     color: rgb(162 157 153 / 100%);
+
+    @include screen-490 {
+      font-size: 12px;
+    }
   }
 
   // .checkbox__icon

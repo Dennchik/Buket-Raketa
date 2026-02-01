@@ -176,12 +176,16 @@
 
     .icon {
       transform: rotate(-45deg);
-      padding: 0.51rem;
+      padding: 0.5rem;
       color: $color;
+      transition: transform 0.3s ease 0s;
     }
 
     &:hover {
       transform: scale(0.95);
+      .icon {
+        transform: rotate(0deg);
+      }
     }
 
     span {

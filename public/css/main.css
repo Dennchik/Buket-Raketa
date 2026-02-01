@@ -96,6 +96,9 @@
   letter-spacing: -1%;
   white-space: nowrap;
 }
+.button .icon {
+  font-size: 13px;
+}
 @media screen and (width <= 490px) {
   .button {
     height: 40px;
@@ -161,49 +164,6 @@
 }
 .check-box__text a:hover {
   text-decoration: none;
-}
-
-.return-button {
-  cursor: pointer;
-  position: fixed;
-  z-index: 13;
-  top: 50%;
-  right: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 65px;
-  margin-top: -17px;
-  border-radius: 4px;
-  background: #f2ebe4;
-}
-.return-button i::before {
-  font-weight: 400;
-  text-shadow: none;
-}
-.return-button ._button {
-  cursor: pointer;
-  position: relative;
-  z-index: 13;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  font-size: 3.8rem;
-  background: transparent;
-  transition: all 0.5s ease-in-out;
-}
-.return-button ._button img {
-  width: 20px;
-  height: 100%;
-}
-.return-button ._button:hover {
-  animation: fadeInBackground;
-}
-.return-button._rotate ._button {
-  scale: -1;
 }
 
 @media (width >= 960.99px) {
@@ -421,6 +381,7 @@
   height: 8px;
 }
 .header__search-button, .header__login, .header__cart {
+  cursor: pointer;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -432,6 +393,10 @@
   font-size: 2.2rem;
   color: rgb(89, 86, 83);
   background: rgb(245, 239, 235);
+  transition: filter 0.3s ease 0s;
+}
+.header__search-button:hover, .header__login:hover, .header__cart:hover {
+  filter: drop-shadow(0 0 5px #858585);
 }
 .header__search-button {
   cursor: pointer;
@@ -802,10 +767,22 @@
   display: flex;
   flex-direction: row;
 }
+.contacts__item--networks .contacts__text {
+  flex-direction: column;
+  gap: 0;
+  align-items: start;
+  justify-content: center;
+}
 @media screen and (width <= 490px) {
   .contacts__item--networks {
     flex-direction: row;
   }
+}
+.contacts__item--networks a {
+  transition: transform 0.3s ease 0s;
+}
+.contacts__item--networks a:hover {
+  transform: scale(0.9);
 }
 .contacts__icon {
   display: flex;
@@ -815,11 +792,20 @@
   height: 33px;
   border-radius: 50%;
   background: rgb(236, 104, 29);
+  transition: transform 0.3s ease 0s;
 }
 .contacts__icon .icon {
   flex: 0 0 33px;
   font-size: 14px;
   color: #fff;
+}
+.contacts__text {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+.contacts__text:hover .contacts__icon {
+  transform: scale(1.2);
 }
 .contacts__text span {
   display: block;
@@ -974,6 +960,38 @@
   letter-spacing: 0;
 }
 
+.icon-contacts::before {
+  content: "\e907";
+}
+
+.icon-cross-middle::before {
+  content: "\e944";
+}
+
+.icon-trash::before {
+  content: "\e938";
+}
+
+.icon-user-profile::before {
+  content: "\e971";
+}
+
+.icon-information-outline::before {
+  content: "\e90a";
+}
+
+.icon-arrow-right::before {
+  content: "\e950";
+}
+
+.icon-delivery::before {
+  content: "\e90b";
+}
+
+.icon-catalog::before {
+  content: "\e90c";
+}
+
 .icon-angle-left::before {
   content: "\f104";
 }
@@ -1026,18 +1044,6 @@
   content: "\e902";
 }
 
-.icon-cross-middle::before {
-  content: "\e944";
-}
-
-.icon-trash::before {
-  content: "\e938";
-}
-
-.icon-user-profile::before {
-  content: "\e971";
-}
-
 .icon-search::before {
   content: "\e905";
 }
@@ -1056,10 +1062,6 @@
 
 .icon-location::before {
   content: "\e909";
-}
-
-.icon-arrow-right::before {
-  content: "\e950";
 }
 
 .line-through {
@@ -1320,6 +1322,11 @@ h6 {
   background: rgb(255, 255, 255);
   box-shadow: -97.02px 117.01px 163px 0 rgba(0, 0, 0, 0.04), -62.88px 75.84px 95.4px 0 rgba(0, 0, 0, 0.03), -37.37px 45.07px 51.9px 0 rgba(0, 0, 0, 0.02), -19.4px 23.4px 26.4px 0 rgba(0, 0, 0, 0.02), -7.9px 9.53px 13.2px 0 rgba(0, 0, 0, 0.02), -1.8px 2.17px 6.4px 0 rgba(0, 0, 0, 0.01);
 }
+@media screen and (width <= 490px) {
+  .form-request__body {
+    padding: 35px 16px;
+  }
+}
 .form-request__title {
   margin-bottom: 30px;
   font-family: "SteticaMedium", sans-serif;
@@ -1349,6 +1356,12 @@ h6 {
 .form-request__form-group .form-request__input:not(:placeholder-shown) + label, .form-request__form-group .form-request__input:focus + label {
   transform: translateY(-200%);
   text-shadow: 0 0 1px #000;
+}
+@media screen and (width <= 490px) {
+  .form-request__form-group .form-request__input:not(:placeholder-shown) + label, .form-request__form-group .form-request__input:focus + label {
+    transform: translateY(-148%);
+    text-shadow: 0 0 1px #000;
+  }
 }
 .form-request__form-group label {
   position: absolute;
@@ -1391,10 +1404,17 @@ h6 {
 .form-request__button span {
   color: #fff;
 }
+.form-request__button:hover {
+  transform: scale(0.95);
+}
+.form-request__button:hover .icon {
+  transform: rotate(0deg);
+}
 .form-request__button .icon {
   transform: rotate(-45deg);
-  padding: 1rem;
+  padding: 0.5rem;
   color: #ec681d;
+  transition: transform 0.3s ease 0s;
 }
 .form-request__icon {
   border-radius: 50%;
@@ -1419,10 +1439,16 @@ h6 {
   background: rgba(0, 0, 0, 0);
 }
 .check-box__text {
+  user-select: none;
   font-size: 13px;
   font-weight: 400;
   line-height: 110%;
   color: rgb(162, 157, 153);
+}
+@media screen and (width <= 490px) {
+  .check-box__text {
+    font-size: 12px;
+  }
 }
 .check-box__icon {
   position: absolute;
@@ -2011,7 +2037,11 @@ h6 {
   pointer-events: all;
   position: relative;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 2rem;
 }
 .menu-list__list ul {
   position: relative;
@@ -2021,10 +2051,24 @@ h6 {
   font-size: 2.4rem;
 }
 .menu-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   width: 100%;
   padding: 1rem 2rem;
+  font-family: "VeranoSans", sans-serif;
+  font-weight: 500;
   line-height: 190%;
+  color: #fff7e2;
+}
+.menu-list__link .icon {
+  margin-right: 0.8rem;
+  font-size: 18px;
+}
+.menu-list__link .menu-list__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.8rem;
 }
 .menu-list__footer {
   display: flex;
@@ -2040,10 +2084,11 @@ h6 {
   border-left: 1px solid #ec681d;
 }
 .menu-list__list-item {
+  display: block;
   padding: 0 0.5rem;
 }
-.menu-list__list-item:not(:last-child) {
-  border-bottom: 1px dashed #ec681d;
+.menu-list__list-item.button {
+  border-radius: 30px;
 }
 
 .bread-crumbs {
@@ -2623,11 +2668,15 @@ h6 {
 }
 .section-invitation__button .icon {
   transform: rotate(-45deg);
-  padding: 0.51rem;
+  padding: 0.5rem;
   color: #ec681d;
+  transition: transform 0.3s ease 0s;
 }
 .section-invitation__button:hover {
   transform: scale(0.95);
+}
+.section-invitation__button:hover .icon {
+  transform: rotate(0deg);
 }
 .section-invitation__button span {
   color: #fff;
@@ -2806,7 +2855,7 @@ h6 {
 }
 .card__button .icon {
   transform: rotate(-45deg);
-  padding: 1rem;
+  padding: 0.5rem;
   color: rgb(255, 255, 255);
   transition: transform 0.3s ease 0s;
 }
@@ -2814,7 +2863,7 @@ h6 {
   transform: scale(0.95);
 }
 .card__button:hover .icon {
-  transform: rotate(-45deg);
+  transform: rotate(0deg);
 }
 .card__button span {
   color: rgb(89, 86, 83);
@@ -3182,11 +3231,14 @@ h6 {
 }
 .products-cart__button-cart .icon {
   transform: rotate(-45deg);
-  padding: 1rem;
   color: #ec681d;
+  transition: transform 0.3s ease 0s;
 }
 .products-cart__button-cart:hover {
   transform: scale(0.95);
+}
+.products-cart__button-cart:hover .icon {
+  transform: rotate(0deg);
 }
 .products-cart__button-cart span {
   color: #fff;
@@ -3344,6 +3396,14 @@ h6 {
   padding: 0.5rem;
   font-size: 14px;
   color: #ec681d;
+  transition: transform 0.3s ease 0s;
+}
+.info-content__button:hover {
+  transform: scale(0.95);
+  filter: drop-shadow(0 0 10px rgba(201, 201, 201, 0.5764705882));
+}
+.info-content__button:hover .icon {
+  transform: rotate(0);
 }
 .info-content__button.accent {
   background: rgb(255, 255, 255);
@@ -3353,15 +3413,10 @@ h6 {
   color: rgb(89, 86, 83);
 }
 .info-content__button.accent .icon {
-  transform: rotate(-45deg);
   color: #fff;
 }
 .info-content__button.accent .info-content__icon {
   background: rgb(89, 86, 83);
-}
-.info-content__button:hover {
-  transform: scale(0.95);
-  filter: drop-shadow(0 0 10px rgba(201, 201, 201, 0.5764705882));
 }
 .info-content__button span {
   color: #fff;
@@ -3455,7 +3510,24 @@ h6 {
 }
 .section-map__item--networks {
   display: flex;
-  flex-direction: row;
+}
+.section-map__item--networks .section-map__text {
+  flex-direction: column;
+  gap: 0;
+}
+.section-map__item--networks a {
+  transition: transform 0.3s ease 0s;
+}
+.section-map__item--networks a:hover {
+  transform: scale(0.9);
+}
+.section-map__text {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+.section-map__text:hover .section-map__icon {
+  transform: scale(1.2);
 }
 .section-map__text span {
   display: block;
@@ -3491,6 +3563,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease 0s;
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -4041,7 +4114,6 @@ h6 {
   font-size: clamp(22px, 1.8vw, 30px);
 }
 .purchase__discount {
-  /* Rectangle 46 */
   display: inline-flex;
   align-items: center;
   width: 44px;
@@ -4079,8 +4151,11 @@ h6 {
 .purchase__button-add span {
   color: rgb(254, 249, 245);
 }
-.purchase__button-add .purchase__icon {
+.purchase__button-add .icon {
   color: #ec681d;
+  transition: transform 0.3s ease 0s;
+}
+.purchase__button-add .purchase__icon {
   background-color: #fff;
 }
 .purchase__button-by {
@@ -4098,15 +4173,26 @@ h6 {
   color: #fff;
   background: rgb(89, 86, 83);
 }
+.purchase__button-add, .purchase__button-by {
+  transition: transform 0.3s ease 0s;
+}
+.purchase__button-add:hover, .purchase__button-by:hover {
+  transform: scale(0.95);
+}
+.purchase__button-add:hover .icon, .purchase__button-by:hover .icon {
+  transform: rotate(0deg);
+}
 .purchase__icon {
-  width: 26px;
-  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
   border-radius: 50%;
 }
 .purchase__icon .icon {
   transform: rotate(-45deg);
-  font-size: 14px;
+  font-size: 13px;
+  transition: transform 0.3s ease 0s;
 }
 
 .delivery-products__wrapper {
@@ -4123,6 +4209,22 @@ h6 {
   text-align: left;
   letter-spacing: -0.2px;
 }
+.delivery-products__select-city span {
+  padding-right: 0.8rem;
+}
+.delivery-products__select-city a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 110%;
+  color: rgb(60, 109, 202);
+}
+.delivery-products__select-city a span {
+  padding: 0;
+}
+.delivery-products__select-city a span::before {
+  background-color: rgb(60, 109, 202);
+}
+
 .delivery-info__links {
   display: flex;
   flex-direction: column;

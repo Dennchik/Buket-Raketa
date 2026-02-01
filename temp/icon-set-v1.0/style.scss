@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a3uofb');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?anpjvq');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a3uofb#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?anpjvq#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?a3uofb')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?anpjvq')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?a3uofb')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?anpjvq')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?a3uofb##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?anpjvq##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -43,6 +43,46 @@
   letter-spacing: 0;
 }
 
+.icon-contacts {
+  &::before {
+    content: $icon-contacts;
+  }
+}
+.icon-cross-middle {
+  &::before {
+    content: $icon-cross-middle;
+  }
+}
+.icon-trash {
+  &::before {
+    content: $icon-trash;
+  }
+}
+.icon-user-profile {
+  &::before {
+    content: $icon-user-profile;
+  }
+}
+.icon-information-outline {
+  &::before {
+    content: $icon-information-outline;
+  }
+}
+.icon-arrow-right {
+  &::before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-delivery {
+  &::before {
+    content: $icon-delivery;
+  }
+}
+.icon-catalog {
+  &::before {
+    content: $icon-catalog;
+  }
+}
 .icon-angle-left {
   &::before {
     content: $icon-angle-left;
@@ -108,21 +148,6 @@
     content: $icon-whatsapp-draw;
   }
 }
-.icon-cross-middle {
-  &::before {
-    content: $icon-cross-middle;
-  }
-}
-.icon-trash {
-  &::before {
-    content: $icon-trash;
-  }
-}
-.icon-user-profile {
-  &::before {
-    content: $icon-user-profile;
-  }
-}
 .icon-search {
   &::before {
     content: $icon-search;
@@ -146,10 +171,5 @@
 .icon-location {
   &::before {
     content: $icon-location;
-  }
-}
-.icon-arrow-right {
-  &::before {
-    content: $icon-arrow-right;
   }
 }

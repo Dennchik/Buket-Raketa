@@ -57,17 +57,19 @@
 			.footer__column 
 				.contacts.footer__contacts 
 					.contacts__item
-						.contacts__icon
-							+iconfont('phone-call', 'icon')
 						.contacts__text
-							span.t-text-20 +7 906 849-97-43
-							span.t-text-13 Позвоните нам 
+							.contacts__icon
+								+iconfont('phone-call', 'icon')
+							a(href="tel:+89068499743")
+								span.t-text-20 +7 906 849-97-43
+								span.t-text-13 Позвоните нам 
 					.contacts__item
-						.contacts__icon
-							+iconfont('location', 'icon')
 						.contacts__text
-							span.t-text-20 г. Оренбург 
-							span.t-text-13 Смотреть все адреса  
+							.contacts__icon
+								+iconfont('location', 'icon')
+							a(href="") 
+								span.t-text-20 г. Оренбург 
+								span.t-text-13 Смотреть все адреса  
 					.contacts__item.contacts__item--networks
 						.contacts__networks
 							a(href="https://t.me/" target="_blank" data-letters="Телеграм")

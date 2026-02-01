@@ -3,17 +3,19 @@
 		.section-map__content 
 			.section-map__column
 				.section-map__item
-					.section-map__icon
-						+iconfont('phone-call', 'icon')
 					.section-map__text
-						span.t-text-20 +7 906 849-97-43
-						span.t-text-13 Позвоните нам
+						.section-map__icon
+							+iconfont('phone-call', 'icon')
+						a(href="tel:+89068499743")
+							span.t-text-20 +7 906 849-97-43
+							span.t-text-13 Позвоните нам
 				.section-map__item
-					.section-map__icon
-						+iconfont('location', 'icon')
-					a(href="").section-map__text
-						span.t-text-20 г. Оренбург 
-						span.t-text-13 Смотреть все адреса 
+					.section-map__text
+						.section-map__icon
+							+iconfont('location', 'icon')
+						a(href="")
+							span.t-text-20 г. Оренбург 
+							span.t-text-13 Смотреть все адреса 
 				.section-map__item.section-map__item--networks
 					.section-map__networks
 						a(href="https://t.me/" target="_blank" data-letters="Телеграм")

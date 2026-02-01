@@ -25,6 +25,13 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'contacts': '&#xe907;',
+            'cross-middle': '&#xe944;',
+            'trash': '&#xe938;',
+            'user-profile': '&#xe971;',
+            'information-outline': '&#xe90a;',
+            'arrow-thin': '&#xe950;',
+            'delivery': '&#xe90b;',
             'angle-left': '&#xf104;',
             'angle-right': '&#xf105;',
             'rouble': '&#xf159;',
@@ -37,15 +44,11 @@
             'vk-draw': '&#xe900;',
             'telegram-draw': '&#xe901;',
             'whatsapp-draw': '&#xe902;',
-            'cross-middle': '&#xe944;',
-            'trash': '&#xe938;',
-            'user-profile': '&#xe971;',
             'local_grocery_store': '&#xe904;',
             'shopping_cart': '&#xe904;',
             'minus': '&#xe908;',
             'plus': '&#xe911;',
             'location': '&#xe909;',
-            'arrow-thin': '&#xe950;',
           '0': 0
         };
         delete icons['0'];

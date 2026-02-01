@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-set';
-  src:  url('fonts/icon-set.eot?a3uofb');
-  src:  url('fonts/icon-set.eot?a3uofb#iefix') format('embedded-opentype'),
-    url('fonts/icon-set.ttf?a3uofb') format('truetype'),
-    url('fonts/icon-set.woff?a3uofb') format('woff'),
-    url('fonts/icon-set.svg?a3uofb#icon-set') format('svg');
+  src:  url('fonts/icon-set.eot?anpjvq');
+  src:  url('fonts/icon-set.eot?anpjvq#iefix') format('embedded-opentype'),
+    url('fonts/icon-set.ttf?anpjvq') format('truetype'),
+    url('fonts/icon-set.woff?anpjvq') format('woff'),
+    url('fonts/icon-set.svg?anpjvq#icon-set') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,6 +35,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-contacts:before {
+  content: "\e907";
+}
+.icon-cross-middle:before {
+  content: "\e944";
+}
+.icon-trash:before {
+  content: "\e938";
+}
+.icon-user-profile:before {
+  content: "\e971";
+}
+.icon-information-outline:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e950";
+}
+.icon-delivery:before {
+  content: "\e90b";
+}
+.icon-catalog:before {
+  content: "\e90c";
+}
 .icon-angle-left:before {
   content: "\f104";
 }
@@ -74,15 +98,6 @@
 .icon-whatsapp-draw:before {
   content: "\e902";
 }
-.icon-cross-middle:before {
-  content: "\e944";
-}
-.icon-trash:before {
-  content: "\e938";
-}
-.icon-user-profile:before {
-  content: "\e971";
-}
 .icon-search:before {
   content: "\e905";
 }
@@ -97,7 +112,4 @@
 }
 .icon-location:before {
   content: "\e909";
-}
-.icon-arrow-right:before {
-  content: "\e950";
 }

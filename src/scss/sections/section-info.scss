@@ -126,9 +126,22 @@
 
     .icon {
       transform: rotate(-45deg);
+
       padding: 0.5rem;
+
       font-size: 14px;
       color: $color;
+
+      transition: transform 0.3s ease 0s;
+    }
+
+    &:hover {
+      transform: scale(0.95);
+      filter: drop-shadow(0 0 10px #c9c9c993);
+
+      .icon {
+        transform: rotate(0);
+      }
     }
 
     &.accent {
@@ -140,18 +153,12 @@
       }
 
       .icon {
-        transform: rotate(-45deg);
         color: #fff;
       }
 
       .info-content__icon {
         background: rgb(89 86 83 / 100%);
       }
-    }
-
-    &:hover {
-      transform: scale(0.95);
-      filter: drop-shadow(0 0 10px #c9c9c993);
     }
 
     span {

@@ -146,6 +146,8 @@
   &__search-button,
   &__login,
   &__cart {
+    cursor: pointer;
+
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -160,6 +162,13 @@
     color: rgb(89 86 83 / 100%);
 
     background: rgb(245 239 235 / 100%);
+
+    transition: filter 0.3s ease 0s;
+
+    &:hover {
+      // transform: scale(0.9);
+      filter: drop-shadow(0 0 5px #858585);
+    }
   }
 
   &__search-button {

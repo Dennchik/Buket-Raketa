@@ -212,10 +212,6 @@
     color: rgb(153 150 147 / 100%);
   }
 
-  // .composition-product__body
-  &__body {
-  }
-
   //.composition-product__row
   &__row {
     width: 100%;
@@ -352,7 +348,6 @@
 
   // .purchase__discount
   &__discount {
-    /* Rectangle 46 */
     display: inline-flex;
     align-items: center;
 
@@ -400,8 +395,12 @@
       color: rgb(254 249 245 / 100%);
     }
 
-    .purchase__icon {
+    .icon {
       color: $color;
+      transition: transform 0.3s ease 0s;
+    }
+
+    .purchase__icon {
       background-color: #fff;
     }
   }
@@ -427,16 +426,31 @@
     }
   }
 
+  &__button-add,
+  &__button-by {
+    transition: transform 0.3s ease 0s;
+
+    &:hover {
+      transform: scale(0.95);
+      .icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
   // .purchase__icon
   &__icon {
-    width: 26px;
-    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 0.5rem;
     border-radius: 50%;
 
     .icon {
       transform: rotate(-45deg);
-      font-size: 14px;
+      font-size: 13px;
+      transition: transform 0.3s ease 0s;
     }
   }
 }
@@ -463,6 +477,23 @@
 
   // .delivery-products__select-city
   &__select-city {
+    span {
+      padding-right: 0.8rem;
+    }
+
+    a {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 110%;
+      color: rgb(60 109 202 / 100%);
+
+      span {
+        padding: 0;
+        &::before {
+          background-color: rgb(60 109 202 / 100%);
+        }
+      }
+    }
   }
 }
 

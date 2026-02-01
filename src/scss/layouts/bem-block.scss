@@ -37,6 +37,9 @@
     letter-spacing: -1%;
     white-space: nowrap;
   }
+  .icon {
+    font-size: 13px;
+  }
 
   @include screen-490 {
     height: 40px;
@@ -130,67 +133,67 @@
 }
 
 //* ----------------------------------------------------------------------------
-.return-button {
-  cursor: pointer;
+// .return-button {
+//   cursor: pointer;
 
-  position: fixed;
-  z-index: 13;
-  top: 50%;
-  right: 5px;
+//   position: fixed;
+//   z-index: 13;
+//   top: 50%;
+//   right: 5px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-  width: 35px;
-  height: 65px;
-  margin-top: -17px;
-  border-radius: 4px;
+//   width: 35px;
+//   height: 65px;
+//   margin-top: -17px;
+//   border-radius: 4px;
 
-  background: #f2ebe4;
+//   background: #f2ebe4;
 
-  i {
-    &::before {
-      font-weight: 400;
-      text-shadow: none;
-    }
-  }
+//   i {
+//     &::before {
+//       font-weight: 400;
+//       text-shadow: none;
+//     }
+//   }
 
-  ._button {
-    cursor: pointer;
+//   ._button {
+//     cursor: pointer;
 
-    position: relative;
-    z-index: 13;
-    left: 0;
+//     position: relative;
+//     z-index: 13;
+//     left: 0;
 
-    display: flex;
-    justify-content: center;
+//     display: flex;
+//     justify-content: center;
 
-    width: 35px;
-    height: 35px;
+//     width: 35px;
+//     height: 35px;
 
-    font-size: 3.8rem;
+//     font-size: 3.8rem;
 
-    background: transparent;
+//     background: transparent;
 
-    transition: all 0.5s ease-in-out;
-    img {
-      width: 20px;
-      height: 100%;
-      // height: 35px;
-    }
+//     transition: all 0.5s ease-in-out;
+//     img {
+//       width: 20px;
+//       height: 100%;
+//       // height: 35px;
+//     }
 
-    &:hover {
-      animation: fadeInBackground;
-    }
-  }
+//     &:hover {
+//       animation: fadeInBackground;
+//     }
+//   }
 
-  &._rotate {
-    ._button {
-      scale: -1;
-    }
-  }
-}
+//   &._rotate {
+//     ._button {
+//       scale: -1;
+//     }
+//   }
+// }
 
 //* ----------------------------------------------------------------------------
 

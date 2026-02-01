@@ -35,8 +35,11 @@ fadeInHeader();
 //todo Временно отключен - showButton();
 
 document.addEventListener('DOMContentLoaded', () => {
+  const bouquetForm = document.getElementById('bouquet-form');
+  if (bouquetForm) {
+    dragAndDrop();
+  }
   //todo Временно отключен -
-  dragAndDrop();
   maskPhone('.phone');
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
   if (!isMobile) {

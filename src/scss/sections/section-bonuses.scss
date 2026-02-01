@@ -216,7 +216,7 @@
 
     .icon {
       transform: rotate(-45deg);
-      padding: 1rem;
+      padding: 0.5rem;
       color: rgb(255 255 255);
       transition: transform 0.3s ease 0s;
     }
@@ -224,7 +224,7 @@
     &:hover {
       transform: scale(0.95);
       .icon {
-        transform: rotate(-45deg);
+        transform: rotate(0deg);
       }
     }
 
