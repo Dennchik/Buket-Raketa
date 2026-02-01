@@ -370,6 +370,7 @@
   &__old-price {
     font-family: $font-family-title;
     font-size: 25px;
+    font-size: clamp(16px, 1.8vw, 25px);
     font-weight: 700;
     line-height: 110%;
     color: rgb(133 110 92 / 100%);

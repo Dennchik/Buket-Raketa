@@ -4131,6 +4131,7 @@ h6 {
 .purchase__old-price {
   font-family: "SteticaMedium", sans-serif;
   font-size: 25px;
+  font-size: clamp(16px, 1.8vw, 25px);
   font-weight: 700;
   line-height: 110%;
   color: rgb(133, 110, 92);
