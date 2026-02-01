@@ -1,0 +1,66 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.delivery-products__select-city {
+  position: relative; /* Чтобы список позиционировался относительно этого блока */
+  display: inline-flex;
+}
+
+.cities-dropdown {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+
+  display: none; /* Скрыт по умолчанию */
+
+  width: 250px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+
+  background: rgb(247 243 240 / 100%);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.cities-dropdown.active {
+  display: block; /* Показываем, когда добавлен класс active */
+}
+
+.cities-search {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid $color;
+  border-radius: 10px;
+}
+
+.cities-list {
+  overflow-y: auto; /* Добавляем скролл */
+
+  max-height: 200px; /* Ограничиваем высоту */
+  margin: 0;
+  padding: 0;
+
+  color: rgb(89 86 83 / 100%);
+  list-style: none;
+}
+
+.cities-list li {
+  cursor: pointer;
+  padding: 8px;
+  transition: background 0.2s;
+}
+
+.cities-list li:hover {
+  color: #000;
+  background-color: #f5f5f5;
+}
+
+.cities-list li.loading {
+  cursor: default;
+  color: #999;
+  text-align: center;
+}

@@ -19,6 +19,7 @@ import {
   toggleModalOpen,
   cookiesAccept,
   fadeInHeader,
+  selectCity,
 } from './layouts/layouts.js';
 
 const requestForm = document.getElementById('requestForm');
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bouquetForm) {
     dragAndDrop();
   }
+  selectCity();
   //todo Временно отключен -
   maskPhone('.phone');
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);

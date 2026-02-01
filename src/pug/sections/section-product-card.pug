@@ -110,10 +110,16 @@
 					.delivery-products
 						.delivery-products__wrapper
 							.delivery-products__title.t-text-20 Способы получения
-							.delivery-products__select-city 
+							.delivery-products__select-city#cityTrigger 
 								span Ваш город:
 								a(href="").select-city.link_underline-lr 
-									span Оренбург
+									span#currentCityName Оренбург
+									// Выпадающий список
+								.cities-dropdown#citiesDropdown
+									input(type="text" placeholder="Поиск города...").cities-search#citySearch
+									ul.cities-list#citiesList
+										// Сюда будут подгружаться города
+										li.loading Загрузка...
 					.delivery-info
 						.delivery-info__links
 							a(href="").delivery-info__link

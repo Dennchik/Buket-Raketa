@@ -598,3 +598,121 @@ export function fadeInHeader(params) {
     header.style.transition = 'transform 0.3s ease';
   });
 }
+
+//* ✅ - [ Выбор города доставки ]
+export function selectCity() {
+  // document.addEventListener('DOMContentLoaded', () => {
+  const trigger = document.getElementById('cityTrigger');
+  const dropdown = document.getElementById('citiesDropdown');
+  const list = document.getElementById('citiesList');
+  const searchInput = document.getElementById('citySearch');
+  const currentCitySpan = document.getElementById('currentCityName');
+
+  // URL источника данных.
+  // Вариант 1: Локальный файл cities.json
+  // Вариант 2: Сторонний API. Для примера используем gist с городами РФ.
+  const DATA_URL =
+    'https://raw.githubusercontent.com/pensnarik/russian-cities/master/russian-cities.json';
+
+  let citiesData = []; // Сюда сохраним загруженные города
+  let isLoaded = false;
+
+  // 1. Открытие/закрытие списка
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+
+    // Фокус на поиск при открытии
+    if (dropdown.classList.contains('active')) {
+      searchInput.focus();
+      if (!isLoaded) {
+        loadCities();
+      }
+    }
+  });
+
+  // 2. Закрытие при клике вне области
+  document.addEventListener('click', (e) => {
+    if (!trigger.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+    }
+  });
+
+  // 3. Загрузка городов
+  async function loadCities() {
+    try {
+      const response = await fetch(DATA_URL);
+      if (!response.ok) throw new Error('Ошибка сети');
+
+      const data = await response.json();
+
+      // В зависимости от структуры JSON, путь к массиву может отличаться.
+      // В примере по ссылке выше это просто массив объектов [{name: "Москва", ...}]
+      citiesData = data;
+
+      renderList(citiesData);
+      isLoaded = true;
+    } catch (error) {
+      list.innerHTML = '<li class="loading">Ошибка загрузки списка</li>';
+      console.error(error);
+    }
+  }
+
+  // 4. Рендеринг списка (отображение)
+  function renderList(cities) {
+    if (cities.length === 0) {
+      list.innerHTML = '<li class="loading">Ничего не найдено</li>';
+      return;
+    }
+
+    // Оптимизация: используем Fragment, чтобы не перерисовывать DOM каждый раз
+    const fragment = document.createDocumentFragment();
+
+    cities.forEach((city) => {
+      const li = document.createElement('li');
+      // Проверяем структуру JSON. Если просто массив строк - city, если объектов - city.name
+      li.textContent = city.name || city;
+
+      li.addEventListener('click', () => {
+        selectCity(li.textContent);
+      });
+
+      fragment.appendChild(li);
+    });
+
+    list.innerHTML = '';
+    list.appendChild(fragment);
+  }
+
+  // 5. Выбор города
+  function selectCity(name) {
+    currentCitySpan.textContent = name;
+    dropdown.classList.remove('active');
+
+    // Опционально: Сохранить в LocalStorage, чтобы запомнить выбор пользователя
+    localStorage.setItem('selectedCity', name);
+
+    // Опционально: Перезагрузить страницу или вызвать функцию обновления цен/доставки
+    // window.location.reload();
+    console.log(`Выбран город: ${name}`);
+  }
+
+  // 6. Поиск (Фильтрация)
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+
+    const filtered = citiesData.filter((city) => {
+      const cityName = (city.name || city).toLowerCase();
+      return cityName.includes(query);
+    });
+
+    renderList(filtered);
+  });
+
+  // 7. Проверка сохраненного города при загрузке страницы
+  const savedCity = localStorage.getItem('selectedCity');
+  if (savedCity) {
+    currentCitySpan.textContent = savedCity;
+  }
+  // });
+}
