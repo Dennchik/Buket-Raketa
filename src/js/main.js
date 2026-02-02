@@ -37,13 +37,16 @@ fadeInHeader();
 
 document.addEventListener('DOMContentLoaded', () => {
   const bouquetForm = document.getElementById('bouquet-form');
+  const citySelect = document.querySelector('.delivery-products__select-city');
+  if (citySelect) {
+    selectCity();
+  }
   if (bouquetForm) {
     dragAndDrop();
   }
-  selectCity();
   //todo Временно отключен -
   maskPhone('.phone');
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-  if (!isMobile) {
-  }
+  // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  // if (!isMobile) {
+  // }
 });
