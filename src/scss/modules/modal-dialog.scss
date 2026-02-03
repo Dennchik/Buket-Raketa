@@ -1,0 +1,179 @@
+@use '../core/variables' as *;
+// Переменные для цветов, размеров и т.д.
+
+$color-text-dark: #333;
+$color-text-medium: #555;
+$color-text-light: #999;
+$color-border-light: #eee;
+$color-overlay: rgb(0 0 0 / 60%);
+
+$border-radius-base: 20px;
+$padding-base: 25px;
+$spacing-medium: 20px;
+$spacing-small: 10px;
+
+/* Блок Бонусного Кода Модального Окна */
+.bonus-code-modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    visibility 0.3s,
+    opacity 0.3s;
+
+  // Модификатор для отображения модального окна
+  &--is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // Элемент для затемнения фона
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-overlay;
+  }
+
+  // Элемент с основным содержимым модалки
+  &__content {
+    position: relative;
+    z-index: 1001;
+    transform: translateY(-20px);
+
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 400px;
+    padding: $padding-base;
+    border-radius: $border-radius-base;
+
+    text-align: center;
+
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
+
+    transition: transform 0.3s ease-out;
+  }
+
+  // Анимация появления контента модалки
+  &--is-visible &__content {
+    transform: translateY(0);
+  }
+
+  // Элемент Заголовок модалки
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: $spacing-medium;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  // Элемент Заголовок
+  &__title {
+    margin: 0 auto;
+    font-size: 1.6em;
+    color: $color;
+  }
+
+  // Элемент Кнопка закрытия
+  &__close-btn {
+    cursor: pointer;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    font-size: 2em;
+    line-height: 1;
+    color: $color-text-light;
+
+    background: none;
+
+    &:hover {
+      color: $color-text-medium;
+    }
+  }
+
+  // Элемент Основной текст модалки
+  &__body {
+    line-height: 1.6;
+    color: $color-text-medium;
+  }
+
+  // Элемент Сообщение
+  &__message {
+    margin-bottom: $spacing-small;
+    &:last-of-type {
+      margin-bottom: $spacing-medium;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Блок для отображения бонусного кода */
+.bonus-code-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: $spacing-medium auto;
+  padding: 10px 15px;
+  border: 1px dashed $color;
+  border-radius: $border-radius-base;
+
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $color-text-dark;
+  letter-spacing: 2px;
+
+  // Этот блок изначально невидим. Код его отобразит
+
+  background-color: $background;
+
+  transition:
+    visibility 0.3s,
+    opacity 0.3s;
+
+  &__value {
+    color: $color;
+  }
+}
+
+.button {
+  // Модификатор для основной кнопки
+  &--primary {
+    display: block;
+
+    width: 100%;
+    max-width: 200px;
+    margin-top: $spacing-medium;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid $color;
+
+    color: white;
+
+    background-color: $color;
+  }
+}

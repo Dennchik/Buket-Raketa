@@ -1,0 +1,15 @@
+.bonus-code-modal#bonusCodeModal(aria-hidden="true")
+	.bonus-code-modal__overlay
+
+	.bonus-code-modal__content
+		.bonus-code-modal__header
+			h3.bonus-code-modal__title Ваш бонусный код!
+			//- Кнопка закрытия (без JS-обработчика в этом файле)
+			button.bonus-code-modal__close-btn(type="button" aria-label="Закрыть") &times;
+
+		.bonus-code-modal__body
+			p.bonus-code-modal__message Поздравляем! Вам начислены бонусы.
+			p.bonus-code-modal__message Используйте этот код, чтобы получить свою скидку или подарок:
+
+			.bonus-code-display#bonusCodeDisplay
+				span.bonus-code-display__value#digits (1234)

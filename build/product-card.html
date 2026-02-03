@@ -10,8 +10,8 @@
   <link rel="icon" type="image/icon" href="./img/icons/logo.png">
   <title>Карточка товара</title>
   <script type="module" crossorigin src="./assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <script type="module" crossorigin src="./assets/main-Cx9oEK0o.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-C2lc5-EX.css">
+  <script type="module" crossorigin src="./assets/main-BHLZMv_U.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-B9kZ1oT5.css">
 </head>
 
 <body>
@@ -689,6 +689,23 @@
           <div class="form-request__close btn-close"><i class="icon-cross-middle icon"></i></div>
         </div>
       </form>
+    </div>
+    <div class="page__modal-dialog">
+      <div class="bonus-code-modal" id="bonusCodeModal" aria-hidden="true">
+        <div class="bonus-code-modal__overlay"></div>
+        <div class="bonus-code-modal__content">
+          <div class="bonus-code-modal__header">
+            <h3 class="bonus-code-modal__title">Ваш бонусный код!</h3><button class="bonus-code-modal__close-btn"
+              type="button" aria-label="Закрыть">&times;</button>
+          </div>
+          <div class="bonus-code-modal__body">
+            <p class="bonus-code-modal__message">Поздравляем! Вам начислены бонусы.</p>
+            <p class="bonus-code-modal__message">Используйте этот код, чтобы получить свою скидку или подарок:</p>
+            <div class="bonus-code-display" id="bonusCodeDisplay"><span class="bonus-code-display__value"
+                id="digits">(1234)</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

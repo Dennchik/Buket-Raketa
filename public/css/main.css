@@ -1501,6 +1501,121 @@ h6 {
   text-transform: uppercase;
 }
 
+/* Блок Бонусного Кода Модального Окна */
+.bonus-code-modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+.bonus-code-modal--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.bonus-code-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bonus-code-modal__content {
+  position: relative;
+  z-index: 1001;
+  transform: translateY(-20px);
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out;
+}
+.bonus-code-modal--is-visible .bonus-code-modal__content {
+  transform: translateY(0);
+}
+.bonus-code-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.bonus-code-modal__title {
+  margin: 0 auto;
+  font-size: 1.6em;
+  color: #ec681d;
+}
+.bonus-code-modal__close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  font-size: 2em;
+  line-height: 1;
+  color: #999;
+  background: none;
+}
+.bonus-code-modal__close-btn:hover {
+  color: #555;
+}
+.bonus-code-modal__body {
+  line-height: 1.6;
+  color: #555;
+}
+.bonus-code-modal__message {
+  margin-bottom: 10px;
+}
+.bonus-code-modal__message:last-of-type {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Блок для отображения бонусного кода */
+.bonus-code-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 1px dashed #ec681d;
+  border-radius: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: visibility 0.3s, opacity 0.3s;
+}
+.bonus-code-display__value {
+  color: #ec681d;
+}
+
+.button--primary {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #ec681d;
+  color: white;
+  background-color: #ec681d;
+}
+
 .hamburger {
   cursor: pointer;
 }
