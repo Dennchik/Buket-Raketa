@@ -93,5 +93,3 @@ function showDebugCode() {
 }
 
 // showDebugCode();
-// Бэкендер мог бы вызвать это через WebSocket-сообщение
-// или обычный AJAX-ответ, передав code: '1234'
