@@ -324,6 +324,7 @@
 .header__column {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .header__column:nth-child(1) {
   display: flex;
@@ -2561,6 +2562,7 @@ h6 {
 @media screen and (width <= 690px) {
   .section-perform__group {
     margin-bottom: 4rem;
+    text-align: center;
   }
 }
 .section-perform__row {
@@ -2622,7 +2624,13 @@ h6 {
   text-align: right;
 }
 @media screen and (width <= 690px) {
+  .section-perform__title span:last-child {
+    text-align: center;
+  }
+}
+@media screen and (width <= 690px) {
   .section-perform__title {
+    max-width: 100%;
     text-align: center;
   }
   .section-perform__title span:not(:last-child) {
@@ -2919,6 +2927,7 @@ h6 {
 }
 @media screen and (width <= 490px) {
   .section-bonuses__info {
+    align-items: center;
     max-width: 200px;
     padding-left: 0;
     padding-block: 4rem;
@@ -2929,7 +2938,6 @@ h6 {
   z-index: 0;
   top: -51%;
   left: 2%;
-  /* Vector 7 */
   width: 1344.94px;
   height: 467.79px;
 }
@@ -2938,9 +2946,10 @@ h6 {
   z-index: 1;
   max-width: clamp(200px, 20vw, 27rem);
   margin-bottom: 3rem;
+  padding-right: 1rem;
   font-weight: 500;
   line-height: 110%;
-  letter-spacing: -3px;
+  letter-spacing: -1.8px;
 }
 .section-bonuses__title span {
   display: block;
@@ -2953,6 +2962,15 @@ h6 {
   color: rgb(31, 30, 29);
   text-align: right;
 }
+@media screen and (width <= 490px) {
+  .section-bonuses__title {
+    text-align: center;
+  }
+  .section-bonuses__title span:nth-child(2) {
+    color: rgb(31, 30, 29);
+    text-align: center;
+  }
+}
 .section-bonuses__text {
   position: relative;
   z-index: 1;
@@ -2964,7 +2982,7 @@ h6 {
 }
 @media screen and (width <= 490px) {
   .section-bonuses__text {
-    max-width: 240px;
+    max-width: 177px;
   }
 }
 .section-bonuses__image {
@@ -3335,7 +3353,7 @@ h6 {
 @media screen and (width <= 490px) {
   .section-products__title {
     padding: 0 2rem;
-    text-align: right;
+    text-align: center;
   }
 }
 .section-products__column {
@@ -3360,7 +3378,6 @@ h6 {
   filter: drop-shadow(0 0 3px rgba(128, 128, 128, 0.5568627451));
 }
 .products-cart__content {
-  pointer-events: none;
   display: flex;
   flex-direction: column;
   gap: 10px;

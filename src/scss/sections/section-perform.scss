@@ -69,6 +69,7 @@
 
     @include screen-690 {
       margin-bottom: 4rem;
+      text-align: center;
     }
   }
 
@@ -133,10 +134,15 @@
       &:last-child {
         color: #000;
         text-align: right;
+
+        @include screen-690 {
+          text-align: center;
+        }
       }
     }
 
     @include screen-690 {
+      max-width: 100%;
       text-align: center;
       span {
         &:not(:last-child) {

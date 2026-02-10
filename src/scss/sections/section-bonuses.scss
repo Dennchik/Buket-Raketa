@@ -72,11 +72,13 @@
     padding-left: clamp(2.4rem, 5vw, 12rem);
 
     @include screen-490 {
+      align-items: center;
       max-width: 200px;
       padding-left: 0;
       padding-block: 4rem;
     }
   }
+
   // .section-bonuses__bg-image
   &__bg-image {
     position: absolute;
@@ -84,7 +86,6 @@
     top: -51%;
     left: 2%;
 
-    /* Vector 7 */
     width: 1344.94px;
     height: 467.79px;
   }
@@ -96,10 +97,11 @@
 
     max-width: clamp(200px, 20vw, 27rem);
     margin-bottom: 3rem;
+    padding-right: 1rem;
 
     font-weight: 500;
     line-height: 110%;
-    letter-spacing: -3px;
+    letter-spacing: -1.8px;
 
     span {
       display: block;
@@ -113,6 +115,14 @@
     span:nth-child(2) {
       color: rgb(31 30 29 / 100%);
       text-align: right;
+    }
+
+    @include screen-490 {
+      text-align: center;
+      span:nth-child(2) {
+        color: rgb(31 30 29 / 100%);
+        text-align: center;
+      }
     }
   }
 
@@ -129,7 +139,7 @@
     color: rgb(31 30 29 / 100%);
 
     @include screen-490 {
-      max-width: 240px;
+      max-width: 177px;
     }
   }
 

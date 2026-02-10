@@ -46,7 +46,7 @@
 
     @include screen-490 {
       padding: 0 2rem;
-      text-align: right;
+      text-align: center;
     }
   }
 
@@ -81,12 +81,9 @@
 
   // .products-cart__content
   &__content {
-    pointer-events: none;
-
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     height: 100%;
   }
 
