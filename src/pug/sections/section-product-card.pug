@@ -1,136 +1,135 @@
 .section-product-card
-	.section-product-card__body 
-		.section-product-card__bread-crumbs 
-			nav.bread-crumbs 
-				ul.bread-crumbs__list 
-					li 
-						a.bread-crumbs__link.link_underline-lr(href=getWebRoot(filename) + "index.html" aria-label="home") 
-							span Главная 
-					li -
-					li 
-						span.bread-crumbs__item Карточка товара 
-		.section-product-card__title.t-h1 Авторский премиум-букет из роз
-		.section-product-card__wrapper
-			.section-product-card__reviews
-				.section-product-card__item
-					.section-product-card__icon
-						img(src="/img/icons/yandex-icon.svg" alt="")
-				.section-product-card__item
-					+iconfont('star', 'icon')
-					.section-product-card__rating
-						span 4.9 
-				.section-product-card__counter 
-					span#card-counter 23
-					span отзыва  
-			.section-product-card__product-code
-				| Код товара: 372913
-		.section-product-card__content
-			.section-product-card__column 
-				.section-product-card__thumb-slide
-					.card-product 
-						include @/pug/modules/slide-thumb 
-			.section-product-card__column
-				.composition-product
-					.composition-product__body 
-						.composition-product__title
-							| Состав букета:
-						.composition-product__info
-							p Роза кустовая: 5 шт.
-							p Хризантема кустовая: 5 шт.
-							p Лагурус (сухоцвет): 5 шт.
-						.composition-product__select-product
-							.composition-product__select-title
-								| Выберите доп. товар
-							.composition-product__content 
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-01.png', 'image')
-									.composition-product__name 
-										| Открытки
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-									.composition-product__name 
-										| Шарики
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-									.composition-product__name 
-										| Шарики
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-01.png', 'image')
-									.composition-product__name 
-										| Открытки  
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-									.composition-product__name 
-										| Шарики
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-									.composition-product__name 
-										| Шарики
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-02.png', 'image')
-									.composition-product__name 
-										| Шарики
-								.composition-product__item
-									.composition-product__image 
-										+picture('img/products/sel-01.png', 'image')
-									.composition-product__name 
-										| Открытки  
-			.section-product-card__column
-				.section-product-card__purchase
-					.purchase
-						.purchase__prices
-							.purchase__prices-item
-								.purchase__new-price
-									span.price 8.870 
-									+iconfont('rub', 'icon')
-								.purchase__discount
-									span -13%
-							.purchase__old-price
-								| 10.326 ₽
-						.purchase__buttons 
-							.purchase__button-add.button.request-button
-								span Оформить заказ
-								.purchase__icon
-									+iconfont('arrow-right', 'icon')
-							a(href="").purchase__button-by.button
-								span Купить в 1 клик
-								.purchase__icon
-									+iconfont('arrow-right', 'icon')
-				.section-product-card__delivery-products
-					.delivery-products
-						.delivery-products__wrapper
-							.delivery-products__title.t-text-20 Способы получения
-							.delivery-products__select-city#cityTrigger 
-								span Ваш город:
-								a(href="").select-city.link_underline-lr 
-									span#currentCityName Оренбург
-									// Выпадающий список
-								.cities-dropdown#citiesDropdown
-									input(type="text" placeholder="Поиск города...").cities-search#citySearch
-									ul.cities-list#citiesList
-										// Сюда будут подгружаться города
-										li.loading Загрузка...
-					.delivery-info
-						.delivery-info__links
-							a(href="").delivery-info__link
-								.delivery-info__icon
-									+iconfont('arrow-right', 'icon')
-								span Узнать стоимость доставки
-							a(href="").delivery-info__link
-								.delivery-info__icon
-									+iconfont('arrow-right', 'icon')
-								span Получите 
-									span.focus 87 бонусов 
-									| за&nbsp;покупку этого товара
+  .section-product-card__body 
+    .section-product-card__bread-crumbs 
+      nav.bread-crumbs 
+        ul.bread-crumbs__list 
+          li 
+            a.bread-crumbs__link.link_underline-lr(href=getWebRoot(filename) + "index.html" aria-label="home") 
+              span Главная 
+          li -
+          li 
+            span.bread-crumbs__item Карточка товара 
+    .section-product-card__title.t-h1 Авторский премиум-букет из роз
+    .section-product-card__wrapper
+      .section-product-card__reviews
+        .section-product-card__item
+          .section-product-card__icon
+            img(src="/img/icons/yandex-icon.svg" alt="")
+        .section-product-card__item
+          +iconfont('star', 'icon')
+          .section-product-card__rating
+            span 4.9 
+        .section-product-card__counter 
+          span#card-counter 23
+          span отзыва  
+      .section-product-card__product-code
+        | Код товара: 372913
+    .section-product-card__content
+      .section-product-card__column 
+        .section-product-card__thumb-slide
+          include @/pug/modules/swiper-thumb
+      .section-product-card__column
+        .composition-product
+          .composition-product__body 
+            .composition-product__title
+              | Состав букета:
+            .composition-product__info
+              p Роза кустовая: 5 шт.
+              p Хризантема кустовая: 5 шт.
+              p Лагурус (сухоцвет): 5 шт.
+            .composition-product__select-product
+              .composition-product__select-title
+                | Выберите доп. товар
+              .composition-product__content 
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-01.png', 'image')
+                  .composition-product__name 
+                    | Открытки
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                  .composition-product__name 
+                    | Шарики
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                  .composition-product__name 
+                    | Шарики
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-01.png', 'image')
+                  .composition-product__name 
+                    | Открытки  
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                  .composition-product__name 
+                    | Шарики
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                  .composition-product__name 
+                    | Шарики
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-02.png', 'image')
+                  .composition-product__name 
+                    | Шарики
+                .composition-product__item
+                  .composition-product__image 
+                    +picture('img/products/sel-01.png', 'image')
+                  .composition-product__name 
+                    | Открытки  
+      .section-product-card__column
+        .section-product-card__purchase
+          .purchase
+            .purchase__prices
+              .purchase__prices-item
+                .purchase__new-price
+                  span.price 8.870 
+                  +iconfont('rub', 'icon')
+                .purchase__discount
+                  span -13%
+              .purchase__old-price
+                | 10.326 ₽
+            .purchase__buttons 
+              .purchase__button-add.button.request-button
+                span Оформить заказ
+                .purchase__icon
+                  +iconfont('arrow-right', 'icon')
+              a(href="").purchase__button-by.button
+                span Купить в 1 клик
+                .purchase__icon
+                  +iconfont('arrow-right', 'icon')
+        .section-product-card__delivery-products
+          .delivery-products
+            .delivery-products__wrapper
+              .delivery-products__title.t-text-20 Способы получения
+              .delivery-products__select-city#cityTrigger 
+                span Ваш город:
+                a(href="").select-city.link_underline-lr 
+                  span#currentCityName Оренбург
+                  // Выпадающий список
+                .cities-dropdown#citiesDropdown
+                  input(type="text" placeholder="Поиск города...").cities-search#citySearch
+                  ul.cities-list#citiesList
+                    // Сюда будут подгружаться города
+                    li.loading Загрузка...
+          .delivery-info
+            .delivery-info__links
+              a(href="").delivery-info__link
+                .delivery-info__icon
+                  +iconfont('arrow-right', 'icon')
+                span Узнать стоимость доставки
+              a(href="").delivery-info__link
+                .delivery-info__icon
+                  +iconfont('arrow-right', 'icon')
+                span Получите 
+                  span.focus 87 бонусов 
+                  | за&nbsp;покупку этого товара
 
 

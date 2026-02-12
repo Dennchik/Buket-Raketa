@@ -29,6 +29,7 @@
 
     overflow: hidden;
 
+    width: 100%;
     max-width: 420px;
     padding: 10px 35px;
     border-radius: 25px;
@@ -82,6 +83,10 @@
         border-color: rgb(236 104 29 / 100%);
       }
     }
+
+    .swiper-wrapper {
+      justify-content: center;
+    }
   }
 
   // .card-slide__image
@@ -90,8 +95,8 @@
     display: flex;
     align-items: center;
 
-    max-width: 70px;
-    max-height: 70px;
+    width: 70px;
+    // max-height: 70px;
     border: 2px solid transparent;
     border-radius: 15px;
 
@@ -106,6 +111,17 @@
     img {
       object-fit: contain;
     }
+  }
+}
+
+.card-thumb {
+  box-sizing: border-box;
+  .swiper-slide {
+    height: 70px;
+  }
+  .swiper-wrapper {
+    justify-content: center;
+    width: min-content;
   }
 }
 

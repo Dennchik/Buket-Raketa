@@ -16,21 +16,6 @@
 .select > ._collapse:not(._show) {
   display: none;
 }
-// Миксин для базовых стилей кнопок
-// @mixin button-base {
-//   cursor: pointer;
-
-//   display: inline-block;
-
-//   padding: $spacing-small $spacing-medium;
-//   border: none;
-//   border-radius: 5px;
-
-//   font-size: 1em;
-//   text-decoration: none;
-
-//   transition: background-color 0.2s ease;
-// }
 
 //* button
 .button {

@@ -30,7 +30,8 @@
   // .section-bonuses __column
   &__column {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
+
     &:nth-child(1) {
       display: flex;
       gap: 20px;

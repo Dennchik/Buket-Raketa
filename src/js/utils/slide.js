@@ -13,7 +13,7 @@ export function cardSlide(slide = '.card-slide') {
       const totalSlides = slides.length;
 
       // ⚠️ Показываем все если их 3 или меньше, иначе показываем 4
-      return totalSlides <= 5 ? totalSlides : 5;
+      return totalSlides <= 3 ? totalSlides : 3;
     }
 
     let swiper = new Swiper('.card-thumb', {
