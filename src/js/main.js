@@ -6,7 +6,7 @@ import Swiper from 'swiper/bundle';
 cookiesAccept('.cookies-accept', '.cookies-accept__button');
 // buildSwiper();
 // cardSlide();
-import loaded from './assets/preloader.js';
+// import loaded from './assets/preloader.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
 import {
@@ -27,7 +27,7 @@ if (requestForm) {
   toggleModalOpen();
 }
 
-loaded('.preloader');
+// loaded('.preloader');
 buttonSearch();
 sideBarLoyuts();
 dynamicAdaptive();
