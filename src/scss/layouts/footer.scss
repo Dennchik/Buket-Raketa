@@ -318,6 +318,11 @@
     gap: 0.5rem;
     align-items: center;
 
+    svg {
+      width: 33px;
+      height: 33px;
+    }
+
     .icon {
       display: flex;
       align-items: center;

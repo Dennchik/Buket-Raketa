@@ -359,7 +359,6 @@
 @media screen and (width <= 375px) {
   .header__logo {
     overflow: hidden;
-    width: 45px;
   }
   .header__logo img {
     position: relative;
@@ -828,6 +827,10 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+.contacts__networks svg {
+  width: 33px;
+  height: 33px;
 }
 .contacts__networks .icon {
   display: flex;
@@ -4224,6 +4227,10 @@ h6 {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+.section-map__networks svg {
+  width: 33px;
+  height: 33px;
 }
 .section-map__networks .icon {
   display: flex;
