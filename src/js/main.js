@@ -1,12 +1,9 @@
 import '../scss/main.scss';
-// import { buildSwiper } from './utils/build-swiper.js';
-import { cardSlide } from './utils/slide.js';
+
 import { maskPhone } from './assets/mask-phone.js';
 import Swiper from 'swiper/bundle';
 cookiesAccept('.cookies-accept', '.cookies-accept__button');
-// buildSwiper();
-// cardSlide();
-// import loaded from './assets/preloader.js';
+
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
 import {
@@ -78,3 +75,4 @@ new Swiper('.mySwiper2', {
     swiper: swiper,
   },
 });
+//* ----------------------------------------------------------------------------
