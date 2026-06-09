@@ -43,6 +43,7 @@
 
   @include screen-490 {
     height: 40px;
+    line-height: 110%;
   }
 }
 //* ✅ - [ Checkbox ] -
@@ -186,7 +187,7 @@
 
   @include minmax-490-1920 {
     font-size: calc(
-      20px + (32 - 20) * ((100vw - 490px) / (1920 - 490))
+      22px + (32 - 22) * ((100vw - 490px) / (1920 - 490))
     ) !important;
   }
 
@@ -194,7 +195,20 @@
     font-size: 22px !important;
   }
 }
+.t-h4 {
+  font-size: 24px;
+  line-height: 110%;
 
+  @include minmax-490-1920 {
+    font-size: calc(
+      18px + (24 - 18) * ((100vw - 490px) / (1920 - 490))
+    ) !important;
+  }
+
+  @include screen-490 {
+    font-size: 18px !important;
+  }
+}
 .t-text-15 {
   font-size: clamp(12px, 1.8vw, 15px);
   line-height: 110%;

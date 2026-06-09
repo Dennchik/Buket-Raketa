@@ -33,6 +33,7 @@
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
 // todo -------------------------- Section -------------------------------------
+@use 'sections/section-about';
 @use 'sections/section-perform';
 @use 'sections/section-invitation';
 @use 'sections/section-bonuses';
@@ -47,6 +48,7 @@
 @use 'sections/section-placed-order';
 @use 'sections/section-questions';
 @use 'sections/section-reviews';
+@use 'sections/section-marketing';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

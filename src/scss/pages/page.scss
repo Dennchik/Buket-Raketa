@@ -117,6 +117,7 @@
     padding-block: 5rem 2rem;
 
     @include screen-490 {
+      margin: 0 -16px;
       padding-block: 3rem 2rem;
     }
   }

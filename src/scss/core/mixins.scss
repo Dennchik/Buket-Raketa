@@ -104,7 +104,13 @@
 }
 
 @mixin screen-580 {
-  @media screen and (width <= 580px) {
+  @media screen and (width < 580px) {
+    @content;
+  }
+}
+
+@mixin screen-520 {
+  @media screen and (width < 520px) {
     @content;
   }
 }

@@ -36,13 +36,22 @@
     justify-content: space-between;
 
     margin: 1.3rem;
+
+    @include screen-580 {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   // .section-product-card__reviews
   &__reviews {
     display: flex;
     gap: 0.7rem;
-    align-items: flex-end;
+    align-items: center;
+
+    @include screen-425 {
+      flex-wrap: wrap;
+    }
   }
 
   // .section-product-card__item
@@ -64,6 +73,10 @@
 
   // .section-product-card__icon
   &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 16px;
     height: 18px;
   }
@@ -91,7 +104,7 @@
 
   //.section-product-card__product-code
   &__product-code {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 110%;
     color: rgb(153 150 147 / 100%);
