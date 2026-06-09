@@ -81,10 +81,32 @@
 
   // .products-cart__content
   &__content {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     height: 100%;
+  }
+
+  // .products-cart__label
+  &__label {
+    position: absolute;
+    transform: translate(8px, -33%);
+
+    display: inline-flex;
+    gap: 7px;
+
+    padding: 7px 10px;
+    border-radius: 7px;
+
+    color: white;
+
+    background-color: $color;
+    .icon {
+      color: white;
+    }
   }
 
   //.products-cart__wrapper
@@ -180,6 +202,7 @@
     }
 
     span {
+      margin: 0 auto;
       color: #fff;
     }
   }

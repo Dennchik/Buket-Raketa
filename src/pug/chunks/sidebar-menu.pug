@@ -2,35 +2,38 @@
   .menu-list__body
     .menu-list__header 
       a(href="#home" aria-label="home").menu-list__logo
-        +picture('/img/icons/logo.png', 'image')  
-      include ../assets/burger-button 
+        +picture('/img/icons/icon-logo.png', 'image') 
+      .burger-button
+        +iconfont('cross-middle', 'icon')
     .menu-list__content 
       .menu-list__list.bp-7
-        .menu-list__list-item.button
-          a(href=linkTo('catalog', filename)).menu-list__link 
-            +iconfont('catalog', 'icon')
+        .menu-list__list-item 
+          a(href=linkTo('catalog', filename)).menu-list__link  
             span Каталог
-        .menu-list__list-item.button
-          a(href=linkTo('delivery', filename)).menu-list__link 
-            +iconfont('delivery', 'icon')
+        .menu-list__list-item 
+          a(href=linkTo('delivery', filename)).menu-list__link  
             span Доставка
-        //- .menu-list__list-item.button
+        .menu-list__list-item
           a(href=linkTo('about', filename)).menu-list__link 
-            +iconfont('information-outline', 'icon')
             span О нас
-        //- .menu-list__list-item.button
-          a(href="#contacts").menu-list__link.anchor-link
-            +iconfont('contacts', 'icon')
+        .menu-list__list-item
+          a(href="#contacts").menu-list__link.anchor-link 
             span Контакты
-        //- .menu-list__list-item.button
+        .menu-list__list-item
           a(href="" target="_blank").menu-list__link 
             .menu-list__icon 
               img(src="/img/icons/group.svg" alt="иконка")
             span Система лояльности  
+
       .menu-list__footer 
+        .header__phone 
+          +iconfont('phone-call', 'icon')
+          a(href="tel:8 (906) 849-97-43") 
+            span +7 (906) 849-97-43 
         .section-map__networks
-          +iconfont('telegram-fly', 'icon') 
-          +iconfont('vk-brand', 'icon')
-        .section-map__text
-          span.t-text-20 Мы в соц. сетях
-          span.t-text-13 Пишите нам
+          a(href="https://t.me/" target="_blank" data-letters="Телеграм")
+            +iconfont('telegram-fly', 'icon') 
+          a(href="https://vk.com/" target="_blank" data-letters="В контакте")
+            +iconfont('vk-brand', 'icon')
+          a(href="https://vk.com/" target="_blank" data-letters="Max")
+            +iconfont('max-logo', 'icon') 

@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?anpjvq');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ss6td3');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?anpjvq#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ss6td3#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?anpjvq')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ss6td3')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?anpjvq')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ss6td3')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?anpjvq##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ss6td3##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -23,14 +23,11 @@
 
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
-  font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
   font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga';
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
-  font-variant-ligatures: discretionary-ligatures;
   font-variant-ligatures: discretionary-ligatures;
 
   /* Better Font Rendering =========== */
@@ -43,34 +40,54 @@
   letter-spacing: 0;
 }
 
-.icon-contacts {
+.icon-zoom-in {
   &::before {
-    content: $icon-contacts;
+    content: $icon-zoom-in;
   }
 }
-.icon-cross-middle {
+.icon-search {
   &::before {
-    content: $icon-cross-middle;
+    content: $icon-search;
   }
 }
-.icon-trash {
+.icon-local_grocery_store {
   &::before {
-    content: $icon-trash;
+    content: $icon-local_grocery_store;
   }
 }
-.icon-user-profile {
+.icon-minus {
   &::before {
-    content: $icon-user-profile;
+    content: $icon-minus;
   }
 }
-.icon-information-outline {
+.icon-plus {
   &::before {
-    content: $icon-information-outline;
+    content: $icon-plus;
   }
 }
-.icon-arrow-right {
+.icon-max-logo {
   &::before {
-    content: $icon-arrow-right;
+    content: $icon-max-logo;
+  }
+}
+.icon-time-alarm {
+  &::before {
+    content: $icon-time-alarm;
+  }
+}
+.icon-fire {
+  &::before {
+    content: $icon-fire;
+  }
+}
+.icon-truck {
+  &::before {
+    content: $icon-truck;
+  }
+}
+.icon-Max_logo_black {
+  &::before {
+    content: $icon-Max_logo_black;
   }
 }
 .icon-delivery {
@@ -148,24 +165,39 @@
     content: $icon-whatsapp-draw;
   }
 }
-.icon-search {
+.icon-heart-like {
   &::before {
-    content: $icon-search;
+    content: $icon-heart-like;
   }
 }
-.icon-local_grocery_store {
+.icon-contacts {
   &::before {
-    content: $icon-local_grocery_store;
+    content: $icon-contacts;
   }
 }
-.icon-minus {
+.icon-cross-middle {
   &::before {
-    content: $icon-minus;
+    content: $icon-cross-middle;
   }
 }
-.icon-plus {
+.icon-trash {
   &::before {
-    content: $icon-plus;
+    content: $icon-trash;
+  }
+}
+.icon-user-profile {
+  &::before {
+    content: $icon-user-profile;
+  }
+}
+.icon-information-outline {
+  &::before {
+    content: $icon-information-outline;
+  }
+}
+.icon-arrow-right {
+  &::before {
+    content: $icon-arrow-right;
   }
 }
 .icon-location {

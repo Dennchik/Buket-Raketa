@@ -34,12 +34,12 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include screen-768 {
+    @include screen-690 {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include screen-490 {
-      grid-template-columns: 1fr;
+    @include screen-375 {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   // .related-products__column

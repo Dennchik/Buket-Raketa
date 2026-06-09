@@ -30,34 +30,54 @@
   letter-spacing: 0;
 }
 
-.icon-contacts {
+.icon-zoom-in {
   &::before {
-    content: $icon-contacts;
+    content: $icon-zoom-in;
   }
 }
-.icon-cross-middle {
+.icon-search {
   &::before {
-    content: $icon-cross-middle;
+    content: $icon-search;
   }
 }
-.icon-trash {
+.icon-local_grocery_store {
   &::before {
-    content: $icon-trash;
+    content: $icon-local_grocery_store;
   }
 }
-.icon-user-profile {
+.icon-minus {
   &::before {
-    content: $icon-user-profile;
+    content: $icon-minus;
   }
 }
-.icon-information-outline {
+.icon-plus {
   &::before {
-    content: $icon-information-outline;
+    content: $icon-plus;
   }
 }
-.icon-arrow-right {
+.icon-max-logo {
   &::before {
-    content: $icon-arrow-right;
+    content: $icon-max-logo;
+  }
+}
+.icon-time-alarm {
+  &::before {
+    content: $icon-time-alarm;
+  }
+}
+.icon-fire {
+  &::before {
+    content: $icon-fire;
+  }
+}
+.icon-truck {
+  &::before {
+    content: $icon-truck;
+  }
+}
+.icon-Max_logo_black {
+  &::before {
+    content: $icon-Max_logo_black;
   }
 }
 .icon-delivery {
@@ -135,24 +155,39 @@
     content: $icon-whatsapp-draw;
   }
 }
-.icon-search {
+.icon-heart-like {
   &::before {
-    content: $icon-search;
+    content: $icon-heart-like;
   }
 }
-.icon-local_grocery_store {
+.icon-contacts {
   &::before {
-    content: $icon-local_grocery_store;
+    content: $icon-contacts;
   }
 }
-.icon-minus {
+.icon-cross-middle {
   &::before {
-    content: $icon-minus;
+    content: $icon-cross-middle;
   }
 }
-.icon-plus {
+.icon-trash {
   &::before {
-    content: $icon-plus;
+    content: $icon-trash;
+  }
+}
+.icon-user-profile {
+  &::before {
+    content: $icon-user-profile;
+  }
+}
+.icon-information-outline {
+  &::before {
+    content: $icon-information-outline;
+  }
+}
+.icon-arrow-right {
+  &::before {
+    content: $icon-arrow-right;
   }
 }
 .icon-location {

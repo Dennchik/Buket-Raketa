@@ -42,7 +42,7 @@
   &__reviews {
     display: flex;
     gap: 0.7rem;
-    align-items: center;
+    align-items: flex-end;
   }
 
   // .section-product-card__item
@@ -80,6 +80,10 @@
     gap: 0.2rem;
     line-height: 100%;
     color: rgb(60 109 202 / 100%);
+
+    .card-counter {
+      font-size: 14px;
+    }
     span {
       display: block;
     }
@@ -93,6 +97,26 @@
     color: rgb(153 150 147 / 100%);
   }
 
+  // .section-product-card__quantity-bouquets
+  &__quantity-bouquets {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    .section-product-card__text {
+      font-size: 1.4rem;
+      opacity: 0.6;
+    }
+    .bouquets-counter {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+
+  // .section-product-card__text
+  &__text {
+    font-size: 14px;
+    line-height: 100%;
+  }
   // .section-product-card__product-title
   &__product-title {
     margin-bottom: 5rem;

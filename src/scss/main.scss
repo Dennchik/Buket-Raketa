@@ -36,16 +36,17 @@
 @use 'sections/section-perform';
 @use 'sections/section-invitation';
 @use 'sections/section-bonuses';
-
 @use 'sections/section-products';
 @use 'sections/section-info';
 @use 'sections/section-map';
-
+@use 'sections/section-bunner';
 @use 'sections/section-delivery';
 @use 'sections/section-catalog';
 @use 'sections/section-product-card';
 @use 'sections/related-products';
 @use 'sections/section-placed-order';
+@use 'sections/section-questions';
+@use 'sections/section-reviews';
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {

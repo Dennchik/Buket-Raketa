@@ -1,0 +1,169 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+$radius: 3.2rem;
+.section-questions {
+  // .section-questions__body
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+
+    @include screen-490 {
+      padding: 0 0 3rem;
+    }
+  }
+
+  &__head {
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+    font-family: $font-family-title;
+    line-height: 110%;
+    color: rgb(31 30 29 / 100%);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+//* ----------------------------------------------------------------------------
+// --- Карточка вопроса ---
+.questions-item {
+  overflow: hidden;
+
+  border: 1px solid rgb(46 46 46 / 5%);
+  border-radius: $radius;
+
+  background-color: $background;
+  box-shadow: 0 2px 20px rgb(46 46 46 / 5%);
+
+  transition: box-shadow 0.1s ease;
+
+  // При наведении чуть подсвечиваем
+  &:hover {
+    box-shadow: 0 4px 20px rgb(46 46 46 / 10%);
+  }
+
+  // --- Состояние: Открыт (добавляется через JS) ---
+  &.is-active {
+    .questions-item__icon {
+      transform: rotate(45deg);
+      // border-color: $color;
+      background-color: $color;
+
+      &::before,
+      &::after {
+        background-color: white;
+      }
+    }
+
+    .questions-item__content {
+      grid-template-rows: 1fr;
+      padding-bottom: 24px;
+      opacity: 1;
+    }
+  }
+
+  // Кнопка-триггер (весь заголовок)
+  &__trigger {
+    cursor: pointer;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 24px 30px;
+    border: none;
+
+    text-align: left;
+
+    background: none;
+  }
+
+  &__question {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  // Иконка плюса
+  &__icon {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+
+    background: rgb(247 243 240);
+
+    transition: all 0.3s ease;
+
+    // Рисуем плюс через псевдоэлементы
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      // background-color: $color-text;
+      background: $color;
+
+      transition: background-color 0.3s;
+    }
+
+    // Горизонтальная палка
+    &::before {
+      width: 14px;
+      height: 2px;
+    }
+    // Вертикальная палка
+    &::after {
+      width: 2px;
+      height: 14px;
+    }
+  }
+
+  // Контейнер для скрытого текста
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr; // По умолчанию высота 0
+
+    padding: 0 30px; // Боковые отступы
+
+    opacity: 0;
+
+    transition:
+      grid-template-rows 0.4s ease-out,
+      opacity 0.4s ease,
+      padding 0.4s ease;
+  }
+
+  &__text {
+    overflow: hidden; // Обязательно для анимации Grid
+    line-height: 130%;
+
+    p {
+      margin: 0;
+    }
+  }
+}

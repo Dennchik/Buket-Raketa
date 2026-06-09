@@ -77,9 +77,12 @@
       }
 
       a {
+        overflow: hidden;
+
         transition: transform 0.3s ease 0s;
         &:hover {
           transform: scale(0.9);
+          opacity: 0.8;
         }
       }
     }

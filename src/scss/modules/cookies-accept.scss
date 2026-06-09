@@ -46,12 +46,19 @@
 
   // .cookies-accept_button
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     max-width: 180px;
     padding: 6px 3rem;
+
     text-align: center;
+
     background: $font-color-secondary;
 
     span {
+      font-weight: 700;
       color: $color;
       text-transform: uppercase;
     }

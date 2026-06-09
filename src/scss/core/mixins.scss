@@ -25,6 +25,12 @@
   }
 }
 
+@mixin screen-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
 @mixin screen-1920 {
   @media screen and (width <= 1920px) {
     @content;
@@ -51,6 +57,12 @@
 
 @mixin screen-1024 {
   @media screen and (width <= 1024px) {
+    @content;
+  }
+}
+
+@mixin screen-992 {
+  @media screen and (width <= 992px) {
     @content;
   }
 }

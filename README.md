@@ -1,3 +1,2 @@
 # Buket-Raketa
-Сайт: https://buketraket.ru/shop
-
+Сайт: https://buketraket.ru/

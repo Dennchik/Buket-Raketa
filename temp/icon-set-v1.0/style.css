@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-set';
-  src:  url('fonts/icon-set.eot?anpjvq');
-  src:  url('fonts/icon-set.eot?anpjvq#iefix') format('embedded-opentype'),
-    url('fonts/icon-set.ttf?anpjvq') format('truetype'),
-    url('fonts/icon-set.woff?anpjvq') format('woff'),
-    url('fonts/icon-set.svg?anpjvq#icon-set') format('svg');
+  src:  url('fonts/icon-set.eot?ss6td3');
+  src:  url('fonts/icon-set.eot?ss6td3#iefix') format('embedded-opentype'),
+    url('fonts/icon-set.ttf?ss6td3') format('truetype'),
+    url('fonts/icon-set.woff?ss6td3') format('woff'),
+    url('fonts/icon-set.svg?ss6td3#icon-set') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,23 +35,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-contacts:before {
-  content: "\e907";
+.icon-zoom-in:before {
+  content: "\e912";
 }
-.icon-cross-middle:before {
-  content: "\e944";
+.icon-search:before {
+  content: "\e905";
 }
-.icon-trash:before {
-  content: "\e938";
+.icon-local_grocery_store:before {
+  content: "\e904";
 }
-.icon-user-profile:before {
-  content: "\e971";
+.icon-minus:before {
+  content: "\e908";
 }
-.icon-information-outline:before {
-  content: "\e90a";
+.icon-plus:before {
+  content: "\e911";
 }
-.icon-arrow-right:before {
-  content: "\e950";
+.icon-max-logo:before {
+  content: "\e910";
+}
+.icon-time-alarm:before {
+  content: "\e90f";
+}
+.icon-fire:before {
+  content: "\e90d";
+}
+.icon-truck:before {
+  content: "\f0d1";
+}
+.icon-Max_logo_black:before {
+  content: "\e90e";
 }
 .icon-delivery:before {
   content: "\e90b";
@@ -98,17 +110,26 @@
 .icon-whatsapp-draw:before {
   content: "\e902";
 }
-.icon-search:before {
-  content: "\e905";
+.icon-heart-like:before {
+  content: "\e9da";
 }
-.icon-local_grocery_store:before {
-  content: "\e904";
+.icon-contacts:before {
+  content: "\e907";
 }
-.icon-minus:before {
-  content: "\e908";
+.icon-cross-middle:before {
+  content: "\e944";
 }
-.icon-plus:before {
-  content: "\e911";
+.icon-trash:before {
+  content: "\e938";
+}
+.icon-user-profile:before {
+  content: "\e971";
+}
+.icon-information-outline:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e950";
 }
 .icon-location:before {
   content: "\e909";

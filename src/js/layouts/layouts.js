@@ -329,21 +329,11 @@ export function sideBarLoyuts() {
 //* - [ Button Search  ] -
 export function buttonSearch() {
   const headerContainer = document.querySelector('.header-container');
-  // const sectionTop = document.querySelector('.section-top');
   const searchButton = document.querySelector('.search-button');
 
-  // if (!searchButton) return;
+  if (!searchButton) return;
   searchButton.addEventListener('click', () => {
     headerContainer.classList.toggle('_active');
-    if (sectionTop) {
-      if (headerContainer.classList.contains('_active')) {
-        // sectionTop.style.paddingTop = '50px';
-        sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
-      } else {
-        // sectionTop.style.paddingTop = '0';
-        sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
-      }
-    }
   });
 }
 
@@ -357,17 +347,18 @@ export function cookiesAccept(el, trigger) {
   // ⬇️⬇️⬇️ ДОБАВЛЕНИЯ сохранение в localStorage ⬇️⬇️⬇️
 
   // 1. Проверяем, было ли уже согласие
-  const hasAccepted = localStorage.getItem('cookiesAccepted');
+  // const hasAccepted = localStorage.getItem('cookiesAccepted');
 
   // 2. Если пользователь уже соглашался - скрываем баннер сразу
-  if (hasAccepted === 'true') {
-    // Сразу убираем, без анимации
-    cookiesAccept.style.display = 'none';
-    // или если хотите с анимацией:
-    // cookiesAccept.style.transform = 'translateY(110%)';
-    // cookiesAccept.style.transition = 'transform 0.5s ease';
-    return; // Завершаем функцию, баннер больше не нужен
-  }
+  // if (hasAccepted === 'true') {
+  //   // Сразу убираем, без анимации
+  //   cookiesAccept.style.display = 'none';
+  //   // или если хотите с анимацией:
+  //   // cookiesAccept.style.transform = 'translateY(110%)';
+  //   // cookiesAccept.style.transition = 'transform 0.5s ease';
+  //   return; // Завершаем функцию, баннер больше не нужен
+  // }
+  // ! Временно
 
   // ⬆️⬆️⬆️  ДОБАВЛЕНИЯ ЗАКОНЧИЛИСЬ ⬆️⬆️⬆️
 
