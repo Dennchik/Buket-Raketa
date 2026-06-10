@@ -12,6 +12,10 @@
     transition: opacity 0.9s ease-in-out;
   }
 }
+.text-light {
+  font-weight: 100;
+  opacity: 0.7;
+}
 
 .select > ._collapse:not(._show) {
   display: none;

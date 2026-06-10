@@ -87,17 +87,22 @@
       max-width: none;
       &:nth-child(1) {
         top: 0;
-        left: 0;
+        right: 0;
         transform: translate(-180px, -60px);
       }
 
       &:nth-child(2) {
-        right: -50%;
-        bottom: 0;
-        transform: rotate(358deg);
+        top: 0;
+        right: -42%;
+        transform: rotate(365deg);
+        margin-top: -42%;
+      }
 
-        margin-top: -50rem;
-        margin-left: -19rem;
+      &:nth-child(3) {
+        bottom: 0;
+        left: -50%;
+        margin-top: 20%;
+        margin-left: -17%;
       }
     }
   }

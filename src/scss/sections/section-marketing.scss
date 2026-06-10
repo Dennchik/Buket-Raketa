@@ -18,6 +18,10 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     gap: 20px;
+
+    @include screen-1024 {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .section-marketing__column
@@ -28,7 +32,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+
+      @include screen-580 {
+        grid-template-columns: 1fr;
+      }
     }
+
     &:nth-child(2) {
       background-color: #fef9f5;
     }
@@ -43,6 +52,10 @@
     padding: 3rem;
     border: 1px solid #e4dfdf;
     border-radius: 25px;
+
+    @include screen-425 {
+      padding: 16px;
+    }
   }
 
   // .section-marketing__row
@@ -54,8 +67,11 @@
 
   // .section-marketing__icon
   &__icon {
-    width: 40px;
-    height: 40px;
+    flex: 0 0 40px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   // .section-marketing__title

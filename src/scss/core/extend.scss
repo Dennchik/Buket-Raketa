@@ -3,6 +3,50 @@
 
 //* ----------------------------------------------------------------------------
 
+// Иконка плюса
+.icon-plus {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+
+  background: rgb(247 243 240);
+
+  transition: all 0.3s ease;
+
+  // Рисуем плюс через псевдоэлементы
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // background-color: $color-text;
+    background: $color;
+
+    transition: background-color 0.3s;
+  }
+
+  // Горизонтальная палка
+  &::before {
+    width: 14px;
+    height: 2px;
+  }
+  // Вертикальная палка
+  &::after {
+    width: 2px;
+    height: 14px;
+  }
+}
+
+//* ----------------------------------------------------------------------------
 .line-through {
   text-decoration: line-through;
   opacity: 0.5;
