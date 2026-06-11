@@ -1,4 +1,5 @@
 @use '../core/variables' as *;
+
 // Переменные для цветов, размеров и т.д.
 
 $color-text-dark: #333;
@@ -6,7 +7,6 @@ $color-text-medium: #555;
 $color-text-light: #999;
 $color-border-light: #eee;
 $color-overlay: rgb(0 0 0 / 60%);
-
 $border-radius-base: 20px;
 $padding-base: 25px;
 $spacing-medium: 20px;

@@ -2,7 +2,7 @@
 @use '../core/mixins' as *;
 
 .preloader {
-  @extend .gradient-loader;
+  @extend %gradient-loader;
   position: fixed;
   z-index: 999;
   inset: 0;

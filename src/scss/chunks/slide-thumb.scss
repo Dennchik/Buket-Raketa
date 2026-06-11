@@ -96,6 +96,7 @@
     align-items: center;
 
     width: 70px;
+
     // max-height: 70px;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -116,9 +117,11 @@
 
 .card-thumb {
   box-sizing: border-box;
+
   .swiper-slide {
     height: 70px;
   }
+
   .swiper-wrapper {
     justify-content: center;
     width: min-content;
@@ -160,6 +163,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+
     .icon {
       pointer-events: none;
       font-size: 30px;

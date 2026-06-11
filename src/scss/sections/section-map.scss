@@ -18,8 +18,8 @@
   // .section-map__content
   &__content {
     display: grid;
-    grid-template-columns: minmax(250px, 348px) minmax(590px, 1fr);
     gap: 10px;
+    grid-template-columns: minmax(250px, 348px) minmax(590px, 1fr);
 
     @include screen-960 {
       grid-template-columns: 1fr;
@@ -28,44 +28,42 @@
 
   // .section-map__column
   &__column {
-    overflow: hidden;
-    min-width: 240px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px; // Для Safari
     height: 100%;
-    border-radius: 40px;
-    -webkit-border-radius: 40px; // Для Safari
+    min-width: 240px;
+    overflow: hidden;
 
     &:nth-child(1) {
+      background: rgb(255 255 255 / 100%);
       display: flex;
       flex-direction: column;
       gap: 10px;
 
       padding: 2rem;
-
-      background: rgb(255 255 255 / 100%);
     }
 
     &:nth-child(2) {
-      position: relative;
       overflow: hidden;
+      position: relative;
       width: 100%;
     }
 
     @include screen-490 {
-      border-radius: 30px;
-      -webkit-border-radius: 30px; // Для Safari
+      -webkit-border-radius: 30px;
+      border-radius: 30px; // Для Safari
     }
   }
 
   // .section-map__item
   &__item {
+    background: rgb(254 249 245 / 100%);
+    -webkit-border-radius: 60px;
+    border-radius: 60px; // Для Safari
     display: flex;
     gap: 1.6rem;
 
     padding: 10px 15px;
-    border-radius: 60px;
-    -webkit-border-radius: 60px; // Для Safari
-
-    background: rgb(254 249 245 / 100%);
 
     // .section-map__item--networks
     &--networks {
@@ -81,8 +79,8 @@
 
         transition: transform 0.3s ease 0s;
         &:hover {
-          transform: scale(0.9);
           opacity: 0.8;
+          transform: scale(0.9);
         }
       }
     }
@@ -90,9 +88,9 @@
 
   // .section-map__text
   &__text {
+    align-items: center;
     display: flex;
     gap: 0.9rem;
-    align-items: center;
 
     &:hover {
       .section-map__icon {
@@ -105,10 +103,10 @@
       white-space: nowrap;
 
       &.t-text-13 {
+        color: rgb(167 162 157 / 100%);
         font-size: 13px;
         font-weight: 400;
         line-height: 110%;
-        color: rgb(167 162 157 / 100%);
       }
 
       &:first-child {
@@ -121,67 +119,67 @@
 
   // .section-map__image
   &__image {
-    display: flex;
     align-items: center;
+
+    background: rgb(236 104 29 / 100%);
+    -webkit-border-radius: 50%;
+    border-radius: 50%; // Для Safari
+    display: flex;
+    height: 33px;
     justify-content: center;
 
     width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%; // Для Safari
-
-    background: rgb(236 104 29 / 100%);
 
     img {
-      width: 13px;
       height: 13px;
+      width: 13px;
     }
   }
 
   // .section-map__icon
   &__icon {
-    display: flex;
     align-items: center;
+
+    background: rgb(236 104 29 / 100%);
+    -webkit-border-radius: 50%;
+    border-radius: 50%; // Для Safari
+    display: flex;
+    height: 33px;
     justify-content: center;
     transition: transform 0.3s ease 0s;
 
     width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%; // Для Safari
-
-    background: rgb(236 104 29 / 100%);
 
     .icon {
-      font-size: 14px;
       color: #fff;
+      font-size: 14px;
     }
   }
 
   // .section-map__networks
   &__networks {
+    align-items: center;
     display: flex;
     gap: 1rem;
-    align-items: center;
     svg {
-      width: 33px;
       height: 33px;
+      width: 33px;
     }
 
     .icon {
-      display: flex;
       align-items: center;
+
+      background-color: #fff;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; // Для Safari
+      color: #fff;
+      display: flex;
+
+      font-size: 18px;
+      height: 33px;
       justify-content: center;
 
       width: 33px;
-      height: 33px;
-      border-radius: 50%;
-      -webkit-border-radius: 50%; // Для Safari
-
-      font-size: 18px;
-      color: #fff;
-
-      background-color: #fff;
     }
 
     .icon-telegram-fly {
@@ -199,21 +197,21 @@
 
   // .section-map__image-map
   &__image-map {
-    pointer-events: auto;
-    user-select: auto;
-    -webkit-user-select: auto; // Для Safari
-
-    position: relative;
-
-    overflow: hidden;
-    display: flex;
     align-items: center;
+    -webkit-border-radius: 40px;
+    border-radius: 40px; // Для Safari
+    display: flex;
+    height: 100%;
     justify-content: center;
 
+    overflow: hidden;
+    pointer-events: auto;
+
+    position: relative;
+    -webkit-user-select: auto;
+    user-select: auto; // Для Safari
+
     width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    -webkit-border-radius: 40px; // Для Safari
 
     @include screen-960 {
       height: 274px;
@@ -222,43 +220,31 @@
 
   //  .section-map__iframe
   &__iframe {
-    width: 100%;
-    height: 290px;
     border: none;
+    height: 290px;
+    width: 100%;
   }
 }
 
 .marker-box {
-  position: absolute;
-  display: inline-flex;
-  width: auto;
   -webkit-backface-visibility: hidden; // Улучшает рендеринг в Safari
   backface-visibility: hidden;
+  display: inline-flex;
+  position: absolute;
+  width: auto;
 
   &__img {
-    width: 50px;
     height: 50px;
+    width: 50px;
 
     img {
-      filter: drop-shadow(-3px 2px 7px #aaaaaa85);
-      -webkit-filter: drop-shadow(-3px 2px 7px #aaaaaa85); // Для Safari
+      -webkit-filter: drop-shadow(-3px 2px 7px #aaaaaa85);
+      filter: drop-shadow(-3px 2px 7px #aaaaaa85); // Для Safari
     }
   }
 
   &__text {
-    transform: translate(40px, -120%);
-    -webkit-transform: translate(40px, -120%); // Для Safari
-
-    display: flex;
     align-items: center;
-
-    width: 230px;
-    height: 42px;
-    padding: 14px 20px;
-    border-radius: 50px;
-    -webkit-border-radius: 50px; // Для Safari
-
-    white-space: nowrap;
 
     // Градиент с префиксами для кроссбраузерности
     background: rgb(255 255 255 / 32.2%);
@@ -272,14 +258,26 @@
       rgb(255 255 255 / 70%),
       rgb(255 255 255 / 39%)
     );
+    -webkit-border-radius: 50px;
+    border-radius: 50px; // Для Safari
+
+    display: flex;
+    height: 42px;
+    padding: 14px 20px;
+    -webkit-transform: translate(40px, -120%);
+    transform: translate(40px, -120%); // Для Safari
+
+    white-space: nowrap;
+
+    width: 230px;
 
     span {
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 110%;
       color: rgb(31 30 29 / 100%);
+      font-size: 13px;
       -webkit-font-smoothing: antialiased; // Улучшает рендеринг текста в Safari
       -moz-osx-font-smoothing: grayscale;
+      font-weight: 600;
+      line-height: 110%;
     }
   }
 }

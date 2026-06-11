@@ -9,35 +9,11 @@
 					li -
 					li 
 						span.bread-crumbs__item Каталог 
-		.section-catalog__title.t-h1 Каталог товаров
-		//- .section-catalog__select-filter 
-			.section-catalog__col
-				span На 8 марта
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon')
-			.section-catalog__col
-				span Сказать любою
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon')
-			.section-catalog__col
-				span Букеты
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon')
-			.section-catalog__col
-				span Любимой
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon')
-			.section-catalog__col
-				span Маме
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon')
-			.section-catalog__col
-				span Сестре
-				.section-catalog__del-btn 
-					+iconfont('plus', 'icon') 
+		.section-catalog__title.t-h1 Каталог товаров 
 		.section-catalog__content-wrapper 
-			.section-catalog__colo-left //* todo Секция фильтра
-				.filter-catalog
+			//* todo Секция фильтра
+			.section-catalog__colo-left
+				include @/pug/chunks/catalog-filter
 			.section-catalog__colo-right 
 				.section-catalog__content 
 					.section-products__column 

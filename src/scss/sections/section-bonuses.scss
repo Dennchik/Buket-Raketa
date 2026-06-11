@@ -269,7 +269,7 @@
     background: rgb(255 255 255);
   }
 
-  //*  - [ Стили для области drag-and-drop ] -
+  // *  - [ Стили для области drag-and-drop ] -
   // .card__upload-area
   &__upload-area {
     cursor: pointer;
@@ -292,7 +292,7 @@
 
     transition: all 0.3s ease;
 
-    //*  - [ Иконка загрузки ]
+    // *  - [ Иконка загрузки ]
     &::before {
       pointer-events: none;
       content: '';
@@ -340,12 +340,12 @@
     color: #888;
   }
 
-  //*  - [ Стили для превью ]
+  // *  - [ Стили для превью ]
   // .card__preview
   &__preview {
     display: none;
     margin-top: 15px;
-    animation: fadeIn 0.3s ease;
+    animation: fade-in 0.3s ease;
   }
 
   // .card__preview-image
@@ -407,7 +407,7 @@
     }
   }
 
-  //* - [ Сообщение об успешной загрузке ]
+  // * - [ Сообщение об успешной загрузке ]
 
   // .card__upload-success
   &__upload-success {
@@ -424,7 +424,7 @@
     background: #eafaf1;
   }
 
-  //* - [ Стили для текстовой области ]
+  // * - [ Стили для текстовой области ]
 
   // .card__textarea-wrapper
   &__textarea-wrapper {
@@ -460,7 +460,7 @@
       color: #ffffffd7;
     }
 
-    //* - [ Валидация ]
+    // * - [ Валидация ]
     &.error {
       border-color: #e74c3c;
     }
@@ -491,7 +491,7 @@
     }
   }
 
-  //* - [ Стили для сообщений ]
+  // * - [ Стили для сообщений ]
 
   // .card__message
   &__message {
@@ -503,7 +503,7 @@
     padding: 16px;
     border-radius: 12px;
 
-    animation: fadeIn 0.3s ease;
+    animation: fade-in 0.3s ease;
 
     &.success-message {
       border: 1px solid #27ae60;
@@ -526,7 +526,7 @@
     transition: width 0.3s ease;
   }
 
-  //* - [ Прогресс загрузки ]
+  // * - [ Прогресс загрузки ]
   // .card__progress
   &__progress {
     overflow: hidden;
@@ -550,7 +550,7 @@
 }
 
 /* Анимация появления */
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     transform: translateY(-10px);
     opacity: 0;
@@ -574,7 +574,7 @@
   line-height: 1.4;
 }
 
-//* - [ Адаптивность ]
+// * - [ Адаптивность ]
 @media (width <= 768px) {
   .card__textarea {
     padding: 12px;

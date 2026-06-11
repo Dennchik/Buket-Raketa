@@ -1,7 +1,7 @@
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
 
-//* ----------------------------------------------------------------------------
+// * ----------------------------------------------------------------------------
 
 $radius: 2rem;
 $gap: 2rem;
@@ -70,7 +70,6 @@ $color-text-dark: #333;
   &__img {
     width: 100%;
     height: 100%;
-    // max-height: 400px;
     transition: transform 0.5s ease;
 
     img {
@@ -136,7 +135,7 @@ $color-text-dark: #333;
   }
 }
 
-//* Кнопка внизу (Transparent style)
+// * Кнопка внизу (Transparent style)
 .btn-outline {
   display: inline-block;
 
@@ -145,6 +144,7 @@ $color-text-dark: #333;
   border-radius: 50px;
 
   font-weight: 700;
+
   // color: $color-text;
   text-decoration: none;
 
@@ -153,11 +153,12 @@ $color-text-dark: #333;
   &:hover {
     // border-color: $color-text;
     color: #fff;
+
     // background-color: $color-text;
   }
 }
 
-//* ----------------------------------------------------------------------------
+// * ----------------------------------------------------------------------------
 .swiper-pagination {
   position: absolute;
   z-index: 10;

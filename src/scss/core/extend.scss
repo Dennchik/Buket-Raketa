@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'mixins.scss' as *;
 
-//* ----------------------------------------------------------------------------
+// * ----------------------------------------------------------------------------
 
 // Иконка плюса
 .icon-plus {
@@ -39,6 +39,7 @@
     width: 14px;
     height: 2px;
   }
+
   // Вертикальная палка
   &::after {
     width: 2px;
@@ -46,13 +47,13 @@
   }
 }
 
-//* ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .line-through {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
-.gradient-loader {
+%gradient-loader {
   background-image:
     radial-gradient(
       ellipse at bottom center,
@@ -146,6 +147,7 @@
   span {
     pointer-events: none;
     position: relative;
+
     &::before {
       content: '';
 
@@ -165,6 +167,7 @@
   &:hover {
     span {
       opacity: 1;
+
       &::before {
         width: 100%;
       }

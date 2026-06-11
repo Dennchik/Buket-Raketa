@@ -4,6 +4,7 @@
   font-family: '#{$icomoon-font-family}';
   font-weight: normal;
   font-style: normal;
+
   font-display: block;
   src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1q423w');
   src:
@@ -40,9 +41,9 @@
     content: $icon-search;
   }
 }
-.icon-local_grocery_store {
+.icon-shopping-cart {
   &::before {
-    content: $icon-local_grocery_store;
+    content: $icon-shopping-cart;
   }
 }
 .icon-minus {
@@ -73,11 +74,6 @@
 .icon-truck {
   &::before {
     content: $icon-truck;
-  }
-}
-.icon-Max_logo_black {
-  &::before {
-    content: $icon-Max_logo_black;
   }
 }
 .icon-delivery {

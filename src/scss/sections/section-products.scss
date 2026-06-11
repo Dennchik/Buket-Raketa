@@ -109,7 +109,7 @@
     }
   }
 
-  //.products-cart__wrapper
+  // .products-cart__wrapper
 
   &__wrapper {
     display: flex;
@@ -121,7 +121,7 @@
   &__image {
     overflow: hidden;
     min-height: auto;
-    //todo-  max-height: 290px; Временно
+    // todo-  max-height: 290px; Временно
     border-radius: 30px;
     transition: max-height 0.3s ease;
   }

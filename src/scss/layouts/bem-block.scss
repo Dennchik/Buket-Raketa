@@ -12,6 +12,13 @@
     transition: opacity 0.9s ease-in-out;
   }
 }
+
+.choice-block__native-input:checked + .choice-block__custom-button {
+  color: $color-defoult;
+  text-shadow: 0 0 1px $color-defoult;
+  opacity: 1;
+}
+
 .text-light {
   font-weight: 100;
   opacity: 0.7;
@@ -21,19 +28,20 @@
   display: none;
 }
 
-//* button
+// * button
 .button {
   cursor: pointer;
 
   overflow: hidden;
 
   width: 100%;
-  padding: 1rem 1rem 1rem 2.4rem;
+  padding: 1rem 1rem 1rem 2rem;
   border-radius: 55px;
 
   font-weight: 400;
 
   background: rgb(236 104 29 / 100%);
+  box-shadow: 0 0 3px #bdbdbd57;
 
   span {
     pointer-events: none;
@@ -41,6 +49,17 @@
     letter-spacing: -1%;
     white-space: nowrap;
   }
+
+  &.white-button {
+    color: $color-defoult;
+    background-color: #fef9f5;
+
+    .icon {
+      color: white;
+      background-color: rgb(89 86 83);
+    }
+  }
+
   .icon {
     font-size: 13px;
   }
@@ -50,7 +69,8 @@
     line-height: 110%;
   }
 }
-//* ✅ - [ Checkbox ] -
+
+// * ✅ - [ Checkbox ] -
 .check-box__input:checked + .check-box__icon .icon-angle-down {
   scale: 1;
   opacity: 1;
@@ -137,8 +157,7 @@
   }
 }
 
-//* ----------------------------------------------------------------------------
-
+// * ----------------------------------------------------------------------------
 ._clip-circle {
   @include min-960 {
     cursor: pointer;
@@ -172,8 +191,7 @@
   }
 }
 
-//* ------------------------- [Class _ibg] -------------------------------------
-
+// * ------------------------ [Class _ibg] -------------------------------------
 .t-h1 {
   font-size: clamp(30px, 5vw, 60px);
   line-height: 110%;
@@ -185,6 +203,7 @@
   line-height: 110%;
   letter-spacing: -0.5px;
 }
+
 .t-h3 {
   font-size: 32px;
   line-height: 110%;
@@ -199,6 +218,7 @@
     font-size: 22px !important;
   }
 }
+
 .t-h4 {
   font-size: 24px;
   line-height: 110%;
@@ -213,6 +233,7 @@
     font-size: 18px !important;
   }
 }
+
 .t-text-15 {
   font-size: clamp(12px, 1.8vw, 15px);
   line-height: 110%;
@@ -249,12 +270,13 @@
   letter-spacing: -0.5px;
 }
 
-//* ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .button-container,
 .form-question__button {
   button {
     background: transparent;
     transition: background 0.4s ease-in-out;
+
     &:disabled {
       pointer-events: none;
       cursor: not-allowed;
@@ -263,6 +285,7 @@
     }
   }
 }
+
 .icon-max-logo {
   padding: 5px;
   background: $max-gradient;

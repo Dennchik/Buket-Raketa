@@ -2,6 +2,7 @@
 
 .hamburger {
   cursor: pointer;
+
   // .hamburger__line
   &__line {
     display: block;
@@ -10,14 +11,15 @@
     height: 2px;
     margin: 4px auto;
 
-    background-color: $color-secondary;
+    background-color: $color-defoult;
 
     transition: all 0.3s ease-in-out;
   }
 
   &.is-active {
     .hamburger__line {
-      background-color: $color-secondary;
+      background-color: $color-defoult;
+
       &:nth-child(1) {
         transform: translateY(6px);
       }

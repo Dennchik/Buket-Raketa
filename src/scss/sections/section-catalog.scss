@@ -25,7 +25,7 @@
   &__title {
     margin-bottom: 3rem;
 
-    font-family: $font-color-title;
+    font-family: $font-family-title;
     font-weight: 500;
     color: rgb(31 30 29 / 100%);
     text-align: left;
@@ -39,7 +39,7 @@
     align-items: center;
   }
 
-  //.section-catalog__col
+  // .section-catalog__col
   &__col {
     display: flex;
     gap: 0.5rem;
@@ -53,7 +53,7 @@
     }
   }
 
-  //.section-catalog__del-btn
+  // .section-catalog__del-btn
   &__del-btn {
     display: flex;
     align-items: center;
@@ -67,35 +67,28 @@
 
   // .section-catalog__content-wrapper
   &__content-wrapper {
-    //todo Дописать стили
     display: flex;
+    color: white;
   }
 
-  //.section-catalog__colo-left
+  // .section-catalog__colo-left
   &__colo-left {
-    //todo Дописать стили
-    display: none;
+    // todo Дописать стили
+    flex: 0 0 400px;
+    width: 400px;
   }
 
-  //.section-catalog__colo-right
+  // .section-catalog__colo-right
   &__colo-right {
-    //todo Дописать стили
+    // todo Дописать стили
     flex: 0 1 100%;
   }
 
   // .section-catalog__content
   &__content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
-    @include screen-1440 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @include screen-960 {
-      grid-template-columns: repeat(3, 1fr);
-    }
 
     @include screen-768 {
       grid-template-columns: repeat(2, 1fr);
@@ -104,8 +97,5 @@
     @include screen-490 {
       grid-template-columns: 1fr;
     }
-  }
-  // .section-catalog__column
-  &__column {
   }
 }

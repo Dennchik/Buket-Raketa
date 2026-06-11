@@ -3,7 +3,7 @@
 
 .form-search {
   position: relative;
-  // margin: 0 -2rem;
+
   // .form-search__search-box
   &__search-box {
     display: flex;
@@ -25,10 +25,12 @@
     width: 100%;
     padding: 0 1.6rem;
     font-size: 1.8rem;
+
     // color: $font-color-default;
 
     &::placeholder {
       font-size: 1.6rem;
+
       // color: $font-color-secondary;
       opacity: 0.8;
     }

@@ -5,10 +5,7 @@
 html {
   counter-reset: heading;
   scroll-behavior: smooth;
-
   height: 100%;
-
-  color: var(--font-color-default);
   letter-spacing: 1.1px;
 
   font: {
@@ -31,7 +28,7 @@ body {
 
   font: 1.6rem/1.6 $font-family-default;
   line-height: 1;
-  color: rgb(31 30 29);
+  color: $color-defoult;
 
   background: rgb(247 243 240 / 100%);
 

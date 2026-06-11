@@ -1,43 +1,42 @@
 @import 'variables';
 
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  font-weight: normal;
-  font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf6e99');
+  font-family: '#{$icomoon-font-family}';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hcgiv');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf6e99#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hcgiv#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qf6e99')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?hcgiv')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qf6e99')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?hcgiv')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qf6e99##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?hcgiv##{$icomoon-font-family}')
       format('svg');
 }
 
 [class^='icon-'],
 [class*=' icon-'] {
-  speak: never;
-
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga';
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-variant-ligatures: discretionary-ligatures;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1;
-  text-transform: none;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  font-weight: normal;
 
   /* Enable Ligatures ================ */
   letter-spacing: 0;
+  line-height: 1;
+  speak: never;
+  text-transform: none;
 }
 
 .icon-zoom-in {
@@ -50,9 +49,9 @@
     content: $icon-search;
   }
 }
-.icon-local_grocery_store {
+.icon-shopping-cart {
   &::before {
-    content: $icon-local_grocery_store;
+    content: $icon-shopping-cart;
   }
 }
 .icon-minus {
@@ -83,11 +82,6 @@
 .icon-truck {
   &::before {
     content: $icon-truck;
-  }
-}
-.icon-Max_logo_black {
-  &::before {
-    content: $icon-Max_logo_black;
   }
 }
 .icon-delivery {

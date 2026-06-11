@@ -2,6 +2,8 @@ import '../scss/main.scss';
 import { maskPhone } from './assets/mask-phone.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import { reviewsSlide, thumbSlide } from './utils/slide.js';
+import fancyBox from './utils/fancyapps.js';
+import { initButtons } from './assets/3d-button.js';
 import {
   dragAndDrop,
   sideBarLoyuts,
@@ -36,7 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   thumbSlide();
   reviewsSlide('.reviews-slide');
   maskPhone('.phone');
+  fancyBox();
 });
+
+document.addEventListener('DOMContentLoaded', initButtons);
 //* ----------------- [ Блок часто задаваемые вопросы ] ------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.questions-item');
@@ -57,12 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('is-active');
     });
   });
-});
-import { Fancybox } from '@fancyapps/ui';
-import '@fancyapps/ui/dist/fancybox/fancybox.css';
-Fancybox.bind('[data-fancybox]', {
-  // Опции анимации (по умолчанию анимация увеличения из источника уже включена)
-  animated: true,
-  showClass: 'f-zoomIn',
-  hideClass: 'f-zoomOut',
 });

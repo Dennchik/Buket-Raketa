@@ -1,28 +1,34 @@
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/fonts';
 @use 'core/fonts-import';
+
 // todo --------------------------- layout -------------------------------------
 @use 'layouts/bem-block';
 @use 'layouts/header';
 @use 'layouts/footer';
-//todo  --------------------------- Icon Fonts ---------------------------------
-@use 'core/_iconfonts.scss';
-//todo  --------------------------- Core ---------------------------------------
+
+// todo  -------------------------- Icon Fonts ---------------------------------
+@use 'core/iconfonts';
+
+// todo  --------------------------- Core --------------------------------------
 @use 'core/reset' as *;
 @use 'core/variables' as *;
 @use 'core/mixins' as *;
 @use 'core/extend' as *;
+
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/modal-overlay';
 @use 'modules/cookies-accept';
 @use 'modules/modal-dialog';
+
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/sidebar-menu';
-// @use 'assets/pl-preloader.scss';
-// @use 'assets/swiper-11.2.10';
 
-@use 'assets/swiper-12.1.0.scss';
+// @use 'assets/pl-preloader.scss';
+
+@use 'assets/swiper-12.1.0';
+
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/form-search';
 @use 'chunks/menu-list';
@@ -30,8 +36,11 @@
 @use 'chunks/drop-down-window';
 @use 'chunks/swiper-thumb';
 @use 'chunks/navigation-slide';
+@use 'chunks/catalog-filter';
+
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
+
 // todo -------------------------- Section -------------------------------------
 @use 'sections/section-about';
 @use 'sections/section-perform';
@@ -50,6 +59,7 @@
 @use 'sections/section-reviews';
 @use 'sections/section-marketing';
 @use 'sections/section-help';
+
 // #region
 // todo ---------------------------- Style -------------------------------------
 .wrapper {
@@ -63,7 +73,7 @@
 
 [class*='_container'] {
   box-sizing: border-box;
-  max-width: $maxWidthContainer;
+  max-width: $max-width-container;
   margin: 0 auto;
   padding: 0 2rem;
 

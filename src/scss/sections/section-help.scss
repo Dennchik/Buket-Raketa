@@ -89,6 +89,7 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+
   // .section-help__item
   &__item {
     display: flex;
@@ -136,6 +137,7 @@
     flex-direction: column;
     gap: 20px;
   }
+
   // .help-info__text
   &__text {
     font-family: $font-family-secondary;
