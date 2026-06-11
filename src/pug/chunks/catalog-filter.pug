@@ -1,106 +1,107 @@
 form(action="#" method="post").catalog-filter
-	.catalog-filter__body
-		.catalog-filter__title.t-text-24 
+	.catalog-filter__body.toggle-box
+		.catalog-filter__title._toggle-button.t-text-24 
 			span Фильтры
 			span.catalog-filter__close-button
 				+iconfont('cross-middle', 'icon')
 				span закрыть
-		.catalog-filter__line 
-			fieldset.catalog-filter__fieldset 
-				legend.catalog-filter__legend Цена, руб
-				.catalog-filter__row
-					.catalog-filter__column 
-						label.catalog-filter__label(for="price-from") от
-						input(id="price-from" type="number" data-error="Ошибка" name="price-from" value="0" min="0").catalog-filter__price-from 
-					.catalog-filter__column 
-						label.catalog-filter__label(for="price-to") до
-						input(id="price-to" type="number" data-error="Ошибка" name="price-to" value="0" min="0").catalog-filter__price-to 
-			fieldset.catalog-filter__fieldset 
-				legend.catalog-filter__legend Повод
-				.choice-block 
-					.choice-block__checked 
-						label.choice-block__option(aria-pressed="falae")
-							.inner
-							input.choice-block__native-input(type="checkbox" name="operation" value="birth-day")
-							span.choice-block__custom-button.choice-block__custom-button--return На день рождения
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="wedding")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Свадьба
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="women-day")
-							span.choice-block__custom-button.choice-block__custom-button--exchange На 8 марта
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value=" say-love")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Сказать люблю
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value=" business-greetings")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Бизнес-поздравление
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value=" thanks")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Благодарность
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value=" congratulation")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Поздравление
-			fieldset.catalog-filter__fieldset 
-				legend.catalog-filter__legend Категория товаров
-				.choice-block 
-					.choice-block__checked 
-						label.choice-block__option(aria-pressed="false")  
-							input.choice-block__native-input(type="checkbox" name="operation" value="bouquet")
-							span.choice-block__custom-button.choice-block__custom-button--return Букеты
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="flower-baskets")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Корзины с цветами
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="pyrotechnics")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Пиротехника
-			fieldset.catalog-filter__fieldset 
-				legend.catalog-filter__legend Кому
-				.choice-block 
-					.choice-block__checked 
-						label.choice-block__option(aria-pressed="false")
-							input.choice-block__native-input(type="checkbox" name="operation" value="favourite")
-							span.choice-block__custom-button.choice-block__custom-button--return Любимой
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="mother")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Маме
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="family")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Семье
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="man")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Мужчине
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="woman")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Женщине
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="child")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Ребенку
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="dochka")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Дочери
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="girlfriend")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Подруге
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="sister")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Сестре
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="doctor")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Врачу
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="teacher")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Учителю
-						label.choice-block__option(aria-pressed="false") 
-							input.choice-block__native-input(type="checkbox" name="operation" value="business-partner")
-							span.choice-block__custom-button.choice-block__custom-button--exchange Деловому партнеру 
-		.catalog-filter__line 
-			.catalog-filter__buttons 
-				button(type="submit").catalog-filter__button.button 
-					span Показать
-					+iconfont('arrow-right', 'icon')
-				button(type="reset").catalog-filter__button.button.white-button.reset-button
-					span Сбросить
-					+iconfont('arrow-right', 'icon')
+		.catalog-filter__drop-down._collapse
+			.catalog-filter__line 
+				fieldset.catalog-filter__fieldset 
+					legend.catalog-filter__legend Цена, руб
+					.catalog-filter__row
+						.catalog-filter__column 
+							label.catalog-filter__label(for="price-from") от
+							input(id="price-from" type="number" data-error="Ошибка" name="price-from" value="0" min="0").catalog-filter__price-from 
+						.catalog-filter__column 
+							label.catalog-filter__label(for="price-to") до
+							input(id="price-to" type="number" data-error="Ошибка" name="price-to" value="0" min="0").catalog-filter__price-to 
+				fieldset.catalog-filter__fieldset 
+					legend.catalog-filter__legend Повод
+					.choice-block 
+						.choice-block__checked 
+							label.choice-block__option(aria-pressed="falae")
+								.inner
+								input.choice-block__native-input(type="checkbox" name="operation" value="birth-day")
+								span.choice-block__custom-button.choice-block__custom-button--return На день рождения
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="wedding")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Свадьба
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="women-day")
+								span.choice-block__custom-button.choice-block__custom-button--exchange На 8 марта
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value=" say-love")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Сказать люблю
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value=" business-greetings")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Бизнес-поздравление
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value=" thanks")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Благодарность
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value=" congratulation")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Поздравление
+				fieldset.catalog-filter__fieldset 
+					legend.catalog-filter__legend Категория товаров
+					.choice-block 
+						.choice-block__checked 
+							label.choice-block__option(aria-pressed="false")  
+								input.choice-block__native-input(type="checkbox" name="operation" value="bouquet")
+								span.choice-block__custom-button.choice-block__custom-button--return Букеты
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="flower-baskets")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Корзины с цветами
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="pyrotechnics")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Пиротехника
+				fieldset.catalog-filter__fieldset 
+					legend.catalog-filter__legend Кому
+					.choice-block 
+						.choice-block__checked 
+							label.choice-block__option(aria-pressed="false")
+								input.choice-block__native-input(type="checkbox" name="operation" value="favourite")
+								span.choice-block__custom-button.choice-block__custom-button--return Любимой
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="mother")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Маме
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="family")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Семье
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="man")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Мужчине
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="woman")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Женщине
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="child")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Ребенку
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="dochka")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Дочери
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="girlfriend")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Подруге
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="sister")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Сестре
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="doctor")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Врачу
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="teacher")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Учителю
+							label.choice-block__option(aria-pressed="false") 
+								input.choice-block__native-input(type="checkbox" name="operation" value="business-partner")
+								span.choice-block__custom-button.choice-block__custom-button--exchange Деловому партнеру 
+			.catalog-filter__line 
+				.catalog-filter__buttons 
+					button(type="submit").catalog-filter__button.button 
+						span Показать
+						+iconfont('arrow-right', 'icon')
+					button(type="reset").catalog-filter__button.button.white-button.reset-button
+						span Сбросить
+						+iconfont('arrow-right', 'icon')
 
 

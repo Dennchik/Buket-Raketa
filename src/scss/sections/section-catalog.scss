@@ -67,15 +67,22 @@
 
   // .section-catalog__content-wrapper
   &__content-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(303px, 400px) 1fr;
     color: white;
+
+    @include screen-820 {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
   }
 
   // .section-catalog__colo-left
   &__colo-left {
     // todo Дописать стили
-    flex: 0 0 400px;
-    width: 400px;
+    flex: 0 1 400px;
+
+    // width: 400px;
   }
 
   // .section-catalog__colo-right

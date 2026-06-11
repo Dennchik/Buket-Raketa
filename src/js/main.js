@@ -4,6 +4,8 @@ import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import { reviewsSlide, thumbSlide } from './utils/slide.js';
 import fancyBox from './utils/fancyapps.js';
 import { initButtons } from './assets/3d-button.js';
+
+import dropBoxColapse from './assets/drop-box.js';
 import {
   dragAndDrop,
   sideBarLoyuts,
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   maskPhone('.phone');
   fancyBox();
 });
-
+document.addEventListener('DOMContentLoaded', dropBoxColapse);
 document.addEventListener('DOMContentLoaded', initButtons);
 //* ----------------- [ Блок часто задаваемые вопросы ] ------------------------
 document.addEventListener('DOMContentLoaded', () => {

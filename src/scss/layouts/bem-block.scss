@@ -13,6 +13,10 @@
   }
 }
 
+.toggle-box > ._collapse:not(._show) {
+  display: none;
+}
+
 .choice-block__native-input:checked + .choice-block__custom-button {
   color: $color-defoult;
   text-shadow: 0 0 1px $color-defoult;
