@@ -1113,6 +1113,10 @@
   content: "\e90a";
 }
 
+.icon-arrow-left::before {
+  content: "\e92d";
+}
+
 .icon-arrow-right::before {
   content: "\e950";
 }
@@ -2990,6 +2994,31 @@ h6 {
 .swiper-button-prev .icon {
   font-size: 38px;
   color: #000;
+}
+
+.navigation-slide {
+  display: flex;
+  gap: 16px;
+}
+.navigation-slide__prev, .navigation-slide__next {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100vh;
+  background-color: #ec681d;
+  transition: all 0.4s ease-in-out;
+}
+.navigation-slide__prev .icon, .navigation-slide__next .icon {
+  font-size: 14px;
+  color: white;
+}
+.navigation-slide__prev.disabled, .navigation-slide__next.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  filter: grayscale(1);
 }
 
 .page__menu-list {
@@ -5513,6 +5542,10 @@ h6 {
   }
 }
 .section-reviews__head {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-around;
   margin-bottom: 40px;
 }
 .section-reviews__title {
@@ -5552,6 +5585,7 @@ h6 {
   object-position: top center;
 }
 .review-card__overlay {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;

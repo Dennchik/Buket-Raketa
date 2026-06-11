@@ -48,6 +48,7 @@
             'trash': '&#xe938;',
             'user-profile': '&#xe971;',
             'information-outline': '&#xe90a;',
+            'arrow-left': '&#xe92d;',
             'arrow-thin': '&#xe950;',
             'location': '&#xe909;',
           '0': 0

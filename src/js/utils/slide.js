@@ -2,15 +2,16 @@
 import Swiper from 'swiper/bundle';
 
 //* ✅ Слайдер новостей на Главной странице
-export function partnerSlide(slide) {
+export function reviewsSlide(slide) {
   if (slide) {
     new Swiper(slide, {
       effect: 'slide',
       lazy: true,
       spaceBetween: 5,
       navigation: {
-        nextEl: '.btn-next',
         prevEl: '.btn-prev',
+        nextEl: '.btn-next',
+        disabledClass: 'disabled',
       },
       slidesPerView: 5,
       speed: 800,
@@ -31,35 +32,35 @@ export function partnerSlide(slide) {
   }
 }
 
-export function thumbSlide(params) {}
-let swiper = new Swiper('.mySwiper', {
-  spaceBetween: 0,
-  slidesPerView: 4,
-  // watchSlidesProgress: true,
-  // updateOnWindowResize: true,
-  navigation: {
-    nextEl: '.btn-next',
-    prevEl: '.btn-prev',
-  },
-  breakpoints: {
-    0: { slidesPerView: 3 },
-    325: { slidesPerView: 4 },
-    490: { slidesPerView: 3 },
-    786: { slidesPerView: 4 },
-    1024: { slidesPerView: 5 },
-  },
-});
-new Swiper('.mySwiper2', {
-  grabCursor: true,
-  spaceBetween: 15,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-});
+export function thumbSlide(params) {
+  let swiper = new Swiper('.mySwiper', {
+    spaceBetween: 0,
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.btn-next',
+      prevEl: '.btn-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 3 },
+      325: { slidesPerView: 4 },
+      490: { slidesPerView: 3 },
+      786: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
+    },
+  });
+  new Swiper('.mySwiper2', {
+    grabCursor: true,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+}
+
 //* ✅ Слайдер карточки товара
 // export function cardSlide(slide = '.card-slide') {
 //   if (slide) {

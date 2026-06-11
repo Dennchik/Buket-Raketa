@@ -185,6 +185,11 @@
     content: $icon-information-outline;
   }
 }
+.icon-arrow-left {
+  &::before {
+    content: $icon-arrow-left;
+  }
+}
 .icon-arrow-right {
   &::before {
     content: $icon-arrow-right;

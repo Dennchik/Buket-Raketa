@@ -17,23 +17,33 @@ $color-text-dark: #333;
     }
   }
 
+  // .section-reviews__head
   &__head {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+
     margin-bottom: 40px;
   }
 
+  // .section-reviews__title
   &__title {
     color: rgb(31 30 29);
   }
 
+  // .section-reviews__subtitle
   &__subtitle {
     font-size: 2rem;
   }
 
+  // .section-reviews__wrapper
   &__wrapper {
     scroll-snap-type: x proximity;
     display: flex;
   }
 
+  // .section-reviews__actions
   &__actions {
     text-align: center;
   }
@@ -71,6 +81,8 @@ $color-text-dark: #333;
 
   // Оверлей (затемнение при наведении)
   &__overlay {
+    pointer-events: none;
+
     position: absolute;
     top: 0;
     left: 0;

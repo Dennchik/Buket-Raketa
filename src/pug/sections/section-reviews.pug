@@ -1,57 +1,59 @@
 .section-reviews
-	.section-reviews__body
-		.section-reviews__head
-			h2.section-reviews__title.t-h2 Отзывы наших покупателей 
-		//*- Обертка для скролла/сетки
-		.section-reviews__wrapper
-			.section-reviews__slide.swiper.reviews-slide
-				.swiper-wrapper
-					//*- Скриншот 1
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-					//*- Скриншот 2
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-					//*- Скриншот 3
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-					//*- Скриншот 4
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-					//*- Скриншот 5
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-					//*- Скриншот 5
-					.review-card.swiper-slide
-						.review-card__image-box
-							.review-card__img 
-								+picture('img/reviews/reviews-1.png', 'image')
-						.review-card__overlay
-							span.review-card__icon
-								span.icon-zoom-in
-			.swiper-pagination
+  .section-reviews__body
+    .section-reviews__head
+      h2.section-reviews__title.t-h2 Отзывы наших покупателей 
+      .section-reviews__navigation
+        include @/pug/chunks/navigation-slide
+    //*- Обертка для скролла/сетки
+    .section-reviews__wrapper
+      .section-reviews__slide.swiper.reviews-slide
+        .swiper-wrapper
+          //*- Скриншот 1
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+          //*- Скриншот 2
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+          //*- Скриншот 3
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+          //*- Скриншот 4
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+          //*- Скриншот 5
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+          //*- Скриншот 5
+          .review-card.swiper-slide
+            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+              .review-card__img 
+                +picture('img/reviews/reviews-1.png', 'image')
+            .review-card__overlay
+              span.review-card__icon
+                span.icon-zoom-in
+      .swiper-pagination

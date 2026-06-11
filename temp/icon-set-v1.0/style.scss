@@ -5,15 +5,15 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ss6td3');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf6e99');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ss6td3#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf6e99#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ss6td3')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qf6e99')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ss6td3')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qf6e99')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ss6td3##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qf6e99##{$icomoon-font-family}')
       format('svg');
 }
 
@@ -193,6 +193,11 @@
 .icon-information-outline {
   &::before {
     content: $icon-information-outline;
+  }
+}
+.icon-arrow-left {
+  &::before {
+    content: $icon-arrow-left;
   }
 }
 .icon-arrow-right {
