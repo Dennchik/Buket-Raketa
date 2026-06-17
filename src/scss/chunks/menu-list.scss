@@ -12,7 +12,6 @@
   max-width: 390px;
   height: 100vh;
 
-  background: $background;
   box-shadow: -2px 3px 7px $color;
 
   transition: transform 0.3s cubic-bezier(0.7, -0.955, 0.55, 1.55);
@@ -29,16 +28,20 @@
   // .menu-list__body
   &__body {
     position: relative;
+
     width: 100%;
     height: 100%;
+    padding: 20px 30px 40px;
+
+    background-color: $background-secondry;
   }
 
   .header__phone {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 
-    margin-bottom: 6rem;
     padding: 2rem;
     border-radius: 100vh;
 
@@ -68,16 +71,28 @@
     width: 100%;
     height: 59px;
     padding: 1rem 2rem;
-    border-bottom: 1px solid $color;
+    border-radius: 100vh;
 
-    background-color: #fff7e2;
+    background-color: $background;
     backdrop-filter: blur(10px);
 
-    .icon-cross-middle {
+    .icon {
       display: block;
+
       height: 100%;
-      font-size: 38px;
+
+      font-size: 24px;
       font-weight: 400;
+      color: $color-light;
+    }
+  }
+
+  // .menu-list__logo
+  &__logo {
+    height: 32px;
+
+    img {
+      height: 100%;
     }
   }
 
@@ -95,8 +110,6 @@
     width: 100%;
     height: 100%;
     height: calc(100% - 59px);
-
-    background: $background;
   }
 
   // .menu-list__list
@@ -109,9 +122,10 @@
     flex: 1 1 auto;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
     justify-content: center;
 
-    padding: 3rem 2rem;
+    padding-block: 3rem;
 
     ul {
       position: relative;
@@ -134,7 +148,7 @@
 
     font-family: $font-family-default;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 190%;
 
     .icon {
@@ -153,6 +167,7 @@
       border-radius: 50%;
 
       background-color: $color;
+
       img {
         width: 15px;
         height: 15px;
@@ -163,9 +178,9 @@
   // .menu-list__footer
   &__footer {
     display: flex;
-    flex-direction: row;
     flex-direction: column;
-    gap: 0;
+    gap: 25px;
+    align-items: center;
 
     padding: 2rem 2.4rem;
 
@@ -187,6 +202,7 @@
       color: white;
 
       background-color: $color;
+
       &::before {
         width: 16px;
         height: 16px;
@@ -197,6 +213,19 @@
       padding-left: 3rem !important;
       border-left: 1px solid $color;
     }
+  }
+
+  // .menu-list__phone
+  &__phone {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    border-radius: 100vh;
+
+    background-color: $background;
   }
 
   // .menu-list__list-item

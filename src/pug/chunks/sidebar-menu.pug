@@ -2,9 +2,9 @@
   .menu-list__body
     .menu-list__header 
       a(href="#home" aria-label="home").menu-list__logo
-        +picture('/img/icons/icon-logo.png', 'image') 
+        +picture('/img/icons/logo.png', 'image') 
       .burger-button
-        +iconfont('cross-middle', 'icon')
+        +iconfont('close-button', 'icon')
     .menu-list__content 
       .menu-list__list.bp-7
         .menu-list__list-item 
@@ -17,19 +17,14 @@
           a(href=linkTo('about', filename)).menu-list__link 
             span О нас
         .menu-list__list-item
-          a(href="#contacts").menu-list__link.anchor-link 
-            span Контакты
-        .menu-list__list-item
+          a(href=linkTo('help', filename)).menu-list__link 
+            span Помощ
+        //- .menu-list__list-item
           a(href="" target="_blank").menu-list__link 
             .menu-list__icon 
               img(src="/img/icons/group.svg" alt="иконка")
             span Система лояльности  
-
       .menu-list__footer 
-        .header__phone 
-          +iconfont('phone-call', 'icon')
-          a(href="tel:8 (906) 849-97-43") 
-            span +7 (906) 849-97-43 
         .section-map__networks
           a(href="https://t.me/" target="_blank" data-letters="Телеграм")
             +iconfont('telegram-fly', 'icon') 
@@ -37,3 +32,7 @@
             +iconfont('vk-brand', 'icon')
           a(href="https://vk.com/" target="_blank" data-letters="Max")
             +iconfont('max-logo', 'icon') 
+        .menu-list__phone 
+          +iconfont('phone-call', 'icon')
+          a(href="tel:8 (906) 849-97-43") 
+            span +7 (906) 849-97-43 

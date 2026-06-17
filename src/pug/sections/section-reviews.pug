@@ -1,58 +1,60 @@
 .section-reviews
   .section-reviews__body
     .section-reviews__head
-      h2.section-reviews__title.t-h2 Отзывы наших покупателей 
-      .section-reviews__navigation
-        include @/pug/chunks/navigation-slide
+      h2.section-reviews__title.t-h2 Отзывы наших&nbsp;покупателей 
+      .section-reviews__wrapp 
+        .section-reviews__label 
+          .section-reviews__icon 
+            +iconfont('star', 'icon')
+          .section-reviews__rating
+            span 4.9
+            span Средняя&nbsp;оценка покупателей
+        .section-reviews__navigation
+          include @/pug/chunks/navigation-slide
     //*- Обертка для скролла/сетки
     .section-reviews__wrapper
       .section-reviews__slide.swiper.reviews-slide
         .swiper-wrapper
           //*- Скриншот 1
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('/img/reviews/reviews-1.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in
           //*- Скриншот 2
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('/img/reviews/reviews-2.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in
           //*- Скриншот 3
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('img/reviews/reviews-3.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in
           //*- Скриншот 4
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('/img/reviews/reviews-4.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in
           //*- Скриншот 5
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('img/reviews/reviews-1.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in
-          //*- Скриншот 5
+          //*- Скриншот 6
           .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-1.png" data-fancybox="reviews")
+            a.review-card__image-box(href="/img/reviews/reviews-2.png" data-fancybox="reviews")
               .review-card__img 
-                +picture('img/reviews/reviews-1.png', 'image')
+                +picture('/img/reviews/reviews-2.png', 'image')
             .review-card__overlay
               span.review-card__icon
                 span.icon-zoom-in

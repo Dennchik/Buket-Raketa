@@ -16,7 +16,7 @@
   // .section-marketing__content
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, calc(50% - 10px));
     gap: 20px;
 
     @include screen-1024 {
@@ -68,6 +68,7 @@
   // .section-marketing__icon
   &__icon {
     flex: 0 0 40px;
+
     img {
       width: 40px;
       height: 40px;
@@ -91,8 +92,13 @@
     padding: 4rem;
     font-size: 1.8rem;
 
+    @include screen-490 {
+      padding: 2rem;
+    }
+
     p {
       line-height: 110%;
+
       &:not(:last-child) {
         margin-bottom: 2rem;
       }

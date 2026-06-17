@@ -79,10 +79,7 @@
 
   // .section-catalog__colo-left
   &__colo-left {
-    // todo Дописать стили
-    flex: 0 1 400px;
-
-    // width: 400px;
+    height: 100%; /* достаточно высоты для прокрутки */
   }
 
   // .section-catalog__colo-right

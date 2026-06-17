@@ -10,7 +10,7 @@ block main-content
 	section.main-content__section#home 
 		.main-content__background-img
 			img(src="/img/pic/bg-img-01.png" alt="image") 
-			img(src="/img/pic/bg-img-02.png" alt="image") 
+			img(src="/img/pic/bg-img-02.png" alt="image")
 		include @/pug/sections/section-perform
 	section.main-content__section#invitation
 		include @/pug/sections/section-invitation
@@ -24,6 +24,8 @@ block main-content
 		include @/pug/sections/section-info
 	section.main-content__section
 		include @/pug/sections/section-questions
+	section.main-content__section
+		include @/pug/sections/section-banner
 	section.main-content__section 
 		include @/pug/sections/section-map 
 

@@ -1,11 +1,11 @@
 import '../scss/main.scss';
 import { maskPhone } from './assets/mask-phone.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
-import { reviewsSlide, thumbSlide } from './utils/slide.js';
-import fancyBox from './utils/fancyapps.js';
+import { reviewsSlide, thumbSlide, influencersSlide } from './utils/slide.js';
 import { initButtons } from './assets/3d-button.js';
+import fancyBox from './utils/fancyapps.js';
 
-import dropBoxColapse from './assets/drop-box.js';
+// import dropBoxColapse from './assets/drop-box.js';
 import {
   dragAndDrop,
   sideBarLoyuts,
@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   thumbSlide();
   reviewsSlide('.reviews-slide');
+  influencersSlide('.influencers-slide');
   maskPhone('.phone');
   fancyBox();
 });
-document.addEventListener('DOMContentLoaded', dropBoxColapse);
+
 document.addEventListener('DOMContentLoaded', initButtons);
 //* ----------------- [ Блок часто задаваемые вопросы ] ------------------------
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,3 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+//* ----------------------------------------------------------------------------
+import dropBoxColapse from './assets/drop-box.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Вызываем всегда. Функция сама решит, когда ей работать!
+  dropBoxColapse();
+});
+
+function slideLayout() {
+  const mySwiper = document.querySelector('.mySwiper');
+  const wrapper = mySwiper.querySelector('.swiper-wrapper');
+  const slides = mySwiper.querySelectorAll('.swiper-slide');
+  if (slides.length > 4) {
+    wrapper.style.width = '100%';
+  }
+}
+document.addEventListener('DOMContentLoaded', slideLayout);

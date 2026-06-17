@@ -15,16 +15,16 @@
         .section-product-card__item
           .section-product-card__icon
             img(src="/img/icons/yandex-icon.svg" alt="image")
-        .section-product-card__quantity-bouquets
-          span.section-product-card__text кол-во доставленных букетов
-          span.bouquets-counter 1487
         .section-product-card__item
           +iconfont('star', 'icon')
           .section-product-card__rating
             span 4.9 
-        .section-product-card__counter 
+        .section-product-card__item.section-product-card__counter 
           span.card-counter#card-counter 23
           span отзыва  
+        .section-product-card__item.section-product-card__quantity-bouquets
+          span.section-product-card__text кол-во доставленных букетов -
+          span.bouquets-counter 1487
       .section-product-card__product-code
         | Код товара: 372913
     .section-product-card__content

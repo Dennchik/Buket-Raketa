@@ -87,6 +87,7 @@
     .section-perform__image {
       flex: 0 0 16.3rem;
       border-radius: 22px;
+
       img {
         max-width: 16.3rem;
         max-height: 15.9rem;
@@ -144,6 +145,7 @@
     @include screen-690 {
       max-width: 100%;
       text-align: center;
+
       span {
         &:not(:last-child) {
           margin-right: 1rem;

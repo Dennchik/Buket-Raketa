@@ -1,42 +1,188 @@
 @import 'variables';
 
 @font-face {
-  font-display: block;
   font-family: '#{$icomoon-font-family}';
-  font-style: normal;
   font-weight: normal;
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hcgiv');
+  font-style: normal;
+
+  font-display: block;
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chll9s');
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hcgiv#iefix')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?chll9s#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?hcgiv')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?chll9s')
       format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?hcgiv')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?chll9s')
       format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?hcgiv##{$icomoon-font-family}')
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?chll9s##{$icomoon-font-family}')
       format('svg');
 }
 
 [class^='icon-'],
 [class*=' icon-'] {
+  speak: never;
+
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  line-height: 1;
+  text-transform: none;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-variant-ligatures: discretionary-ligatures;
-  font-weight: normal;
+}
 
-  /* Enable Ligatures ================ */
-  letter-spacing: 0;
-  line-height: 1;
-  speak: never;
-  text-transform: none;
+.icon-user {
+  &::before {
+    content: $icon-user;
+  }
+}
+
+.icon-angle-up {
+  &::before {
+    content: $icon-angle-up;
+  }
+}
+
+.icon-angle-down1 {
+  &::before {
+    content: $icon-angle-down1;
+  }
+}
+
+.icon-angle-left {
+  &::before {
+    content: $icon-angle-left;
+  }
+}
+
+.icon-angle-right {
+  &::before {
+    content: $icon-angle-right;
+  }
+}
+
+.icon-user-plus {
+  &::before {
+    content: $icon-user-plus;
+  }
+}
+
+.icon-max-logo {
+  &::before {
+    content: $icon-max-logo;
+  }
+}
+
+.icon-time-alarm {
+  &::before {
+    content: $icon-time-alarm;
+  }
+}
+
+.icon-fire {
+  &::before {
+    content: $icon-fire;
+  }
+}
+
+.icon-truck {
+  &::before {
+    content: $icon-truck;
+  }
+}
+
+.icon-delivery {
+  &::before {
+    content: $icon-delivery;
+  }
+}
+
+.icon-catalog {
+  &::before {
+    content: $icon-catalog;
+  }
+}
+
+.icon-star {
+  &::before {
+    content: $icon-star;
+  }
+}
+
+.icon-rub {
+  &::before {
+    content: $icon-rub;
+  }
+}
+
+.icon-whats-app {
+  &::before {
+    content: $icon-whats-app;
+  }
+}
+
+.icon-vk-brand {
+  &::before {
+    content: $icon-vk-brand;
+  }
+}
+
+.icon-telegram-fly {
+  &::before {
+    content: $icon-telegram-fly;
+  }
+}
+
+.icon-cart {
+  &::before {
+    content: $icon-cart;
+  }
+}
+
+.icon-phone-call {
+  &::before {
+    content: $icon-phone-call;
+  }
+}
+
+.icon-angle-down {
+  &::before {
+    content: $icon-angle-down;
+  }
+}
+
+.icon-vk-draw {
+  &::before {
+    content: $icon-vk-draw;
+  }
+}
+
+.icon-telegram-draw {
+  &::before {
+    content: $icon-telegram-draw;
+  }
+}
+
+.icon-whatsapp-draw {
+  &::before {
+    content: $icon-whatsapp-draw;
+  }
+}
+
+.icon-close-button {
+  &::before {
+    content: $icon-close-button;
+  }
 }
 
 .icon-zoom-in {
@@ -44,161 +190,73 @@
     content: $icon-zoom-in;
   }
 }
+
 .icon-search {
   &::before {
     content: $icon-search;
   }
 }
+
 .icon-shopping-cart {
   &::before {
     content: $icon-shopping-cart;
   }
 }
+
 .icon-minus {
   &::before {
     content: $icon-minus;
   }
 }
+
 .icon-plus {
   &::before {
     content: $icon-plus;
   }
 }
-.icon-max-logo {
-  &::before {
-    content: $icon-max-logo;
-  }
-}
-.icon-time-alarm {
-  &::before {
-    content: $icon-time-alarm;
-  }
-}
-.icon-fire {
-  &::before {
-    content: $icon-fire;
-  }
-}
-.icon-truck {
-  &::before {
-    content: $icon-truck;
-  }
-}
-.icon-delivery {
-  &::before {
-    content: $icon-delivery;
-  }
-}
-.icon-catalog {
-  &::before {
-    content: $icon-catalog;
-  }
-}
-.icon-angle-left {
-  &::before {
-    content: $icon-angle-left;
-  }
-}
-.icon-angle-right {
-  &::before {
-    content: $icon-angle-right;
-  }
-}
-.icon-star {
-  &::before {
-    content: $icon-star;
-  }
-}
-.icon-rub {
-  &::before {
-    content: $icon-rub;
-  }
-}
-.icon-whats-app {
-  &::before {
-    content: $icon-whats-app;
-  }
-}
-.icon-vk-brand {
-  &::before {
-    content: $icon-vk-brand;
-  }
-}
-.icon-telegram-fly {
-  &::before {
-    content: $icon-telegram-fly;
-  }
-}
-.icon-cart {
-  &::before {
-    content: $icon-cart;
-  }
-}
-.icon-phone-call {
-  &::before {
-    content: $icon-phone-call;
-  }
-}
-.icon-angle-down {
-  &::before {
-    content: $icon-angle-down;
-  }
-}
-.icon-vk-draw {
-  &::before {
-    content: $icon-vk-draw;
-  }
-}
-.icon-telegram-draw {
-  &::before {
-    content: $icon-telegram-draw;
-  }
-}
-.icon-whatsapp-draw {
-  &::before {
-    content: $icon-whatsapp-draw;
-  }
-}
+
 .icon-heart-like {
   &::before {
     content: $icon-heart-like;
   }
 }
+
 .icon-contacts {
   &::before {
     content: $icon-contacts;
   }
 }
-.icon-cross-middle {
-  &::before {
-    content: $icon-cross-middle;
-  }
-}
+
 .icon-trash {
   &::before {
     content: $icon-trash;
   }
 }
+
 .icon-user-profile {
   &::before {
     content: $icon-user-profile;
   }
 }
+
 .icon-information-outline {
   &::before {
     content: $icon-information-outline;
   }
 }
+
 .icon-arrow-left {
   &::before {
     content: $icon-arrow-left;
   }
 }
+
 .icon-arrow-right {
   &::before {
     content: $icon-arrow-right;
   }
 }
+
 .icon-location {
   &::before {
     content: $icon-location;

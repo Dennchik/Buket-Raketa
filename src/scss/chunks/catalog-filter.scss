@@ -6,7 +6,6 @@
   &__body {
     display: flex;
     flex-direction: column;
-    gap: 25px;
 
     padding: 20px;
     border-radius: 30px;
@@ -15,6 +14,13 @@
 
     background-color: white;
     box-shadow: -5px 5px 15px 5px rgb(175 175 175 / 20%);
+
+    &._open {
+      .icon-angle-down {
+        transform: scale(-1);
+        color: $color;
+      }
+    }
 
     @include screen-425 {
       margin: 0 -15px;
@@ -31,22 +37,33 @@
     justify-content: space-between;
 
     padding-block: 15px;
-    border-bottom: 1px solid rgb(241 241 241);
 
     font-weight: 600;
 
+    .icon {
+      font-size: 28px;
+      transition:
+        color 0.4s ease-in-out,
+        transform 0.4s ease-in-out;
+    }
+
     span {
       font-size: inherit;
-      line-height: 110%;
+      line-height: 100%;
+
+      &:last-child {
+        @include min-820 {
+          display: none;
+        }
+      }
     }
   }
 
   // .catalog-filter__close-button
   &__close-button {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
-    justify-content: flex-end;
 
     font-family: $font-family-secondary;
     color: rgb(153 150 147);
@@ -59,8 +76,22 @@
       font-family: $font-family-default;
       font-size: 14px;
       font-weight: normal;
+      line-height: 100%;
       letter-spacing: 0.2px;
     }
+  }
+
+  // .catalog-filter__drop-down
+  &__drop-down {
+    border-top: 1px solid rgb(241 241 241);
+  }
+
+  // .catalog-filter__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 25px;
   }
 
   // .catalog-filter__line
@@ -118,6 +149,14 @@
     font-size: 15px;
     font-weight: 400;
     color: white;
+
+    transition: transform 0.3s ease-in-out;
+
+    @include screen-hover {
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
 
     .icon {
       display: flex;

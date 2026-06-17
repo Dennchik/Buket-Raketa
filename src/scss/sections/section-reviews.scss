@@ -10,6 +10,8 @@ $color-text-dark: #333;
 .section-reviews {
   // .section-reviews__body
   &__body {
+    max-width: 1200px;
+    margin: 0 auto;
     padding-block: 8rem 9rem !important;
 
     @include screen-490 {
@@ -25,11 +27,74 @@ $color-text-dark: #333;
     justify-content: space-around;
 
     margin-bottom: 40px;
+
+    @include screen-620 {
+      flex-direction: column;
+    }
   }
 
   // .section-reviews__title
   &__title {
-    color: rgb(31 30 29);
+    line-height: 110%;
+  }
+
+  // .section-reviews__icon
+  &__icon {
+    width: auto;
+    height: 16px;
+    font-size: 16px;
+    color: $color;
+  }
+
+  // .section-reviews__wrapp
+  &__wrapp {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    @include screen-620 {
+      justify-content: space-around;
+    }
+  }
+
+  // .section-reviews__label
+  &__label {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    @include screen-620 {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  // .section-reviews__rating
+  &__rating {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: start;
+
+    max-width: 247px;
+    padding: 12px 20px;
+    border-radius: 100vh;
+
+    font-size: 1.5rem;
+
+    background-color: $background;
+
+    span {
+      &:nth-child(1) {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      &:nth-child(2) {
+        font-size: 1.5rem;
+        line-height: 110%;
+      }
+    }
   }
 
   // .section-reviews__subtitle
@@ -52,18 +117,13 @@ $color-text-dark: #333;
 // //* Карточка отзыва
 .review-card {
   cursor: pointer;
-
   position: relative;
-
   overflow: hidden;
-
-  padding: 10px;
-  border-radius: $radius;
 
   &__image-box {
     overflow: hidden;
     width: 100%;
-    border-radius: $radius;
+    border-radius: 3rem;
     background-color: #eee; // Цвет заглушки, пока грузится фото
   }
 
@@ -118,21 +178,6 @@ $color-text-dark: #333;
       color: white;
     }
   }
-
-  // Ховер эффекты (только для десктопа)
-  @media (width >= 992px) {
-    &:hover {
-      .review-card__img {
-        transform: scale(1.05); // Легкий зум картинки
-      }
-      .review-card__overlay {
-        opacity: 1; // Показываем оверлей
-      }
-      .review-card__icon {
-        transform: scale(1);
-      }
-    }
-  }
 }
 
 // * Кнопка внизу (Transparent style)
@@ -151,10 +196,7 @@ $color-text-dark: #333;
   transition: all 0.3s ease;
 
   &:hover {
-    // border-color: $color-text;
     color: #fff;
-
-    // background-color: $color-text;
   }
 }
 
@@ -214,9 +256,11 @@ $color-text-dark: #333;
     &.swiper-pagination-bullet-active-next {
       transform: scale(0.66);
     }
+
     &.swiper-pagination-bullet-active-next-next {
       transform: scale(0.33);
     }
+
     &.swiper-pagination-bullet-active,
     &.swiper-pagination-bullet-active-main {
       transform: scale(1);

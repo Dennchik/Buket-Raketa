@@ -22,11 +22,11 @@ export function initButtons() {
 
   // 🧹 Находим кнопку сброса (у неё отдельный класс .reset-button)
   const resetBtn = document.querySelector('.reset-button');
+  if (!resetBtn) return;
 
   // 🖱️ Навешиваем обработчик клика на кнопку сброса
   resetBtn.addEventListener('click', (e) => {
     // 🛡️ Проверка на случай, если кнопка вдруг не найдена (защита от ошибок)
-    if (!resetBtn) return;
 
     // 🔁 Перебираем все опции и сбрасываем их состояние
     document.querySelectorAll('.choice-block__option').forEach((label) => {

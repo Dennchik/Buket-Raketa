@@ -104,13 +104,13 @@
     color: white;
 
     background-color: $color;
+
     .icon {
       color: white;
     }
   }
 
   // .products-cart__wrapper
-
   &__wrapper {
     display: flex;
     flex: 1 1 auto;
@@ -121,6 +121,7 @@
   &__image {
     overflow: hidden;
     min-height: auto;
+
     // todo-  max-height: 290px; Временно
     border-radius: 30px;
     transition: max-height 0.3s ease;
@@ -196,6 +197,7 @@
 
     &:hover {
       transform: scale(0.95);
+
       .icon {
         transform: rotate(0deg);
       }
