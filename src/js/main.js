@@ -75,12 +75,27 @@ document.addEventListener('DOMContentLoaded', () => {
   dropBoxColapse();
 });
 
-function slideLayout() {
-  const mySwiper = document.querySelector('.mySwiper');
-  const wrapper = mySwiper.querySelector('.swiper-wrapper');
-  const slides = mySwiper.querySelectorAll('.swiper-slide');
-  if (slides.length > 4) {
-    wrapper.style.width = '100%';
-  }
-}
-document.addEventListener('DOMContentLoaded', slideLayout);
+// function slideLayout() {
+//   const mySwiper = document.querySelector('.mySwiper');
+//   const wrapper = mySwiper.querySelector('.swiper-wrapper');
+//   const slides = mySwiper.querySelectorAll('.swiper-slide');
+//   const slideThumb = document.querySelector('.slide-thumb');
+//   console.log(slideThumb);
+
+//   if (slides.length > 4) {
+//     // wrapper.style.width = '100%';
+//     slideThumb.style.width = '100%';
+//     slides.forEach((slide) => {
+//       slide.style.width = '60px';
+//       console.log('111');
+//     });
+//   } else {
+//     slideThumb.style.width = 'auto';
+
+//     slides.forEach((slide) => {
+//       slide.style.width = '60px';
+//       console.log('60px !important;');
+//     });
+//   }
+// }
+// document.addEventListener('DOMContentLoaded', slideLayout);

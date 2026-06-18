@@ -31,18 +31,21 @@ export function reviewsSlide(slide) {
   }
 }
 
+//* ✅ Слайдер карточки товара
 export function thumbSlide(params) {
   let swiper = new Swiper('.mySwiper', {
-    spaceBetween: 0,
+    spaceBetween: 5,
     centeredSlides: false,
+    freeMode: true,
+    watchSlidesProgress: true,
     breakpoints: {
-      0: { slidesPerView: 3 },
-      325: { slidesPerView: 4 },
+      0: { slidesPerView: 4 },
+      390: { slidesPerView: 5 },
       490: { slidesPerView: 3 },
-      640: { slidesPerView: 4 },
-      // 880: { slidesPerView: 4 },
+      560: { slidesPerView: 4 },
+      768: { slidesPerView: 5 },
+      920: { slidesPerView: 4 },
       1080: { slidesPerView: 5 },
-      // 1024: { slidesPerView: 5 },
     },
   });
   new Swiper('.mySwiper2', {
@@ -58,7 +61,7 @@ export function thumbSlide(params) {
   });
 }
 
-//* ✅ Слайдер карточки товара
+//* ✅ Слайдер на странице Онас Инфлюенсеры
 export function influencersSlide(slide) {
   if (slide) {
     new Swiper(slide, {
