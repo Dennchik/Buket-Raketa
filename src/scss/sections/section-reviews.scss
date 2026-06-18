@@ -1,16 +1,10 @@
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
 
-// * ----------------------------------------------------------------------------
-
-$radius: 2rem;
-$gap: 2rem;
-$color-text-dark: #333;
-
+// * Секция отзывы покупателей -------------------------------------------------
 .section-reviews {
   // .section-reviews__body
   &__body {
-    max-width: 1200px;
     margin: 0 auto;
     padding-block: 8rem 9rem !important;
 
@@ -38,18 +32,10 @@ $color-text-dark: #333;
     line-height: 110%;
   }
 
-  // .section-reviews__icon
-  &__icon {
-    width: auto;
-    height: 16px;
-    font-size: 16px;
-    color: $color;
-  }
-
   // .section-reviews__wrapp
   &__wrapp {
     display: flex;
-    gap: 15px;
+    gap: 1.6rem;
     align-items: center;
 
     @include screen-620 {
@@ -60,12 +46,22 @@ $color-text-dark: #333;
   // .section-reviews__label
   &__label {
     display: flex;
-    gap: 16px;
+    gap: 1.6rem;
     align-items: center;
 
     @include screen-620 {
       justify-content: flex-start;
       width: 100%;
+    }
+  }
+
+  // .section-reviews__icon
+  &__icon {
+    .icon-star {
+      width: auto;
+      height: 16px;
+      font-size: 16px;
+      color: $color;
     }
   }
 
@@ -97,112 +93,194 @@ $color-text-dark: #333;
     }
   }
 
-  // .section-reviews__subtitle
-  &__subtitle {
-    font-size: 2rem;
-  }
-
   // .section-reviews__wrapper
   &__wrapper {
     scroll-snap-type: x proximity;
     display: flex;
   }
 
-  // .section-reviews__actions
-  &__actions {
-    text-align: center;
+  // .section-reviews__slide
+  &__slide {
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  // .section-reviews__buttons
+  &__buttons {
+    display: inline-flex;
+    gap: 4rem;
+    width: 100%;
+    padding-left: 7rem;
+
+    .button {
+      width: auto;
+      color: $font-color-secondary;
+    }
+
+    @include screen-690 {
+      gap: 2rem;
+      justify-content: center;
+      padding: 0;
+    }
+
+    @include screen-425 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .section-reviews__button
+  &__button {
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: transform 0.3s ease-in-out;
+
+    .icon {
+      transform: rotate(-45deg);
+
+      width: 30px;
+      height: 30px;
+      border-radius: 100vh;
+
+      color: $color;
+
+      background-color: $background;
+
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.button-white {
+      background-color: $background;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 100vh;
+
+        color: $background;
+
+        background-color: $color-text-medium;
+      }
+    }
+
+    &.button {
+      @include screen-425 {
+        width: 200px;
+      }
+    }
+
+    &:hover {
+      .icon {
+        transform: rotate(0);
+      }
+      transform: scale(0.98);
+    }
+  }
+
+  // .section-reviews__button-wrapp
+  &__button-wrapp {
+    display: flex;
+    gap: 0.5rem;
+    color: #000;
+
+    span {
+      &:nth-child(2) {
+        font-family: $font-family-italic;
+        color: $color-light;
+        white-space: nowrap;
+      }
+    }
+
+    @include screen-580 {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 }
 
-// //* Карточка отзыва
+// * Карточка отзыва -----------------------------------------------------------
 .review-card {
-  cursor: pointer;
   position: relative;
-  overflow: hidden;
-
-  &__image-box {
-    overflow: hidden;
-    width: 100%;
-    border-radius: 3rem;
-    background-color: #eee; // Цвет заглушки, пока грузится фото
-  }
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.6rem;
 
   &__img {
+    overflow: hidden;
     width: 100%;
-    height: 100%;
+    border-radius: 4rem;
     transition: transform 0.5s ease;
 
     img {
+      position: relative;
+      z-index: 0;
       object-fit: contain;
       object-position: top center; // Показываем начало переписки
     }
   }
 
-  // Оверлей (затемнение при наведении)
-  &__overlay {
-    pointer-events: none;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+  // .review-card__thumb
+  &__thumb {
+    position: relative;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 1.5rem;
 
-    width: 100%;
-    height: 100%;
+    width: 97%;
+    margin: -32% auto 0;
+    padding: 2.5rem;
+    border-radius: 4rem;
 
-    opacity: 0; // Скрыт по умолчанию
-    background-color: rgb(0 0 0 / 30%);
-
-    transition: opacity 0.5s ease;
+    background-color: $background;
+    box-shadow: 0 3px 7px rgb(167 167 167 / 20%);
   }
 
-  &__icon {
-    transform: scale(0.8);
-
+  // .review-card__row
+  &__row {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
 
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    .icon {
+      color: $color;
+    }
 
-    background-color: $color;
-
-    transition: transform 0.3s ease;
-
-    .icon-zoom-in {
-      color: white;
+    &:nth-child(2) {
+      flex-direction: column;
+      gap: 1.5rem;
+      height: 100%;
     }
   }
-}
 
-// * Кнопка внизу (Transparent style)
-.btn-outline {
-  display: inline-block;
+  // .review-card__name
+  &__name {
+    font-family: $font-family-title;
+  }
 
-  padding: 15px 30px;
-  border: 2px solid #e0e0e0;
-  border-radius: 50px;
+  // .review-card__type
+  &__type {
+    font-family: $font-family-italic;
+    font-size: 1.4rem;
+    color: $color;
+  }
 
-  font-weight: 700;
-
-  // color: $color-text;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: #fff;
+  // .review-card__text
+  &__text {
+    flex: 1 1 auto;
+    font-size: 1.5rem;
+    line-height: 110%;
   }
 }
 
-// * ----------------------------------------------------------------------------
+// * Swiper pagination ---------------------------------------------------------
 .swiper-pagination {
-  position: absolute;
+  position: relative;
   z-index: 10;
   transform: translateZ(0);
 
@@ -212,11 +290,12 @@ $color-text-dark: #333;
 
   &.swiper-pagination-bullets-dynamic {
     left: 50%;
-    transform: translate(-50%, -300%) !important;
+    transform: translate(-50%, 0) !important;
+    padding: 2.4rem 0;
     white-space: nowrap;
 
     @include screen-490 {
-      transform: translate(-50%, -50%) !important;
+      transform: translate(-50%, 0) !important;
     }
   }
 
@@ -238,7 +317,7 @@ $color-text-dark: #333;
     margin: 0 5px;
     border-radius: 50%;
 
-    background-color: $color-text-dark;
+    background-color: $color-light;
 
     transition:
       transform 0.5s,

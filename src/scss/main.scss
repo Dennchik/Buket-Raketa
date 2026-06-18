@@ -23,12 +23,8 @@
 
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
-@use 'assets/sidebar-menu';
 
-// @use 'assets/pl-preloader.scss';
-
-// @use 'assets/swiper-12.1.0';
-@use 'assets/swiper--bundle-12.1.2';
+@use 'assets/swiper-bundle-12.1.2';
 
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/form-search';

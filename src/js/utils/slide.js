@@ -19,13 +19,14 @@ export function reviewsSlide(slide) {
         el: '.swiper-pagination',
         dynamicBullets: true,
       },
-      // loop: true,
+
       grabCursor: true,
       centeredSlides: false,
       breakpoints: {
-        0: { slidesPerView: 2 },
-        425: { slidesPerView: 3 },
-        768: { slidesPerView: 4 },
+        0: { slidesPerView: 1 },
+        410: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 },
       },
     });
   }
@@ -61,7 +62,7 @@ export function thumbSlide(params) {
   });
 }
 
-//* ✅ Слайдер на странице Онас Инфлюенсеры
+//* ✅ Слайдер на странице Онас
 export function influencersSlide(slide) {
   if (slide) {
     new Swiper(slide, {

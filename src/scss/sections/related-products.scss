@@ -24,7 +24,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 5px;
 
     @include screen-1440 {
       grid-template-columns: repeat(4, 1fr);
@@ -38,14 +38,14 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @include screen-490 {
+      margin: 0 -16px;
+    }
+
     @include screen-375 {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-
-  // .related-products__column
-  // &__column {
-  // }
 }
 
 .products-cart {

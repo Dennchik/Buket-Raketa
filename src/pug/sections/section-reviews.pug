@@ -19,43 +19,105 @@
           .review-card.swiper-slide 
             .review-card__img 
               +picture('/img/reviews/reviews-1.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
+            .review-card__thumb
+              .review-card__row
+                .review-card__name Анна
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type День рождение
+                .review-card__text Букет очень нежный и свежий. Всё красиво упаковано, доставили аккуратно.
           //*- Скриншот 2
           .review-card.swiper-slide 
             .review-card__img 
               +picture('/img/reviews/reviews-2.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
+            .review-card__thumb 
+              .review-card__row
+                .review-card__name Марина
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type Маме в подарок 
+                .review-card__text Заказывала в подарок маме — букет приехал пышный, цветы красивые, оттенки очень приятные. Спасибо!
           //*- Скриншот 3
           .review-card.swiper-slide 
             .review-card__img 
               +picture('img/reviews/reviews-3.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
+            .review-card__thumb
+              .review-card__row
+                .review-card__name Екатерина
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type Любимой жене
+                .review-card__text Очень эстетичный букет, выглядит дороже своей цены. Цветы свежие, упаковка аккуратная.
           //*- Скриншот 4
           .review-card.swiper-slide 
             .review-card__img 
               +picture('/img/reviews/reviews-4.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
+            .review-card__thumb
+              .review-card__row
+                .review-card__name Ольга
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type Учительнице
+                .review-card__text Получательница была в восторге! Букет яркий, нежный и очень фотогеничный. Буду заказывать ещё.
           //*- Скриншот 5
           .review-card.swiper-slide 
             .review-card__img 
               +picture('img/reviews/reviews-1.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
+            .review-card__thumb
+              .review-card__row
+                .review-card__name Анна
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type День рождение
+                .review-card__text Букет очень нежный и свежий. Всё красиво упаковано, доставили аккуратно.
           //*- Скриншот 6
-          .review-card.swiper-slide
-            a.review-card__image-box(href="/img/reviews/reviews-2.png" data-fancybox="reviews")
-              .review-card__img 
-                +picture('/img/reviews/reviews-2.png', 'image')
-            .review-card__overlay
-              span.review-card__icon
-                span.icon-zoom-in
-      .swiper-pagination
+          .review-card.swiper-slide 
+            .review-card__img 
+              +picture('/img/reviews/reviews-2.png', 'image')
+            .review-card__thumb
+              .review-card__row
+                .review-card__name Марина
+                .review-card__rating
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+                  +iconfont('star', 'icon')
+              .review-card__row
+                .review-card__type Учительнице
+                .review-card__text Получательница была в восторге! Букет яркий, нежный и очень фотогеничный. Буду заказывать ещё.
+    .swiper-pagination
+    .section-reviews__buttons
+      .section-reviews__button.button
+        span Оставить отзыв
+        +iconfont('arrow-right', 'icon')
+      .section-reviews__button.button.button-white 
+        .section-reviews__button-wrapp
+          span Посмотреть все отзывы 
+          span на Яндекс картах
+        +iconfont('arrow-right', 'icon')

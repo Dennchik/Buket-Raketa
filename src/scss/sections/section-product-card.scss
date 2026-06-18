@@ -37,7 +37,7 @@
 
     margin: 1.3rem;
 
-    @include screen-580 {
+    @include screen-690 {
       flex-direction: column;
       align-items: start;
     }
@@ -46,10 +46,11 @@
   // .section-product-card__reviews
   &__reviews {
     display: flex;
-    gap: 0.7rem;
+    gap: 1rem;
     align-items: center;
+    line-height: 150%; /* 24px/16 */
 
-    @include screen-425 {
+    @include screen-490 {
       flex-wrap: wrap;
     }
   }
@@ -58,15 +59,17 @@
   &__item {
     display: flex;
     gap: 0.2rem;
-    align-items: center;
+    align-items: baseline;
 
     font-family: $font-family-secondary;
-    font-size: 1.6rem;
     font-weight: 700;
-    line-height: 110%;
 
     .icon-star {
+      width: 16px;
+      height: 24px;
       margin-right: 0.5rem;
+
+      font-size: 14px;
       color: rgb(251 180 21);
     }
   }
@@ -76,30 +79,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 16px;
-    height: 18px;
   }
 
   // .section-product-card__rating
   &__rating {
-    display: flex;
-    gap: 0.5rem;
+    font-size: 14px;
   }
 
   // .section-product-card__counter
   &__counter {
     display: flex;
     gap: 0.2rem;
-    line-height: 100%;
+    align-items: center;
     color: rgb(60 109 202 / 100%);
 
-    .card-counter {
-      font-size: 14px;
-    }
-
     span {
-      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
     }
   }
 
@@ -107,24 +103,26 @@
   &__product-code {
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 110%;
     color: rgb(153 150 147 / 100%);
   }
 
   // .section-product-card__quantity-bouquets
   &__quantity-bouquets {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-
     .section-product-card__text {
-      font-size: 1.4rem;
+      font-size: 13px;
+      text-transform: uppercase;
+      white-space: nowrap;
       opacity: 0.6;
+
+      @include screen-425 {
+        font-size: 12px;
+      }
     }
 
     .bouquets-counter {
-      font-size: 1.6rem;
+      font-size: 14px;
       font-weight: 700;
+      line-height: 100%;
     }
   }
 
@@ -366,6 +364,12 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+
+    @include screen-880 {
+      flex-direction: row;
+      gap: 5rem;
+      align-items: center;
+    }
   }
 
   // .purchase__prices-item
@@ -395,6 +399,7 @@
   &__discount {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 
     width: 44px;
     height: 30px;
