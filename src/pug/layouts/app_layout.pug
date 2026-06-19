@@ -40,6 +40,5 @@ html(lang="ru")
 								include @/pug/chunks/sidebar-menu
 					block cookies
 						include @/pug/modules/cookies-accept 
-					//- append page 
-						.page__form-request
-							include @/pug/modules/modal-overlay
+					block pop-up-banner 
+						include @/pug/assets/pop-up-banner

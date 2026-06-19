@@ -347,17 +347,17 @@ export function cookiesAccept(el, trigger) {
   // ⬇️⬇️⬇️ ДОБАВЛЕНИЯ сохранение в localStorage ⬇️⬇️⬇️
 
   // 1. Проверяем, было ли уже согласие
-  // const hasAccepted = localStorage.getItem('cookiesAccepted');
+  const hasAccepted = localStorage.getItem('cookiesAccepted');
 
   // 2. Если пользователь уже соглашался - скрываем баннер сразу
-  // if (hasAccepted === 'true') {
-  //   // Сразу убираем, без анимации
-  //   cookiesAccept.style.display = 'none';
-  //   // или если хотите с анимацией:
-  //   // cookiesAccept.style.transform = 'translateY(110%)';
-  //   // cookiesAccept.style.transition = 'transform 0.5s ease';
-  //   return; // Завершаем функцию, баннер больше не нужен
-  // }
+  if (hasAccepted === 'true') {
+    // Сразу убираем, без анимации
+    cookiesAccept.style.display = 'none';
+    // или если хотите с анимацией:
+    // cookiesAccept.style.transform = 'translateY(110%)';
+    // cookiesAccept.style.transition = 'transform 0.5s ease';
+    return; // Завершаем функцию, баннер больше не нужен
+  }
   // ! Временно
 
   // ⬆️⬆️⬆️  ДОБАВЛЕНИЯ ЗАКОНЧИЛИСЬ ⬆️⬆️⬆️

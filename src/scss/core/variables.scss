@@ -10,6 +10,7 @@ $font-family-default: 'VeranoSans', sans-serif;
 $font-family-title: 'SteticaMedium', sans-serif;
 $font-family-secondary: 'SteticaRegular', sans-serif;
 $font-family-italic: 'VeranoSansItalic', sans-serif;
+$font-family-light: 'VeranoSansLight', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
 $color-text-medium: rgb(85 85 85);
@@ -24,14 +25,14 @@ $color: #ec681d;
 $color-light: rgb(89 86 83);
 $color-defoult: rgb(31 30 29 / 100%);
 
-// * -
+// * - [Text color] -
 $text-selection: rgb(250 230 215 / 100%);
 $text-color-selection: rgb(122 122 122);
 
 :root {
   --width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
 
-  // * -
+  // * - [Font color] -
   --font-color-default: rgb(0 0 0);
   --font-color-second: rgb(77 91 206);
 
