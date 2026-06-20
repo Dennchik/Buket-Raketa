@@ -82,7 +82,7 @@ function popUpLayout(params) {
 
   setTimeout(() => {
     hideBanner.classList.add('_show');
-  }, 500);
+  }, 4500);
 
   buttonClose.addEventListener('click', () => {
     hideBanner.style.display = 'none';
