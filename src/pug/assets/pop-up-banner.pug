@@ -1,14 +1,17 @@
 .pop-up-banner 
   .pop-up-banner__body.hide-banner
     .pop-up-banner__content
+      .pop-up-banner__close-button.button-close
+        +iconfont('close-button', 'icon')
       .pop-up-banner__image 
         +picture('img/timer.png', 'image')
-      .pop-up-banner__button.banner-button 
-        +iconfont('close-button', 'icon')
       .pop-up-banner__info
-        .pop-up-banner__title.t-h2
+        .pop-up-banner__title 
           span скидка 10%
           span на 1 заказ
+        .pop-up-banner__text До конца акции
         .pop-up-banner__timer 
           span 30:00
-        .pop-up-banner__text До конца акции
+        .pop-up-banner__button.banner-button 
+          +iconfont('close-button', 'icon')
+          span закрыть

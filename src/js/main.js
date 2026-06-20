@@ -26,7 +26,7 @@ sideBarLoyuts();
 dynamicAdaptive();
 fadeInHeader();
 
-//* Выбор города
+//* -------------------------- [ Выбор города ] --------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const bouquetForm = document.getElementById('bouquet-form');
   const citySelect = document.querySelector('.delivery-products__select-city');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', initButtons);
 //* ----------------- [ Блок часто задаваемые вопросы ] ------------------------
-document.addEventListener('DOMContentLoaded', () => {
+function answersQuestions() {
   const faqItems = document.querySelectorAll('.questions-item');
 
   faqItems.forEach((item) => {
@@ -64,8 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('is-active');
     });
   });
-});
+}
 
+document.addEventListener('DOMContentLoaded', answersQuestions);
 //* ----------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,27 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function popUpLayout(params) {
   const banner = document.querySelector('.pop-up-banner');
-  const button = banner.querySelector('.banner-button ');
   const hideBanner = document.querySelector('.hide-banner');
+  const buttonHide = banner.querySelector('.banner-button');
+  const buttonClose = document.querySelector('.button-close');
 
   setTimeout(() => {
-    hideBanner.style.transform = 'translateY(50%)';
-    hideBanner.style.transition = 'transform 0.5s ease';
+    hideBanner.classList.add('_show');
   }, 500);
 
-  button.addEventListener('click', () => {
-    banner.classList.add('_hide');
-    hideBanner.style.transform = 'translateY(662%)';
+  buttonClose.addEventListener('click', () => {
+    hideBanner.style.display = 'none';
   });
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth < 689) {
-    hideBanner.style.transform = 'translateY(219%)';
-  }
-  window.addEventListener('resize', () => {
-    if (screenWidth < 689) {
-      hideBanner.style.transform = 'translateY(219%)';
-    }
+  buttonHide.addEventListener('click', () => {
+    banner.classList.add('_hide');
   });
 }
+
 document.addEventListener('DOMContentLoaded', popUpLayout);

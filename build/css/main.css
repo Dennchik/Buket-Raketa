@@ -370,7 +370,7 @@
     grid-template-columns: auto min-content min-content;
   }
 }
-@media screen and (width < 320px) {
+@media screen and (width <= 320px) {
   .header__content {
     grid-template-columns: 1fr min-content;
   }
@@ -384,7 +384,7 @@
   display: flex;
   align-items: center;
 }
-@media screen and (width < 320px) {
+@media screen and (width <= 320px) {
   .header__column:nth-child(1) {
     display: none;
   }
@@ -401,7 +401,7 @@
   z-index: 0;
   gap: 1.6rem;
 }
-@media screen and (width < 320px) {
+@media screen and (width <= 320px) {
   .header__column:nth-child(3) {
     justify-content: space-between;
   }
@@ -1782,47 +1782,76 @@ h6 {
 .pop-up-banner._hide .pop-up-banner__title {
   display: none;
 }
+.pop-up-banner._hide .pop-up-banner__close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .pop-up-banner._hide .pop-up-banner__body {
+  transform: translateY(667%);
   justify-content: end;
+}
+@media (width >= 320px) and (width <= 1140px) {
+  .pop-up-banner._hide .pop-up-banner__body {
+    transform: translateY(calc(355px + 310 * (100vw - 690px) / 450));
+  }
 }
 @media screen and (width < 690px) {
   .pop-up-banner._hide .pop-up-banner__body {
-    transform: translateY(-50%);
+    transform: translateY(247%);
     margin-right: -15px;
   }
+}
+.pop-up-banner._hide .pop-up-banner__content {
+  border-radius: 24px;
 }
 .pop-up-banner._hide .pop-up-banner__image {
   display: none;
 }
-.pop-up-banner._hide .pop-up-banner__timer {
-  font-size: 50px;
-}
 .pop-up-banner._hide .pop-up-banner__info {
   position: relative;
+  flex-direction: column-reverse;
   justify-content: center;
   width: 202px;
   padding: 2rem;
-  border-radius: 24px;
   background-color: #ec681d;
+}
+.pop-up-banner._hide .pop-up-banner__timer {
+  font-size: 50px;
 }
 .pop-up-banner__button {
   pointer-events: all;
   cursor: pointer;
-  position: absolute;
-  z-index: 20;
-  top: 3%;
-  right: 8%;
-  font-size: 3.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   color: rgb(255, 255, 255);
+}
+.pop-up-banner__button .icon {
+  width: 26px;
+  height: 26px;
+  font-size: 26px;
   transition: transform 0.3s ease-in-out;
 }
-.pop-up-banner__button:hover {
+.pop-up-banner__button span {
+  display: block;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 173.333%; /* 26px/15 */
+}
+.pop-up-banner__button:hover .icon {
   transform: rotate(90deg);
 }
-@media screen and (width < 375px) {
-  .pop-up-banner__button {
-    top: 1%;
-  }
+.pop-up-banner__close-button {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 10px;
+  display: none;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
 }
 .pop-up-banner__body {
   pointer-events: all;
@@ -1833,19 +1862,20 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
 }
+.pop-up-banner__body._show {
+  transform: translateY(50%);
+  transition: transform 0.5s ease-in-out;
+}
 .pop-up-banner__content {
   position: relative;
+  overflow: hidden;
+  border-radius: 5rem;
+  box-shadow: 0 0 25px rgba(32, 32, 32, 0.747);
 }
 .pop-up-banner__image {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  border-radius: 5rem;
-  box-shadow: 0 0 25px rgba(32, 32, 32, 0.747);
-}
-.pop-up-banner__image img {
-  overflow: hidden;
-  border-radius: 5rem;
 }
 .pop-up-banner__info {
   position: absolute;
@@ -1856,16 +1886,37 @@ h6 {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 6.4rem 6rem;
-  border-radius: 5rem;
+  padding: 64px 54px;
   color: rgb(255, 255, 255);
+}
+@media (width >= 320px) and (width <= 490px) {
+  .pop-up-banner__info {
+    padding: calc(40px + 24 * (100vw - 320px) / 170) calc(30px + 24 * (100vw - 320px) / 170);
+  }
+}
+@media screen and (width <= 320px) {
+  .pop-up-banner__info {
+    padding: 40px 30px;
+  }
 }
 .pop-up-banner__title {
   width: 100%;
-  font-family: "SteticaRegular", sans-serif;
+  font-family: "SteticaMedium", sans-serif;
+  font-size: 50px;
+}
+@media (width >= 320px) and (width <= 490px) {
+  .pop-up-banner__title {
+    font-size: clamp(30px, -3.07px + 11vw, 50px);
+  }
+}
+@media screen and (width <= 320px) {
+  .pop-up-banner__title {
+    font-size: 32px;
+  }
 }
 .pop-up-banner__title span {
   display: block;
+  line-height: 110%;
 }
 .pop-up-banner__title span:nth-child(1) {
   text-align: left;
@@ -1875,7 +1926,7 @@ h6 {
 }
 .pop-up-banner__timer {
   font-family: "VeranoSansLight", sans-serif;
-  font-size: clamp(42px, -3.07px + 9.014vw, 107px);
+  font-size: clamp(72.05px, -3.07px + 22.464vw, 107px);
   line-height: 100%;
   text-align: center;
 }
@@ -2734,7 +2785,7 @@ h6 {
   box-shadow: -2px 3px 7px #ec681d;
   transition: transform 0.3s cubic-bezier(0.7, -0.955, 0.55, 1.55);
 }
-@media screen and (width < 320px) {
+@media screen and (width <= 320px) {
   .menu-list {
     width: 100%;
   }

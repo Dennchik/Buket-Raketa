@@ -149,7 +149,7 @@
 }
 
 @mixin screen-320 {
-  @media screen and (width < 320px) {
+  @media screen and (width <= 320px) {
     @content;
   }
 }
@@ -354,8 +354,8 @@
   }
 }
 
-@mixin minmax-320-920 {
-  @media (width >= 320.99px) and (width <= 920px) {
+@mixin minmax-320-1140 {
+  @media (width >= 320px) and (width <= 1140px) {
     @content;
   }
 }
@@ -397,7 +397,7 @@
 }
 
 @mixin minmax-320-690 {
-  @media (width >= 330.98px) and (width <= 690px) {
+  @media (width >= 320) and (width <= 690px) {
     @content;
   }
 }

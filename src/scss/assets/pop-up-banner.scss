@@ -19,38 +19,51 @@
       display: none;
     }
 
+    // .pop-up-banner__close-button
+    .pop-up-banner__close-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .pop-up-banner__body {
-      // transform: translateY(720px);
+      transform: translateY(667%);
       justify-content: end;
 
-      // height: 104px;
+      @include minmax-320-1140 {
+        transform: translateY(
+          calc(355px + (665 - 355) * ((100vw - 690px) / (1140 - 690)))
+        );
+      }
 
       @include screen-690 {
-        transform: translateY(-50%);
+        transform: translateY(247%);
         margin-right: -15px;
       }
+    }
+
+    .pop-up-banner__content {
+      border-radius: 24px;
     }
 
     .pop-up-banner__image {
       display: none;
     }
 
-    .pop-up-banner__timer {
-      font-size: 50px;
-    }
-
     .pop-up-banner__info {
       position: relative;
 
+      flex-direction: column-reverse;
       justify-content: center;
 
       width: 202px;
-
-      // height: 104px;
       padding: 2rem;
-      border-radius: 24px;
 
       background-color: $color;
+    }
+
+    .pop-up-banner__timer {
+      font-size: 50px;
     }
   }
 
@@ -59,23 +72,47 @@
     pointer-events: all;
     cursor: pointer;
 
-    position: absolute;
-    z-index: 20;
-    top: 3%;
-    right: 8%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 3.2rem;
     color: $background;
 
-    transition: transform 0.3s ease-in-out;
+    .icon {
+      width: 26px;
+      height: 26px;
+      font-size: 26px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    span {
+      display: block;
+      display: flex;
+      align-items: center;
+
+      font-size: 1.5rem;
+      line-height: 173.333%; /* 26px/15 */
+    }
 
     &:hover {
-      transform: rotate(90deg);
+      .icon {
+        transform: rotate(90deg);
+      }
     }
+  }
 
-    @include screen-375 {
-      top: 1%;
-    }
+  // .pop-up-banner__close-button
+  &__close-button {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 10px;
+
+    display: none;
+
+    font-size: 24px;
+    color: $background;
   }
 
   // .pop-up-banner__body
@@ -91,12 +128,18 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    // transition: transform 0.3s ease-in-out;
+    &._show {
+      transform: translateY(50%);
+      transition: transform 0.5s ease-in-out;
+    }
   }
 
   // .pop-up-banner__content
   &__content {
     position: relative;
+    overflow: hidden;
+    border-radius: 5rem;
+    box-shadow: 0 0 25px rgb(32 32 32 / 74.7%);
   }
 
   // .pop-up-banner__image
@@ -104,14 +147,6 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    border-radius: 5rem;
-
-    box-shadow: 0 0 25px rgb(32 32 32 / 74.7%);
-
-    img {
-      overflow: hidden;
-      border-radius: 5rem;
-    }
   }
 
   // .pop-up-banner__info
@@ -126,19 +161,37 @@
 
     width: 100%;
     height: 100%;
-    padding: 6.4rem 6rem;
-    border-radius: 5rem;
+    padding: 64px 54px;
 
     color: $background;
+
+    @include minmax-320-490 {
+      padding: calc(40px + (64 - 40) * ((100vw - 320px) / (490 - 320)))
+        calc(30px + (54 - 30) * ((100vw - 320px) / (490 - 320)));
+    }
+
+    @include screen-320 {
+      padding: 40px 30px;
+    }
   }
 
   // .pop-up-banner__title
   &__title {
     width: 100%;
-    font-family: $font-family-secondary;
+    font-family: $font-family-title;
+    font-size: 50px;
+
+    @include minmax-320-490 {
+      font-size: clamp(30px, -3.07px + 11vw, 50px);
+    }
+
+    @include screen-320 {
+      font-size: 32px;
+    }
 
     span {
       display: block;
+      line-height: 110%;
 
       &:nth-child(1) {
         text-align: left;
@@ -153,7 +206,7 @@
   // .pop-up-banner__timer
   &__timer {
     font-family: $font-family-light;
-    font-size: clamp(42px, -3.07px + 9.014vw, 107px);
+    font-size: clamp(72.05px, -3.07px + 22.464vw, 107px);
     line-height: 100%;
     text-align: center;
   }
