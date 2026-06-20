@@ -15,26 +15,19 @@
 
   &._hide {
     .pop-up-banner__button,
-    .pop-up-banner__text,
     .pop-up-banner__title {
       display: none;
     }
 
     .pop-up-banner__body {
-      top: 0;
-      transform: translateY(720px);
+      // transform: translateY(720px);
       justify-content: end;
 
+      // height: 104px;
+
       @include screen-690 {
-        top: 33%;
         transform: translateY(-50%);
         margin-right: -15px;
-      }
-
-      @include minmax-690-1920 {
-        transform: translateY(
-          calc(277px + (720 - 277) * ((100vw - 360px) / (1920 - 360)))
-        );
       }
     }
 
@@ -43,7 +36,7 @@
     }
 
     .pop-up-banner__timer {
-      font-size: 32px;
+      font-size: 50px;
     }
 
     .pop-up-banner__info {
@@ -51,8 +44,9 @@
 
       justify-content: center;
 
-      max-width: 202px;
-      max-height: 104px;
+      width: 202px;
+
+      // height: 104px;
       padding: 2rem;
       border-radius: 24px;
 
@@ -89,13 +83,15 @@
     pointer-events: all;
 
     position: relative;
-    transform: translateY(50%);
+    transform: translateY(-250%);
 
     display: flex;
     justify-content: center;
 
     max-width: 1200px;
     margin: 0 auto;
+
+    // transition: transform 0.3s ease-in-out;
   }
 
   // .pop-up-banner__content

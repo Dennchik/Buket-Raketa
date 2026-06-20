@@ -76,8 +76,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function popUpLayout(params) {
   const banner = document.querySelector('.pop-up-banner');
   const button = banner.querySelector('.banner-button ');
+  const hideBanner = document.querySelector('.hide-banner');
+
+  setTimeout(() => {
+    hideBanner.style.transform = 'translateY(50%)';
+    hideBanner.style.transition = 'transform 0.5s ease';
+  }, 500);
+
   button.addEventListener('click', () => {
     banner.classList.add('_hide');
+    hideBanner.style.transform = 'translateY(662%)';
+  });
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 689) {
+    hideBanner.style.transform = 'translateY(219%)';
+  }
+  window.addEventListener('resize', () => {
+    if (screenWidth < 689) {
+      hideBanner.style.transform = 'translateY(219%)';
+    }
   });
 }
 document.addEventListener('DOMContentLoaded', popUpLayout);
