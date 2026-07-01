@@ -5223,6 +5223,9 @@ h6 {
   grid-template-columns: minmax(303px, 400px) 1fr;
   color: white;
 }
+.section-catalog__content-wrapper.with-filter-block {
+  grid-template-columns: 1fr;
+}
 @media screen and (width < 820px) {
   .section-catalog__content-wrapper {
     grid-template-columns: 1fr;

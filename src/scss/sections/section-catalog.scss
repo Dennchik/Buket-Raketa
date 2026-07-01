@@ -71,6 +71,10 @@
     grid-template-columns: minmax(303px, 400px) 1fr;
     color: white;
 
+    &.with-filter-block {
+      grid-template-columns: 1fr;
+    }
+
     @include screen-820 {
       grid-template-columns: 1fr;
       gap: 4rem;

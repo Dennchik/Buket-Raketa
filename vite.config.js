@@ -93,8 +93,8 @@ export default defineConfig(({ command }) => {
           // 'card-product': resolve(__dirname, 'src/js/card.js'),
         },
         output: {
-          entryFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash].[ext]',
+          entryFileNames: 'assets/[name].js',
+          assetFileNames: 'assets/[name].[ext]',
           // chunkFileNames: 'assets/vendors/[name]-[hash].js',
 
           // manualChunks(id) {
