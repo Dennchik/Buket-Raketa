@@ -1355,6 +1355,10 @@ textarea {
   border: none;
 }
 
+textarea {
+  resize: none;
+}
+
 button,
 input[type=submit] {
   cursor: pointer;
@@ -1454,6 +1458,9 @@ h6 {
   }
 }
 .form-request__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
   font-family: "SteticaMedium", sans-serif;
   font-size: 30px;
@@ -1461,6 +1468,14 @@ h6 {
   line-height: 110%;
   color: rgb(31, 30, 29);
   letter-spacing: -0.3px;
+}
+.form-request__title .icon {
+  color: rgb(89, 86, 83);
+  transition: transform 0.3s ease-in-out;
+}
+.form-request__title .icon:hover {
+  transform: rotate(-90deg);
+  color: #ec681d;
 }
 .form-request__content {
   display: flex;
@@ -1472,7 +1487,6 @@ h6 {
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 10px;
 }
 .form-request__form-group .form-request__input {
   overflow: hidden;
@@ -1506,7 +1520,7 @@ h6 {
 }
 .form-request__input {
   padding: 20px 25px;
-  border-radius: 64px;
+  border-radius: 100vh;
   font-family: "VeranoSans", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;

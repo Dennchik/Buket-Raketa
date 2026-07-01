@@ -124,6 +124,7 @@ $spacing-small: 10px;
   // Элемент Сообщение
   &__message {
     margin-bottom: $spacing-small;
+
     &:last-of-type {
       margin-bottom: $spacing-medium;
       font-weight: bold;

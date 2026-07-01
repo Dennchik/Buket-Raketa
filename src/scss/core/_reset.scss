@@ -104,6 +104,10 @@ textarea {
   border: none;
 }
 
+textarea {
+  resize: none;
+}
+
 button,
 input[type='submit'] {
   cursor: pointer;

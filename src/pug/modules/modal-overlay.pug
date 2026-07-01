@@ -1,6 +1,9 @@
 form.form-request.modal-form(action="#" method="post" id="requestForm")
   .form-request__body 
-    .form-request__title Оставить заявку 
+    .form-request__title 
+      span Оставить заявку 
+      .form-request__close-btn.btn-close
+        +iconfont('close-button', 'icon')
     .form-request__content
 
       .form-request__form-group
